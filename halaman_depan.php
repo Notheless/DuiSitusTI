@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/laman_depan.css" />
     <link rel="stylesheet" type="text/css" href="css/laman_depan_grid.css" />
     <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-	<link rel="shortcut icon" href="img/icon_unpad.png"/>
 </head>
 <body>
     <!-- navigation top bar -->
@@ -22,7 +21,6 @@
                     <div class="text">
                         <h1>WELCOME</h1>
                         <p>TO INFORMATICS UNPAD WEBSITE</p>
-                        <a class="midbutton" href="">VISIT</a>
                     </div>
                 </div>
                 <div class="presSlides fade">
@@ -30,7 +28,7 @@
                     <div class="text">
                         <h1>VISI MISI</h1>
                         <p>Visi, Misi, Sasaran dan Tujuan Program Studi S1 Teknik Informatika Unpad</p>
-                        <a class="midbutton" href="visi_misi.php">READ MORE</a>
+                        <a class="midbutton" href="visi_misi.html">READ MORE</a>
                     </div>
                 </div>
                 <div class="presSlides fade">
@@ -38,7 +36,7 @@
                     <div class="text">
                         <h1 id="width-alt">ORGANISASI DAN TATA PAMONG</h1>
                         <p>Program Studi S1 Teknik Informatika Unpad</p>
-                        <a class="midbutton" href="organisasi.php">READ MORE</a>
+                        <a class="midbutton" href="organisasi.html">READ MORE</a>
                     </div>
                 </div>
                 <div class="presSlides fade">
@@ -46,7 +44,7 @@
                     <div class="text">
                         <h1>MAHASISWA DAN ALUMNI</h1>
                         <p>Program Studi S1 Teknik Informatika Unpad</p>
-                        <a class="midbutton" href="mahasiswa_dan_lulusan.php">READ MORE</a>
+                        <a class="midbutton" href="mahasiswa_dan_lulusan.html">READ MORE</a>
                     </div>
                 </div>
                 <div class="presSlides fade">
@@ -54,7 +52,7 @@
                     <div class="text">
                         <h1>SUMBER DAYA MANUSIA</h1>
                         <p>Program Studi S1 Teknik Informatika Unpad</p>
-                        <a class="midbutton" href="sdm.php">READ MORE</a>
+                        <a class="midbutton" href="sdm.html">READ MORE</a>
                     </div>
                 </div>
                 <div class="presSlides fade">
@@ -62,7 +60,7 @@
                     <div class="text">
                         <h1>KURIKULUM</h1>
                         <p>Pembelajaran Mahasiswa Program Studi S1 Teknik Informatika Unpad</p>
-                        <a class="midbutton" href="kurikulum.php">READ MORE</a>
+                        <a class="midbutton" href="kurikulum.html">READ MORE</a>
                     </div>
                 </div>
                 <div class="presSlides fade">
@@ -70,7 +68,7 @@
                     <div class="text">
                         <h1>FASILITAS</h1>
                         <p>Sarana dan Prasarana Program Studi S1 Teknik Informatika Unpad</p>
-                        <a class="midbutton" href="fasilitas.php">READ MORE</a>
+                        <a class="midbutton" href="fasilitas.html">READ MORE</a>
                     </div>
                 </div>
                 <div class="presSlides fade">
@@ -78,7 +76,7 @@
                     <div class="text">
                         <h1>PENELITIAN DAN KERJASAMA</h1>
                         <p>Program Studi S1 Teknik Informatika Unpad</p>
-                        <a class="midbutton" href="kerjasama_penelitian.php">READ MORE</a>
+                        <a class="midbutton" href="kerjasama_penelitian.html">READ MORE</a>
                     </div>
                 </div>
             </div>
