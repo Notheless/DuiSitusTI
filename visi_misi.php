@@ -8,9 +8,7 @@
 </head>
 <body>
     <?php include 'Navbar.html';?>
-    <!-- container -->
     <div class="grid-container">
-        
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
 		<!--Recent-->
