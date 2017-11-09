@@ -15,27 +15,35 @@
         <div class="grid-dosen-header">
             <h1 class="headline-header"> FASILITAS <span class="header-revcolor">DAN SISTEM INFORMASI </span></h1>
         </div>
-        <div class="grid-dosen-info">
-            <div class="dosen-info">
-                <h1>Aditya Pradana, M.Eng</h1>
-                <div></div>
-                <p>Networking, data comm</p>
-            </div>
-        </div>
-        <div class="grid-dosen-pic">
-            <div class="photo-border">a</div>
-        </div>
-        <div class="grid-dosen-stats">
-            <div class="dosen-stats">
-                <p>Nama : </p>
-                <p>Email : </p>
-                <p>Telp : </p>
-                <p>HP : </p>
-                <p>Alamat : </p>
-                <p>S1 : </p>
-                <p>S2 : </p>
-            </div>
-        </div>
+		<?php
+		include 'database.php';
+		$sql = "SELECT * FROM dosen";
+		$result = $conn->query($sql);
+		while($row = $result->fetch_assoc()) {
+		if($row["ID"]==9){
+        echo "<div class=\"grid-dosen-info\">";
+        echo    "<div class=\"dosen-info\">";
+        echo        "<h1>".$row["Nama"]."</h1>";
+        echo        "<div></div>";
+        echo        "<p>".$row["Bidang"]."</p>";
+        echo    "</div>";
+        echo"</div>";
+        echo"<div class=\"grid-dosen-pic\">";
+        echo    "<div class=\"photo-border\"><img src=\"img/".$row["ID"].".jpg\"</div>";
+        echo"</div>";
+        echo"<div class=\"grid-dosen-stats\">";
+        echo    "<div class=\"dosen-stats\">";
+        echo        "<p>Nama : ".$row["Nama"]."</p>";
+        echo        "<p>Email : ".$row["Email"]."</p>";
+        echo        "<p>Telp : ".$row["Telp"]."</p>";
+        echo        "<p>HP : ".$row["HP"]."</p>";
+        echo        "<p>Alamat : ".$row["Alamat"]."</p>";
+        echo        "<p>Pendidikan : ".$row["Pendidikan"]."</p>";
+        echo    "</div>";
+        echo"</div";
+		}
+		}
+		?>
         <div class="grid-dosen-data">
             a
         </div>
