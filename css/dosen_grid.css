@@ -1,0 +1,35 @@
+.grid-dosen-container {
+    grid-template-rows: 40px 120px 120px auto auto;
+    grid-template-columns: 300px 1fr 450px;
+}
+.grid-dosen-header {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+}
+.grid-dosen-info {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+.grid-dosen-pic {
+    grid-column: 1;
+    grid-row: 4;
+}
+.grid-dosen-stats {
+    grid-column: 2;
+    grid-row: 4;
+}
+.grid-dosen-data {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+}
+.grid-dosen-list {
+    grid-column: 3;
+    grid-row: 4 / span 3;
+}
+.grid-dosen-container {
+    margin-top: 50px;
+    margin-left: 380px;
+    display: grid;
+    z-index: 5;
+    transition: 0.5s;
+}

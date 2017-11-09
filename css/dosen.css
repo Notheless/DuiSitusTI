@@ -1,0 +1,26 @@
+.dosen-info {
+    margin : 10px;
+}
+.dosen-info h1 {
+    font-family: 'Futura md BT';
+}
+.dosen-info p {
+    font-family: 'Futura bk BT';
+}
+.dosen-info div {
+    margin-top: -4px;
+    border-top: 4px solid black;
+}
+.photo-border {
+    margin: 15px;
+    width: 270px;
+    height: 340px;
+    background-color: #929;
+}
+.dosen-stats {
+    margin: 20px 10px;
+}
+.dosen-stats p {
+    font-size: 18px;
+    font-family: 'Futura bk BT';
+}
