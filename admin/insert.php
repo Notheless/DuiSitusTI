@@ -11,7 +11,7 @@
     <div class="admin-content-pos">
         <div class="admin-content">
             <h2 class="content-title">Input Data Dosen</h2>
-            <form action="#">
+            <form action="test.php" method="post">
                 <table>
                     <tr>
                         <td><p>Judul Artikel : </p></td>
