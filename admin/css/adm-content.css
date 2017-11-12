@@ -1,7 +1,7 @@
 .admin-content-pos {
     position: relative;
     width: 60%;
-    max-width: 1000px;
+    max-width: 1200px;
     height: auto;
     margin: 0 auto;
     padding: 20px;
@@ -77,4 +77,11 @@
 .admin-content .button:active {
     color: white;
     background-color: #5093ac;
+}
+.admin-main-content {
+    margin-top: 16px;
+    height: auto;
+    padding: 30px;
+    background-color: #aaa;
+    border-radius: 5px;
 }
