@@ -13,14 +13,14 @@
 			<?php include 'left_nav.html';?>
         <!-- konten -->
         <div class="grid-dosen-header">
-            <h1 class="headline-header"> FASILITAS <span class="header-revcolor">DAN SISTEM INFORMASI </span></h1>
+            <h1 class="headline-header"> DAFTAR <span class="header-revcolor">DOSEN </span></h1>
         </div>
 		<?php
 		include 'database.php';
 		$sql = "SELECT * FROM dosen";
 		$result = $conn->query($sql);
 		while($row = $result->fetch_assoc()) {
-		if($row["ID"]==9){
+		if($row["ID"]==$_GET["ID"]){
         echo "<div class=\"grid-dosen-info\">";
         echo    "<div class=\"dosen-info\">";
         echo        "<h1>".$row["Nama"]."</h1>";
@@ -29,7 +29,7 @@
         echo    "</div>";
         echo"</div>";
         echo"<div class=\"grid-dosen-pic\">";
-        echo    "<div class=\"photo-border\"><img src=\"img/".$row["ID"].".jpg\"</div>";
+        echo    "<div class=\"photo-border\"><img src=\"img/"."sam".".png\"></div>";
         echo"</div>";
         echo"<div class=\"grid-dosen-stats\">";
         echo    "<div class=\"dosen-stats\">";
