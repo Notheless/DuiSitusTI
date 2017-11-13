@@ -31,7 +31,7 @@
 			echo"	<td style=\"text-align:center;\">";
 			echo"		<a href=\"..\\dosen.php?ID=".$row["ID"]."\"><img src=\"img/detail.png\" style=\"width:25px\"></a>";
 			echo"		<a href=\"editD.php?ID=".$row["ID"]."\"><img src=\"img/edit.png\" style=\"width:25px\"></a>";
-			echo"		<a href=\"deleteD.php?ID=".$row["ID"]."\"><img src=\"img/delete.png\" style=\"width:25px\"></a>";
+			echo"		<a ><img src=\"img/delete.png\" style=\"width:25px;cursor: pointer;\" onclick=\"javascript:deleteD(".$row["ID"].")\"></a>";
 			echo"	</td>";
 			echo"</tr>";
 			$i+=1;
@@ -115,5 +115,6 @@
         </div> -->
     </div>
     <script type="text/javascript" src="js/textarea.js"></script>
+    <script type="text/javascript" src="js/viewDosen.js"></script>
 </body>
 </html>

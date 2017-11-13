@@ -20,8 +20,11 @@
 	`Bidang` = '".$bidang."' 
 	WHERE `dosen`.`ID` = ".$id.";";
 	if ($conn->query($sql) === TRUE) {
-		header("Location: ViewD.php"); /* Redirect browser */
-		exit();
+		echo "
+		<script>
+			alert('Data berhasil diubah');
+			window.location.href='ViewD.php';
+		</script>";
 	} else {
 		echo "
 		<script>
