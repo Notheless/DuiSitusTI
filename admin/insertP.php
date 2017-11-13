@@ -13,10 +13,10 @@
         <div class="admin-main-content">
             
         </div>
-		<!-- insert -->
-        <!--<div class="admin-content"> 
-            <h2 class="content-title">Input Dosen</h2>
-            <form action="test.php" method="post">
+        <div class="admin-content"> 
+            <h2 class="content-title">Artikel baru</h2>
+            <form action="insertPE.php" method="get">
+			<input type="hidden" name="auth" value="EX">
                 <table>
                     <tr>
                         <td><p>Judul Artikel : </p></td>
@@ -32,10 +32,49 @@
                     <tr>
                         <td colspan="2"><textarea rows="3" name="isi_artikel" placeholder="isi artikel"></textarea></td>
                     </tr>
+                </table>
+				<!-- Gotta tag em all -->
+				<table>
+					<?php
+					include '../database.php';
+					$sql = "SELECT * FROM tags";
+					$result = $conn->query($sql);
+					if ($result->num_rows > 0)
+					{
+						for ($i=0; $i<9; $i+=1) 
+						{
+							$x = $i;
+							$x %=3;
+							if($x===0)
+							{
+								echo "<tr>";
+							}
+							echo "
+							<td>
+								<select class=\"tagg\" name=\"tag".$i."\">";
+								echo "<option value=\"NULL\">----</option>";
+							while($row = $result->fetch_assoc()){
+								echo "<option value=".$row["ID"].">".$row["Text"]."</option>";
+							}
+							mysqli_data_seek($result,0); 	
+							echo"</select>
+							</td>";
+							
+							if($x===2)
+							{
+								echo "</tr>";
+							}
+						}
+					}
+					?>
+                </table>
+				<table>
+                    <tr>
                         <td></td><td style="text-align: right"><input class="button" type="submit" value="Masukkan"></td>
+					</tr>
                 </table>
             </form>
-        </div>-->
+        </div>
 
         <!-- update -->
         <!-- <div class="admin-content"> 
