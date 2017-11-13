@@ -6,3 +6,8 @@
     vertical-align: baseline;
     background: transparent;
 }
+
+* .tagg {
+    background:white;
+	border:black;
+}

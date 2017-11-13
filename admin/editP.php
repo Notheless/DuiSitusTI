@@ -11,44 +11,127 @@
     <div class="admin-content-pos">
         
         <div class="admin-main-content">
-            <table>
-                <col><col><col>
-                <tr>
-                    <td>Judul</td>
-                    <td>Tanggal</td>
-                    <td>Pengaturan</td>
-                </tr>
-                <tr>
-                    <td>Prestasi Mahasiswa TI Unpad di 3rd International Conference on Science in Information Technology (ICSITech) 2017</td><td>11/05/2017</td><td><button type="button" onclick="alert('Hello world!')">edit</button><button type="button">delete</button></td>
-                </tr>
-                <tr>
-                    <td></td><td></td><td><button type="button" onclick="alert('Hello world!')">edit</button><button type="button">delete</button></td>
-                </tr>
-            </table>
+            
         </div>
-		<!-- insert -->
-        <!--<div class="admin-content"> 
-            <h2 class="content-title">Input Dosen</h2>
-            <form action="test.php" method="post">
+        <div class="admin-content"> 
+            <h2 class="content-title">Edit Artikel</h2>
+            <form action="editPE.php" method="get">
+			<?php
+				include '../database.php';
+				$id=0;
+				$sql = "SELECT * FROM posting";
+				$result = $conn->query($sql);
+				$judul ='';
+				$tanggal ='';
+				$isi ='';
+				$auth ='';
+				$tag0 ='';
+				$tag1 ='';
+				$tag2 ='';
+				$tag3 ='';
+				$tag4 ='';
+				$tag5 ='';
+				$tag6 ='';
+				$tag7 ='';
+				$tag8 ='';
+				
+				if($_GET["ID"]) 
+				{
+					$id=$_GET["ID"];
+				}			
+				if ((!$id==0)&&($result->num_rows > 0)) 
+				{
+					while($row = $result->fetch_assoc()) 
+					{
+						if($row["ID"]==$id)
+						{
+							$judul =$row["Judul"];
+							$tanggal =$row["Tanggal"];
+							$isi =$row["Isi"];
+							$auth =$row["Author"];
+							$tag0 =$row["tag0"];
+							$tag1 =$row["tag1"];
+							$tag2 =$row["tag2"];
+							$tag3 =$row["tag3"];
+							$tag4 =$row["tag4"];
+							$tag5 =$row["tag5"];
+							$tag6 =$row["tag6"];
+							$tag7 =$row["tag7"];
+							$tag8 =$row["tag8"];
+						}
+					}
+					if($judul==='')notfound();
+				}
+				else
+				{	
+					notfound();
+				}
+				function notfound() {
+					//header("Location: ViewP.php"); /* Redirect browser */
+					exit();
+				}
+			?>
+			<input type="hidden" name="ID"  <?php echo "value=\"".$id."\""; ?>>
+			<input type="hidden" name="auth" value="EX">
                 <table>
                     <tr>
                         <td><p>Judul Artikel : </p></td>
-                        <td width="70%"><input class="data-input" type="text" name="judul_artikel" placeholder="judul artikel"></td>
+                        <td width="70%"><input class="data-input" type="text" name="judul_artikel" placeholder="judul artikel" <?php echo "value=\"".$judul."\""; ?>></td>
                     </tr>
                     <tr>
                         <td><p>Tanggal : </p></td>
-                        <td><input class="data-input" type="datetime-local" name="tanggal_artikel" placeholder="11/7/2017" ></td>
+                        <td><input class="data-input" type="datetime-local" name="tanggal_artikel" placeholder="11/7/2017" <?php echo "value=\"".$tanggal."\""; ?>></td>
                     </tr>
                     <tr>
                         <td><p>Isi Artikel: </p></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><textarea rows="3" name="isi_artikel" placeholder="isi artikel"></textarea></td>
+                        <td colspan="2"><textarea rows="3" name="isi_artikel" placeholder="isi artikel"><?php echo $isi; ?></textarea></td>
                     </tr>
+                </table>
+				<!-- Gotta tag em all -->
+				<table>
+					<?php
+					$sqlx = "SELECT * FROM tags";
+					$resultx = $conn->query($sqlx);
+					if ($resultx->num_rows > 0)
+					{
+						for ($i=0; $i<9; $i+=1) 
+						{
+							$x = $i;
+							$x %=3;
+							if($x===0)
+							{
+								echo "<tr>";
+							}
+							echo "
+							<td>
+								<select class=\"tagg\" name=\"tag".$i."\">";
+								echo "<option value=\"NULL\">----</option>";
+							while($rowx = $resultx->fetch_assoc()){
+								echo "<option value=\"".$rowx["ID"]."\"";
+									if($rowx["ID"]===${'tag'.$i}) echo "selected=\"selected\"";
+								echo ">".$rowx["Text"]."</option>";
+							}
+							mysqli_data_seek($resultx,0); 	
+							echo"</select>
+							</td>";
+							
+							if($x===2)
+							{
+								echo "</tr>";
+							}
+						}
+					}
+					?>
+                </table>
+				<table>
+                    <tr>
                         <td></td><td style="text-align: right"><input class="button" type="submit" value="Masukkan"></td>
+					</tr>
                 </table>
             </form>
-        </div>-->
+        </div>
 
         <!-- update -->
         <!-- <div class="admin-content"> 
