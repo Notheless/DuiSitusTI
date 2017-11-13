@@ -25,6 +25,7 @@
 		{
 			$id=$_GET["ID"];
 		}			
+		if(!$id==0){
 		while($row = $result->fetch_assoc()) {
 		if($row["ID"]==$id){
         echo "<div class=\"grid-dosen-info\">";
@@ -47,6 +48,7 @@
         echo        "<p>Pendidikan : ".$row["Pendidikan"]."</p>";
         echo    "</div>";
         echo"</div";
+		}
 		}
 		}
 		?>

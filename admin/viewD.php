@@ -29,7 +29,7 @@
 			echo"	<td style=\"text-align:center;\">".$i."</td>";
 			echo"	<td>".$row["Nama"]."</td>";
 			echo"	<td style=\"text-align:center;\">";
-			echo"		<a href=\"detailD.php?ID=".$row["ID"]."\"><img src=\"img/detail.png\" style=\"width:25px\"></a>";
+			echo"		<a href=\"..\\dosen.php?ID=".$row["ID"]."\"><img src=\"img/detail.png\" style=\"width:25px\"></a>";
 			echo"		<a href=\"editD.php?ID=".$row["ID"]."\"><img src=\"img/edit.png\" style=\"width:25px\"></a>";
 			echo"		<a href=\"deleteD.php?ID=".$row["ID"]."\"><img src=\"img/delete.png\" style=\"width:25px\"></a>";
 			echo"	</td>";
@@ -37,6 +37,9 @@
 			$i+=1;
 		}
 		echo"	</table>";
+	}
+	else{
+		echo "<h1>No data found</h1>";
 	}
 	?>
         </div>

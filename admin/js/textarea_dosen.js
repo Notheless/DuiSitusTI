@@ -1,8 +1,4 @@
-var textarea = document.querySelector('textarea');
-
-textarea.addEventListener('keydown', autosize);
-             
-			 
+ 
 //jangan dihapus ~Afuwwu~
 
 var textarea0 = document.getElementById('textarea0');
