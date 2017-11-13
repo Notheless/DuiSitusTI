@@ -16,11 +16,17 @@
             <h1 class="headline-header"> DAFTAR <span class="header-revcolor">DOSEN </span></h1>
         </div>
 		<?php
+		error_reporting(0);
 		include 'database.php';
 		$sql = "SELECT * FROM dosen";
 		$result = $conn->query($sql);
+		$id = 0;
+		if($_GET["ID"]) 
+		{
+			$id=$_GET["ID"];
+		}			
 		while($row = $result->fetch_assoc()) {
-		if($row["ID"]==$_GET["ID"]){
+		if($row["ID"]==$id){
         echo "<div class=\"grid-dosen-info\">";
         echo    "<div class=\"dosen-info\">";
         echo        "<h1>".$row["Nama"]."</h1>";
