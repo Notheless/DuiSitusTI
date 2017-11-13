@@ -41,6 +41,15 @@
 							$bidang =$row["Bidang"];
 						}
 					}
+					if($nama==='')notfound();
+				}
+				else
+				{	
+					notfound();
+				}
+				function notfound() {
+					header("Location: ViewD.php"); /* Redirect browser */
+					exit();
 				}
 			?>
             <h2 class="content-title">Update Artikel</h2>
