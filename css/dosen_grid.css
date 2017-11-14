@@ -1,6 +1,6 @@
 .grid-dosen-container {
     grid-template-rows: 40px 120px 120px auto auto;
-    grid-template-columns: 300px 1fr 450px;
+    grid-template-columns: 300px 1fr 100px;
 }
 .grid-dosen-header {
     grid-column: 1 / span 3;
@@ -27,8 +27,8 @@
     grid-row: 4 / span 3;
 }
 .grid-dosen-container {
-    margin-top: 50px;
-    margin-left: 380px;
+    margin-top: 42px;
+    margin-left: 280px;
     display: grid;
     z-index: 5;
     transition: 0.5s;
