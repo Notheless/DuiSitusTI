@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2017 at 04:17 PM
+-- Generation Time: Nov 14, 2017 at 05:18 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -263,7 +263,7 @@ CREATE TABLE `gambar` (
 
 CREATE TABLE `lulusan` (
   `ID` int(11) NOT NULL,
-  `Nama` point NOT NULL,
+  `Nama` text NOT NULL,
   `Pembimbing1` int(11) DEFAULT NULL,
   `Pembimbing2` int(11) DEFAULT NULL,
   `Penguji1` int(11) DEFAULT NULL,
@@ -272,6 +272,79 @@ CREATE TABLE `lulusan` (
   `TanggalLulus` date NOT NULL,
   `Judul` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `lulusan`
+--
+
+INSERT INTO `lulusan` (`ID`, `Nama`, `Pembimbing1`, `Pembimbing2`, `Penguji1`, `Penguji2`, `Penguji3`, `TanggalLulus`, `Judul`) VALUES
+(1, 'Jordy Saragih, S.Kom.', 1, 4, NULL, NULL, NULL, '2016-01-08', 'Sistem Informasi Persediaan Barang Berbasis Web dan Sistem Monitoring Berbasis Mobile pada Perusahaan Distribusi'),
+(2, 'Faishal Wahiduddin, S.Kom.', 2, 10, NULL, NULL, NULL, '2016-06-22', 'Pemanfaatan Kartu Tanda Penduduk Elektronik sebagai Alternatif Otentikasi (Studi Kasus Pada Sistem PAUS ID di Universitas Padjadjaran)'),
+(3, 'Harits Muhammad, S.Kom.', 7, 11, NULL, NULL, NULL, '2016-06-22', 'Penerapan Data Mining dalam Menganlisis Kepribadian Pengguna Media SOsial Dengan Naive Baye Classifier: Studi Kasus Media Sosial Instagram'),
+(4, 'Riva Farabi, S.Kom.', 3, 9, NULL, NULL, NULL, '2016-06-22', 'Implementasi Simulasi Wisata Shark Cage Diving Dengan Perangkat Virtual Reality Google Cardboard Menggunakan Game Engine Unity 3D'),
+(5, 'Deisna Rahmaningtyas, S.Kom.', 2, 8, NULL, NULL, NULL, '2016-08-11', 'Analisis Perbandingan Metode Binerisasi Terhadap Citra Naskah Lontar Sunda Kuno'),
+(6, 'M. Raditya Putra, S.Kom.', 5, 11, NULL, NULL, NULL, '2016-08-11', 'Aplikasi Steganografi Suara Menggunakan Metode Phase Coding'),
+(7, 'Billal M. Hadian, S.Kom.', 9, 10, NULL, NULL, NULL, '2016-08-11', 'Network Behavior Anomaly Detection (Studi Kasus di Gedung D PPBS Universitas Padjadjaran)'),
+(8, 'Luqman Adibiarso, S.Kom.', 1, 4, NULL, NULL, NULL, '2016-10-15', 'Pengembangan Aplikasi Temporal Data Mining Prediksi Curah Hujan Berbasis PHP dan MySQL Menggunakan Model Autoregressive di Propinsi Jawa Barat'),
+(9, 'Indah Maulidia Turrohmah, S.Kom.', 7, 5, NULL, NULL, NULL, '2016-12-07', 'Program Aplikasi Pengenalan Plat Nomor Kendaraan Mobil Menggunakan Template Matching Pada Sistem Informasi Parkir'),
+(10, 'Izzan Latryana O, S.Kom.', 6, 11, NULL, NULL, NULL, '2016-12-07', 'Analisis Jaringan Komputer Untuk Mendapatkan Informasi Perilaku Pengguna Jaringan Studi Kasus Gedung D PPBS Jatinangor'),
+(11, 'Muhammad Miftah Al Rasyid, S.Kom.', 6, 2, NULL, NULL, NULL, '2017-01-11', 'Rancang Bangun Aplikasi Penyisipan Pesan Ke Dalam Gambar Menggunakan Teknik Steganografi Dengan Metode Enhance LSB'),
+(12, 'Benarivo Triadi Putra, S.Kom.', 4, 10, NULL, NULL, NULL, '2017-01-11', 'Implementasi Pemodelan Ontologi dan Pembangunan Web Semantik Pada Studi Kasus Pencarian Buku di Perpustakaan Digital (Informatics E-Library)'),
+(13, 'Amir Mujahiduddien, S.Kom.', 5, 3, NULL, NULL, NULL, '2017-02-06', 'Pemanfaatan Augmented Reality Sebagai Sarana Pembelajaran Sistem Gerak Tubuh Manusia'),
+(14, 'Jansen Giovanni, S.Kom.', 8, 10, NULL, NULL, NULL, '2017-02-06', 'Analisis dan Perancangan Jaringan Wireless di Gedung PPBS Unpad Untuk Mengoptimalkan Peletakan Posisi Access Point'),
+(15, 'Muhammad Iqbal, S.Kom.', 2, 8, NULL, NULL, NULL, '2017-02-06', 'Pembangunan Aplikasi Navigasi Dalam Gedung D PPBS Universitas Padjajdaran Menggunakan Model Pemetaan Indoor Geolocation Berbasis Android'),
+(16, 'Anaz Tazcia Lestari, S.Kom.', 5, 10, NULL, NULL, NULL, '2017-02-06', 'Implementasi Algoritma Spyware Dalam Program Aplikasi Remote Access'),
+(17, 'Rahmatullah Arrizal P, S.Kom.', 2, 7, NULL, NULL, NULL, '2017-02-06', 'Perhitungan Jumlah Kendaraan di Jalan Tol Menggunakan Metode Image Subtracting'),
+(18, 'Zahra Solihah, S.Kom.', NULL, NULL, 4, 9, NULL, '2017-02-13', 'Rancang Bangun Sistem Pakar untuk Mendiagnosa Kondisi Gangguan Kepribadian Menggunakan Metode Forward Chaining Berbasis Mobile Android'),
+(19, 'Ichsan Alfiansyah, S.Kom.', 8, 7, 4, 9, 6, '2017-02-13', 'Klasifikasi Anomali Trafik Jaringan Unpad Jatinangor Menggunakan Naive Bayes Classifier: Studi Kasus Data Trafik Periode April-Mei 2016'),
+(20, 'Fadel Muhammad P, S.Kom.', 11, 8, NULL, NULL, NULL, '2017-04-07', 'Analisis Pengaruh Firewall Terhadap Kinerja Komputer Dalam Mengurangi Dampak Serangan DoS'),
+(21, 'Rahadian Hilmy, S.Kom.', 3, 6, NULL, NULL, NULL, '2017-04-07', 'Implementasi Algoritma Kriptografi AES Dengan Model ECB Pada APlikasi LAN Messenger'),
+(22, 'Rizky Maulana Rachyan, S.Kom.', 11, 5, NULL, NULL, NULL, '2017-04-07', 'Membangun Program Aplikasi CCTV Berbasis Smartphone Android Untuk Menghitung Jnmlah Pelanggar Lajur Kendaraan Studi Kasus di Universitas Padjadjaran'),
+(23, 'Andrean Taufik, S.Kom.', 4, 11, NULL, NULL, NULL, '2017-04-07', 'Analisis Filtering Email SPAM Menggunakan Metode Naive Bayesian'),
+(24, 'Albertus Aditya Wisnu Whardana, S.Kom.', 1, 4, NULL, NULL, NULL, '2017-04-07', 'Pengembangan Aplikasi Travelling Salesman Problem Dengan Optimasi Robust (Studi Kasus PAda Pekan Paralimpik Nasional XV 2016)'),
+(25, 'Sopyan Mulyana, S.Kom.', 2, 11, NULL, NULL, NULL, '2017-05-31', 'Pengenalan Gestur Tangan Berbasis Warna Kulit untuk Penerjemahan Bahasa Isyarat'),
+(26, 'Wahyudin Buca Kalauw, S.Kom.', 4, 6, NULL, NULL, NULL, '2017-05-31', 'Implementasi Algoritma K-Means Clustering untuk Menentukan Prioritas Pembangunan Pendidikan di Provinsi Jawa Barat'),
+(27, 'Mochamad Edwin Lokyta, S.Kom.', 6, 9, NULL, NULL, NULL, '2017-05-31', 'Pengembangan Aplikasi Mobile Manajemen Aset dengan QR-Code'),
+(28, 'Febrian Suhendra Citromulyo, S.Kom.', 3, 5, NULL, NULL, NULL, '2017-06-14', 'Manajemen Traffic Jaringan Internet Berbasis Web Dengan Protocol SNMP (Studi Kasus di Lab SIM Departemen Ilmu Komputer Universitas Padjadjaran)'),
+(29, 'Muhammad Fadly Rahman, S.Kom.', 2, 3, NULL, NULL, NULL, '2017-06-14', 'Membangun Automatic Facial Recognition System Menggunakan Metode Euclidean Distance Sebai Alat untuk Mengenali Kondisi Emosi Seseorang'),
+(30, 'Anggie Audina Ikhwanudin, S.Kom.', 5, 3, NULL, NULL, NULL, '2017-06-14', 'Perancangan dan Implementasi Sistem Informasi Sidang Tilang Pada Pengadilan Negeri Indramayu Berbasis Web'),
+(31, 'Yusup Septiananda, S.Kom.', 9, 6, NULL, NULL, NULL, '2017-06-14', 'Pengembangan Aplikasi Sistem Pemantauan dan Evaluasi Proyek'),
+(32, 'Hilga Dwiana Hardani, S.Kom.', 2, 9, NULL, NULL, NULL, '2017-06-14', 'Analisis Sentimen pada Review Film Menggunakan Text Mining dengan Menggunakan Naive Bayes Classifier'),
+(33, 'Agung Kurniati, S.Kom.', 1, 7, NULL, NULL, NULL, '2017-06-14', 'Pengembangan Sistem Pendukung Keputusan Pemilihan Kelompok Tani Penerima Bantuan Pertanian Menggunakan Metode Analytical Hierarchy Process Berbasis Web'),
+(34, 'Hilmi Wijaksana Wahyudi, S.Kom.', 2, 9, NULL, NULL, NULL, '2017-07-05', 'Penerapan K-Optimal Pada Algoritma K-Nearest Neighbor (KKN) Untuk Klasifikasi Dan Prediksi Masa Studi Mahasiswa FMIPA Unpad'),
+(35, 'Raynaldo Kristiadi Sola Gratia, S.Kom.', 10, 7, NULL, NULL, NULL, '2017-07-03', 'Pengujian Keamanan Wireless Access Point Dengan Protokol Keamanan WEP, WPA, dan WPA2 Menggunakan Aircrack-ng Pada Sistem Operasi Kali Linux'),
+(36, 'M. Fathurrahman, S.Kom.', 2, 11, NULL, NULL, NULL, '2017-07-03', 'Pengenalan Wajah Berbasis Android Menggunakan Metode Principal Component Analysis'),
+(37, 'Alvin Niza Aulia, S.Kom.', 1, 11, NULL, NULL, NULL, '2017-07-03', 'Sistem Pendukung Keputusan Investasi Properti Berbasis Web Menggunakan Metode Analytical Hierarchy Process'),
+(38, 'Yoko Suryadi, S.Kom.', 4, 7, NULL, NULL, NULL, '2017-07-03', 'Implementasi Algoritma Kriptografi RSA Pada Aplikasi Chatting Berbasis Socket Programming Dengan Menggunakan Bahasa C'),
+(39, 'Muhammad Iqbal Pandailing Widodo, S.Kom.', 5, 9, NULL, NULL, NULL, '2017-07-03', 'Perbandingan Haar Cascade Classification Dan LBP Cascade Classification Sebagai Hand Gesture Recognition Dalam Aplikasi Virtual Reality'),
+(40, 'Rezky Pratomo, S.Kom.', 1, 3, NULL, NULL, NULL, '2017-07-03', 'Implementasi Perbandingan Metode Fuzzy Analytical Hierarchy Process Dan Simple Additive Weighting Dalam Sistem Pendukung Keputusan Pemilihan Pengawas Sekolah Terbaik Di Kabupaten Tanjung Jabung Timur'),
+(41, 'Anne Devia, S.Kom.', 1, 4, NULL, NULL, NULL, '2017-07-03', 'Data Mining Untuk Clustering Ethnoinformatika Penamaan Kampung Di Kabupaten Bandung'),
+(42, 'Carinna Sunny Budiono Putri, S.Kom.', 1, 10, NULL, NULL, NULL, '2017-07-03', 'Naive Bayes Classifier Untuk Kategori Berita Bahasa Indonesia Berbasis Web'),
+(43, 'Fath Imtiaz, S.Kom.', 1, 3, NULL, NULL, NULL, '2017-07-26', 'Penerapan Data Mining Dengan Teknik Semi-Supervised Clustering Untuk Mengelompokan Statistik Pemain Sepak Bola Berdasarkan Posisi Dalam Formasi'),
+(44, 'Asep Sudrajat, S.Kom.', 1, 7, NULL, NULL, NULL, '2017-07-26', 'Sistem Informasi Etnoinformatika Penamaan Dusun Dalam Mengetahui Karakteristik Masyarakat Ciamis Berbasis Website'),
+(45, 'Ai Siti Sobariah, S.Kom.', 1, 7, NULL, NULL, NULL, '2017-07-26', 'Perancangan Dan Implementasi Sistem Informasi Etnoinformatika Penamaan Kampung Untuk Melihat Karakteristik Kebudayaan Sunda Di Kabupaten Tasikmalaya Berbasis Web'),
+(46, 'Linda Angela Putri, S.Kom.', 1, 4, NULL, NULL, NULL, '2017-07-26', 'Perancangan Dan Implementasi Sistem Informasi Etnoinformatika Penamaan Kampung Di Kabupaten Garut Berbasis Java'),
+(47, 'Rizki Fitrah Mutaqin, S.Kom.', 2, 6, NULL, NULL, NULL, '2017-07-26', 'Aplikasi Sistem Pendukung Keputusan Dalam Menentukan Kenaikan Pangkat Dan Promosi Jabatan Struktural Di Kabupaten Garut Menggunakan Metode Topsis'),
+(48, 'Henry Aulia Rahman, S.Kom.', 1, 6, NULL, NULL, NULL, '2017-07-26', 'Sistem Informasi Perpustakaan Berbasis Web Di SMA Darul Falah Cihampelas Bandung Barat'),
+(49, 'Edwin Ginanjar Sonjaya, S.Kom.', 3, 9, NULL, NULL, NULL, '2017-07-26', 'Metode Fuzzy Analytical Hierarchy Process Untuk Pemilihan Rayon Terbaik Dalam Perspektif Pelanggan Pada PT. PLN (Persro) Area Cirebon'),
+(50, 'Ivan Alexander Yunadi, S.Kom.', 5, 11, NULL, NULL, NULL, '2017-07-28', 'Pemanfaatan Kartu Tanda Penduduk Elektronik Sebagai Sistem Informasi Absensi Kelas Di Program Studi Teknik Informatika Fakultas MIPA Universitas Padjadjaran'),
+(51, 'Muhamad Ilham D, S.Kom.', 7, 3, NULL, NULL, NULL, '2017-07-28', 'Program Rute Terpendek UNPAD Jatinangor Menggunakan Algoritma DIKSTRA'),
+(52, 'Nero Gading Laksamana, S.Kom.', 7, 3, NULL, NULL, NULL, '2017-07-28', 'Pemanfaatan Kartu Tanda Mahasiswa Untuk Autentikasi Dalam Pengembangan Sistem Informasi Akademik Universitas Padjadjaran Berbasis Android'),
+(53, 'Rifky Fachry Muhamad, S.Kom.', 9, 4, NULL, NULL, NULL, '2017-07-28', 'Pengembangan Aplikasi Berbasis Chrome Extension Untuk Mengakses Browser Game Kantai Collection Dengan Menggunakan Metode IP Spoofing'),
+(54, 'Tiara Rizki Maharani, S.Kom.', 1, 10, NULL, NULL, NULL, '2017-07-28', 'Sistem Pendukung Keputusan Dalam Menentukan Atlet Taekwondo Untuk Mengikuti Kejuaraan Dengan Metode Analytical Hierarchy Process (AHP)'),
+(55, 'Selano Putra, S.Kom.', 1, 5, NULL, NULL, NULL, '2017-07-28', 'Penerapan Data Mining Algoritma K-Means Clustering Dalam Segmentasi Wilayah Nasabah Permohonan Kredit Untuk Membantu Strategi Pemasaran PT. BPR Ganto Nagari 1854'),
+(56, 'Isa Abdul Muhyi, S.Kom.', 6, 3, NULL, NULL, NULL, '2017-08-09', 'Sistem Informasi Tracer Study Berbasis Web Menggunakan Framework Laravel'),
+(57, 'Mauludy Nugrahani, S.Kom.', 2, 5, NULL, NULL, NULL, '2017-08-09', 'Aplikasi Sistem Pendukung Keputusan Prioritas Pembangunan Kesehatan Di Provinsi Jawa Barat Menggunakan Metode Fuzzy Analytical Hierarchy Process'),
+(58, 'Nirdan Anshari, S.Kom.', 4, 10, NULL, NULL, NULL, '2017-08-09', 'Analisis Dan Perbandingan Enkripsi Dekripsi Pada File Menggunakan Metode AES Rijndael Dan 3DES'),
+(59, 'Akmaluddin Fadhilah, S.Kom.', 10, 11, NULL, NULL, NULL, '2017-08-09', 'Sistem Informasi Monitoring Aset Berbasis Web Pada Departemen IT Santosa Hospital Bandung Kopo'),
+(60, 'Fadhli Aufar Syahmi, S.Kom.', 5, 9, NULL, NULL, NULL, '2017-08-09', 'Analisis Aplikasi Peringkasan Teks Otomatis Menggunakan Metode Term Frequency Inverse Document Frequency (TF-IDR)'),
+(61, 'Aldi Maulana, S.Kom.', NULL, NULL, NULL, NULL, NULL, '2017-08-09', 'Sistem Pendukung Keputusan Pemilihan Smartphone Menggunakan Metode Fuzzy Analytical Hierarchy Process Berbasis Web'),
+(62, 'O Ginanjar, S.Kom.', 5, 9, NULL, NULL, NULL, '2017-08-11', 'Desain Dan Analisis Pengembangan Program Aplikasi IDMS Dengan Metodologi Scrum Framework'),
+(63, 'Firdaus Perdana Yusuf, S.Kom.', 6, 9, NULL, NULL, NULL, '2017-08-11', 'Simulasi Eksplorasi Hutan Pada Malam Hari Berbasis Virtual Reality Menggunakan Game Engine Unity 3D'),
+(64, 'Ardhi Rizki Harahap, S.Kom.', 1, 7, NULL, NULL, NULL, '2017-08-11', 'Sistem Informasi Mobile Berbasis Web Service Untuk Pemantauan Lokasi Perangkat Android (Studi Kasus Bus Damri Kota Bandung)'),
+(65, 'Dion Alamsah, S.Kom.', 9, 6, NULL, NULL, NULL, '2017-10-18', 'Analisis Performa Algoritma Kriptografi AES Untuk Citra Digital Pada Berbagai Perangkat Android'),
+(66, 'Muhammad Adamul Khair, S.Kom.', 5, 11, NULL, NULL, NULL, '2017-10-18', 'Implementasi Sistem Pemungutan Suara Elektronik Dengan Menggunakan Teknologi NFC (Near Field Communication) Pada Platform Android (Studi Kasus Pemilihan Ketua HIMATIF FMIPA Unpad)'),
+(67, 'Fieny Mughnisari S, S.Kom.', 11, 3, NULL, NULL, NULL, '2017-10-18', 'Sistem Pendukung Keputusan Berbasis Fuzzy Analytical Hierarchy Process Untuk Penentuan Kelayakan Penerimaan Kredit (Studi Kasus : Koperasi Keluarga Besar Dinas Pendapatan (KKBD) Provinsi Jawa Barat)');
 
 -- --------------------------------------------------------
 
@@ -295,6 +368,16 @@ CREATE TABLE `posting` (
   `tag7` int(11) DEFAULT NULL,
   `tag8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `posting`
+--
+
+INSERT INTO `posting` (`ID`, `Judul`, `Tanggal`, `Isi`, `Author`, `tag0`, `tag1`, `tag2`, `tag3`, `tag4`, `tag5`, `tag6`, `tag7`, `tag8`) VALUES
+(2, 'A', '2017-11-13 13:37:57', 'A', 'A', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'A', '2017-11-13 13:39:20', 'A', 'A', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'B', '2017-11-13 09:29:20', 'B', 'EX', 13, 0, 0, 0, 15, 0, 15, 0, 0),
+(5, 'C', '2017-11-13 09:30:52', '<div class=\"entry-content\">\r\n						<p>Pada tanggal 1-4 Nov 2017, Dosen Teknik Informatika, Universitas Padjadjaran ikut berpartisipasi aktif pada kegiatan Rapat Koordinasi Nasional (RAKORNAS) Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM) 2017. Kegiatan Rakornas yang bekerjasama dengan Universitas YAPIS Papua ini mengusung tema â€œPeningkatan Kompetensi SDM TIK dan Daya Saing Daerah di Era Globalâ€. Pada kesempatan yang sama juga diselenggarakan beberapa kegiatan:</p>\r\n<li>Seminar Nasional Aptikom (Semnastikom) â€“ Call For Paper dengan tema : â€œPengembangan SDM TIK Untuk Percepatan Pembangunan Daerah â€.</li>\r\n<li>The 2nd International Conference on Informatics and Computing (ICIC 2017) dengan tema : â€œImproving Competencies of ICT Human Resources and Regional Competitiveness in Global Eraâ€.</li>\r\n<li>Higher Education Sharing of Best Practice</li>\r\n<li>Industrial Sharing of Technology</li>\r\n<li>Higher Education Clinics</li>\r\n<li>Country Side Tour</li>\r\n<p></p>\r\n<p>Adapun kegiatan ICIC 2017 ini menyajikan sekitar 97 artikel, diantaranya adalah </p>\r\n<li>â€œA Novel Scheme for Handwritten Binarization Method on Sundanese Palm Leaf Document Imagesâ€ oleh Erick Paulus, Mira Suryani, Setiawan Hadi and Intan Nurma Yulita</li>\r\n<li>â€œQuality enhancement of degraded Sundanese lontar images using direct subtraction and retrospective correction methods in several color spacesâ€ oleh Setiawan Hadi, Undang Ahmad Darsa, Erick Paulus and Mira Suryani</li>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-07-at-15.39.46.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-07-at-15.39.46-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3099\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-1.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-1-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3100\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3101\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-01-at-17.36.52.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-01-at-17.36.52-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3102\"></a></p>\r\n<p></p>\r\n											</div>', 'EX', 13, 0, 0, 0, 15, 0, 15, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -396,12 +479,12 @@ ALTER TABLE `gambar`
 -- AUTO_INCREMENT for table `lulusan`
 --
 ALTER TABLE `lulusan`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 --
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tags`
 --
