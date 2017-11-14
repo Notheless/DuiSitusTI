@@ -45,6 +45,6 @@
         </div>
     </div>
     <script type="text/javascript" src="js/textarea.js"></script>
-    <script type="text/javascript" src="js/viewDosen.js"></script>
+    <script type="text/javascript" src="js/DeleteD.js"></script>
 </body>
 </html>

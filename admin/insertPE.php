@@ -14,7 +14,10 @@
 	$tag6 =$_GET["tag6"];
 	$tag7 =$_GET["tag7"];
 	$tag8 =$_GET["tag8"];
-	if($tanggal === '') $tanggal=NULL;
+	if(!$tanggal){
+		$t=getdate();
+		$tanggal = $t['year']."-".$t['mon']."-".$t['mday']." ".$t['hours'].":".$t['minutes'].":".$t['seconds'];
+	}
 	$sql = "INSERT INTO `posting` (`ID`, `Judul`, `Tanggal`, `Isi`, `Author`, `tag0`, `tag1`, `tag2`, `tag3`, `tag4`, `tag5`, `tag6`, `tag7`, `tag8`) VALUES (NULL,'".$judul."','".$tanggal."','".$isi."','".$auth."','".$tag0."','".$tag1."','".$tag2."','".$tag3."','".$tag4."','".$tag5."','".$tag6."','".$tag7."','".$tag8."');";
 	if ($conn->query($sql) === TRUE) {
 		echo "
