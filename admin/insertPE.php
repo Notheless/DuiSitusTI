@@ -29,7 +29,7 @@
 		echo "
 		<script>
 			alert('Terjadi Kelasahan');
-			window.location.href='editP.php?ID='.$id;
+			window.location.href='insertP.php';
 		</script>";
 		//echo $sql;
 	}

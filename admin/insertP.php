@@ -52,7 +52,7 @@
 							echo "
 							<td>
 								<select class=\"tagg\" name=\"tag".$i."\">";
-								echo "<option value=\"NULL\">----</option>";
+								echo "<option value=\"\">----</option>";
 							while($row = $result->fetch_assoc()){
 								echo "<option value=".$row["ID"].">".$row["Text"]."</option>";
 							}
