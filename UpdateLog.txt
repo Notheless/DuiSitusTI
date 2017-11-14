@@ -1,1 +1,0 @@
-14/11/2017  08:58  Halaman admin/postingan.php dibuat, penambahan javascript halaman admin/postingan.php (fungsi tombol), beberapa tambahan css pada halaman admin/postingan.php (efek tombol, desain)
