@@ -44,7 +44,21 @@
         echo"</div";
 		}
 		}
-		?>
+        ?>
+        <div class="grid-dosen-data">
+            <div class="menu-bar-aspek">
+                <div class="button-menu" onclick="showPengajaranDosen()"><p>Pengajaran</p></div>
+                <div class="button-menu" onclick="showPenelitianDosen()"><p>Penelitian</p></div>
+                <div class="button-menu" onclick="showPengabdianDosen()"><p>Pengabdian</p></div>
+                <div class="button-menu" onclick="showPenunjangDosen()"><p>Penunjang</p></div>
+            </div>
+            <div class="menu-bar-konten">
+                <div id="pengajaran-d" class="konten-data"><p>a</p></div>
+                <div id="penelitian-d" class="konten-data"><p>x</p></div>
+                <div id="pengabdian-d" class="konten-data"><p>c</p></div>
+                <div id="penunjang-d" class="konten-data"><p>s</p></div>
+            </div>
+        </div>
     </div>
 	
 </body>
