@@ -1,0 +1,265 @@
+﻿@media screen and (min-width: 1600px) {
+    .left-sidebar-container {
+        width: 375px;
+    }
+    .left-sidebar-style {
+        margin: 20px;
+        color: white;
+    }
+    .left-sidebar-border {
+        margin: 20px;
+        color: white;
+    }
+    h2.left-sidebar {
+        font-size: 28px;
+    }
+    .search-input {
+        width: 260px;
+    }
+    .tags-container {
+        width: 300px;
+        padding: 15px 10px;
+    }
+    .left-nav-header {
+        font-size: 40px;
+    }
+    .tags-container a {
+        margin: 3px;
+        padding: 0.5px 8px 3.5px 8px;
+    }
+    .subscribe-container {
+        width: 320px;
+        height: 200px;
+    }
+    .subscribe-container .subscribe-header p {
+        margin-left: 75px;
+        font-weight: 900;
+    }
+    .subscribe-input {
+        width: 265px;
+    }
+    .subscribe-icon {
+        height: 40px;
+        width: 60px;
+    }
+    .left-sidebar-container p {
+        font-size: 16px;
+    }
+    .left-sidebar-container a {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1599px) and (min-width: 700px) {
+    .left-sidebar-container {
+        width: 275px;
+    }
+    .left-sidebar-style {
+        margin: 15px;
+        color: white;
+    }
+    .left-sidebar-border {
+        margin: 15px;
+        color: white;
+    }
+    h2.left-sidebar {
+        font-size: 24px;
+    }
+    .search-input {
+        width: 170px;
+    }
+    .tags-container {
+        width: 210px;
+        padding: 10px 8px;
+    }
+    .left-nav-header {
+        font-size: 34px;
+    }
+    .tags-container a {
+        margin: 4px;
+        padding: 0.5px 6px 3.5px 6px;
+    }
+    .subscribe-container {
+        width: 230px;
+        height: 200px;
+    }
+    .subscribe-container .subscribe-header p {
+        margin-left: 54px;
+        font-weight: 700;
+    }
+    .subscribe-input {
+        width: 175px;
+    }
+    .subscribe-icon {
+        margin-top: 5px;
+        height: 26px;
+        width: 42px;
+    }
+    .left-sidebar-container p {
+        font-size: 13px;
+    }
+    .left-sidebar-container a {
+        font-size: 13px;
+    }
+}
+.left-sidebar-container {
+    float: left;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease-in-out;
+}
+h2.left-sidebar {
+    margin-top: 30px;
+    font-family: 'Futura md BT';
+}
+a.left-sidebar {
+    color: white;
+    margin-top: 30px;
+    font-family: 'Futura bk BT';
+    text-decoration: none;
+}
+.search-input {
+    display: inline-block;
+    font-family: 'Futura bk BT';
+    position: relative;
+    padding: 10px;
+    box-shadow: rgba(0,0,0,0.4) 2px 0 5px 2px inset;
+    background-color: #fff;
+    border: 0.5px solid #888;
+    transition: 0.3s;
+}
+.search-input:focus {
+    box-shadow: rgba(0,0,0,0.6) 2px 0 9px 2px inset;
+}
+.search-input::placeholder {
+    font-style: italic;
+}
+.search-submit {
+    height: 38.5px;
+    width: 38.5px;
+    color: #fff;
+    font-size: 13px;
+    position: absolute;
+    background-color: #fdce2a;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.3) -2px 0 2px 2px inset;
+    border: 0;
+    transition: 0.2s;
+}
+.search-submit:hover {
+    box-shadow: rgba(0,0,0,0.5) -2px 0 4px 2px inset;
+}
+.left-nav-header {
+    color: white;
+    font-family: 'Futura Md BT';
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-bottom: -10px;
+}
+.tags-container {
+    background: linear-gradient(to right bottom, white, #bbb);
+    overflow: hidden;
+    height: 170px;
+    transition: 0.3s;
+}
+.tags-container:hover {
+    height: 300px;
+}
+.tags-container-hover {
+    background-color: black;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tags-container a {
+    display: inline-block;
+    font-family: 'Futura bk BT';
+    background-color: #cab363;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: box-shadow 0.4s, text-shadow 0.4s;
+}
+.tags-container a::after {
+    padding-left: 2px;
+    content: ' \25cf';
+}
+.tags-container a.active {
+    background-color: #fdce2a;
+}
+.tags-container a:hover:not(.active) {
+    box-shadow: rgba(0, 0, 0, 0.30) 3px 3px 3px 2px inset;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.30);
+}
+.subscribe-container {
+    margin-top: 20px;
+    background-color: #fff;
+}
+.subscribe-container .subscribe-header {
+    width: 93%;
+    height: 55px;
+    position: relative;
+    padding: 5% 2% 2% 5%;
+    padding-top: 5%;
+    color: #fff;
+    background-color: #f4ae00;
+}
+.subscribe-container .subscribe-header p {
+    display: inline-block;
+    font-family: 'Futura md BT';
+    font-style: italic;
+}
+.subscribe-header span {
+    font-family: 'Futura bk BT';
+    font-weight: normal;
+}
+.subscribe-icon {
+    display: inline;
+    position: absolute;
+}
+.subscribe-input {
+    font-family: 'Futura bk BT';
+    padding: 10px;
+    margin: 15px;
+    box-shadow: rgba(0,0,0,0.4) 0 0 5px 2px inset;
+    border: 0.5px solid #888;
+    transition: 0.3s;
+}
+.subscribe-input:focus {
+    box-shadow: rgba(0,0,0,0.6) 0 0 7px 2px inset;
+    border: 0.5px solid #555;
+}
+.subscribe-input::placeholder {
+    font-style: italic;
+}
+.subscribe-submit {
+    font-family: 'Futura md BT';
+    font-weight: 600;
+    float: right;
+    padding: 10px 15px;
+    margin-right: 18px;
+    color: #fff;
+    background-color: #e2a200;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.3) 0 0 2px 2px;
+    border: 0;
+}
+.subscribe-submit:hover {
+    box-shadow: rgba(0,0,0,0.5) 0 0 4px 3px;
+}
+.subscribe-submit:active {
+    opacity: 0.7;
+}
+.end-of-left-nav {
+    padding: 40px;
+}
+@media screen and (max-width: 1700px) and (min-width: 700px) {
+    .left-sidebar-container {
+        padding-top: 10px;
+    }
+}

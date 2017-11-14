@@ -1,0 +1,74 @@
+.admin-top-box-wrapper {
+    position: absolute;
+    width: 100%;
+    top : 0;
+    height: auto;
+    background-color: #555;
+    z-index: 9;
+}
+.admin-top-box-bar {
+    position : relative;
+    width : 600px;
+    margin: auto;
+    height: auto;
+    list-style-type: none;
+    padding: 0;
+    color: white;
+}
+.admin-top-box-bar li {
+    float: left;
+    width: 200px;
+    transition: 0.2s;
+}
+.admin-top-box-bar li a {
+    width: 100%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 7px 0;
+    font-family: 'Futura Md BT';
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+.admin-top-box-bar li:hover {
+    background-color: #aaa;
+}
+.admin-left-box-bar {
+    position: fixed;
+    height: 450px;
+    width: 20%;
+    max-width: 250px;
+    left: 0;
+    margin-top : 200px;
+    padding: 0;
+    background-color: #4abdac;
+    z-index: 7;
+}
+.inside {
+    margin: 20px;
+    font-family: 'Futura bk BT';
+    font-size: 18px;
+}
+.inside a {
+    display: block;
+    padding: 2px 0;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+}
+.inside div {
+    height: 1px;
+    margin: 20px 0;
+    border-bottom: 1px solid white;
+}
+.inside a:before {
+    content: '\25b6 ';
+    color: rgba(255,255,255,0);
+    transition: all 0.3s;
+    margin-right: -15px;
+}
+.inside a:hover:before {
+    opacity: 100%;
+    color: rgba(255,255,255,1);
+    margin-right: 5px;
+}
