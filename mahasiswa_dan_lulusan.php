@@ -16,7 +16,7 @@
 			<?php include 'recent.html' ?>
         <!-- konten -->
 		<div class="grid-headline-header">
-            <h1 class="headline-header"> MAHASISWA <span class="header-revcolor">DAN LULUSAN </span></h1>
+            <h1 class="headline-header"> MAHASISWA <span class="header-revcolor"> DAN LULUSAN</span></h1>
         </div>
         <div class="grid-headline-para">
             <p class="headline-para">
@@ -45,13 +45,6 @@
                 <h1>Data Mahasiswa</h1>
                 <img src="img/Grafik1.jpg" height="auto" width="auto">
                 <img src="img/Grafik2.jpg" height="auto" width="auto">
-                <h1>Lulusan</h1>
-                <p>
-                    <ol>
-                        <li><a href>Daftar Lulusan</a></li>
-                        <li><a href>Formulir pelacakan alumni (Tracer Study) secara ONLINE dari FMIPA Universitas Padjadjaran</a></li>
-                    </ol>
-                </p>
                 <!-- content end -->
             </div>
         </div>
