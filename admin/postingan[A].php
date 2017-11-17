@@ -5,6 +5,11 @@
     <meta charset="utf-8" />
     <title>Fasilitas dan Sistem Informasi</title>
     <?php include 'admin-header.html';?>
+	<script>
+		function showUser(str) {
+
+}
+</script>
 </head>
 <body>
     <?php include 'admin-navbar.html';?>
@@ -25,11 +30,16 @@
 					$i=1;
 					while($row = $result->fetch_assoc()) 
 					{
-						echo"<tr>";
-						echo"	<td>".$row["Judul"]."</td>";
-						echo"	<td>".$row["Tanggal"]."</td>";
-						echo"	<td><button id=\"update-button\" type=\"button\" onclick=\"showUpdateDiv()\">edit</button><button id=\"delete-button\" type=\"button\" onclick=\"showDeleteDiv()\">hapus</button></td>";
-						echo"</tr>";
+				?>
+						<tr>
+						<td> <?php echo	$row["Judul"] ?></td>
+						<td> <?php echo	$row["Tanggal"] ?></td>
+						<td>
+							<button id="update-button" type="button" onclick="showUpdateDiv(<?php echo	$row["ID"] ?>)">edit</button>
+							<button id="delete-button" type="button" onclick="showDeleteDiv()">hapus</button></td>
+						</tr>
+						
+				<?php
 					}
 				?>
             </table>
@@ -67,28 +77,8 @@
         <!-- update -->
         <div id="divUpdate" class="background-content">
             <div class="background" onclick="hideUpdateDiv()"></div>
-            <div class="admin-content"> 
-                <h2 class="content-title">Update Artikel</h2>
-                <form action="test.php" method="get">
-                    <table>
-                        <tr>
-                            <td><p>Judul Artikel : </p></td>
-                            <td width="70%"><input class="data-input" type="text" name="judul_artikel" placeholder="judul artikel"></td>
-                        </tr>
-                        <tr>
-                            <td><p>Tanggal : </p></td>
-                            <td><input class="data-input" type="datetime-local" name="tanggal_artikel" placeholder="11/7/2017" ></td>
-                        </tr>
-                        <tr>
-                            <td><p>Isi Artikel: </p></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><textarea rows="3" name="isi_artikel" placeholder="isi artikel"></textarea></td>
-                        </tr>
-                            <td><button type="button" onclick="hideInsertDiv()">kembali</button></td>
-                            <td style="text-align: right"><input class="button" type="submit" value="Masukkan"></td>
-                    </table>
-                </form>
+            <div class="admin-content" id="update"> 
+                
             </div>
         </div>
 
@@ -118,7 +108,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/show-div.js"></script>
+    <script type="text/javascript" src="js/show-div [A].js"></script>
     <script type="text/javascript" src="js/textarea.js"></script>
 </body>
 </html>

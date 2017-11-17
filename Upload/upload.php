@@ -1,44 +1,52 @@
 <?php
-$valid_formats = array("jpg", "png", "gif", "bmp", "jpeg");
+$ResTarget = 2000;
 if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
     $name = $_FILES['gambar']['name'];
     $size = $_FILES['gambar']['size'];
     if (strlen($name)) {
-        list($txt, $ext) = explode(".", $name);
-        if (in_array($ext, $valid_formats)) {
-            if ($size < (1024 * 1024)) { // Image size max 1 MB
-                $actual_image_name = "hasil/".time().".jpg";
-                $tmp = $_FILES['gambar']['tmp_name'];
+        if ($size < (1024 *1024 * 1024)) { // Image size max 1 MB
+			//upload and convert
+            $actual_image_name = "hasil/".time().".jpg";
+            $tmp = $_FILES['gambar']['tmp_name'];
+            move_uploaded_file($tmp,$actual_image_name);
 				
-				$exploded = explode('.',$tmp);
-				if (preg_match('/jpg|jpeg/i',$ext))
-					$imageTmp=imagecreatefromjpeg($tmp);
-    			else if (preg_match('/png/i',$ext))
-    			    $imageTmp=imagecreatefrompng($tmp);
-    			else if (preg_match('/gif/i',$ext))
-    			    $imageTmp=imagecreatefromgif($tmp);
-    			else if (preg_match('/bmp/i',$ext))
-					$imageTmp=imagecreatefrombmp($originalImage);
-				imagejpeg($imageTmp, $tmp, "100");
-				imagedestroy($imageTmp);
+			$check =  exif_imagetype ( $actual_image_name );
+			$tmp = $actual_image_name;
+			$exploded = explode('.',$tmp);
+			if ($check == 2 )
+				$imageTmp=imagecreatefromjpeg($tmp);
+    		else if ($check == 3 )
+    		    $imageTmp=imagecreatefrompng($tmp);
+    		else if ($check == 1 )
+    		    $imageTmp=imagecreatefromgif($tmp);
+    		else if ($check == 6 )
+				$imageTmp=imagecreatefrombmp($originalImage);
+			imagejpeg($imageTmp, $tmp, 100);	
+			$ext = $exploded[count($exploded) - 1]; 
 				
-				$ext = $exploded[count($exploded) - 1]; 
-                if (move_uploaded_file($tmp,$actual_image_name)) {
-                    echo "<img src='uploads/" . $actual_image_name . "'>";
-                } else {
-                    echo "failed";
-                }
-            } else {
-                echo "Image file size max 1 MB";
-            }
-        } else {
-            echo "Invalid file format..";
+			//resize
+			$filename = $tmp;
+			$percent = 1;
+			list($width, $height) = getimagesize($filename);
+			if($width>$ResTarget||$height>$ResTarget){
+				if($width>$height) $percent = $ResTarget / $width;
+				else $percent = $ResTarget / $width;
+					
+				$new_width = $width * $percent;
+				$new_height = $height * $percent;
+			
+				$image_p = imagecreatetruecolor($new_width, $new_height);
+				$image = imagecreatefromjpeg($filename);
+				imagecopyresampled($image_p, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+				imagejpeg($image_p, $tmp, 100);	
+			}
+			
+			//actual upload process
+            move_uploaded_file($tmp,$actual_image_name);
         }
-    } else {
-        echo "Please select image..!";
-    }
-    exit;
+	}
+	//header("Location: index.html"); /* Redirect browser */
+	exit;
 }
 
-?>
 ?>
