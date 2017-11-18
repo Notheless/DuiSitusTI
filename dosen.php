@@ -49,18 +49,22 @@
 		<?php }} 
 			$sql = "SELECT * FROM detaildosen";
 			$result = $conn->query($sql);
-			$pengajaran='';
-			$penelitian='';
-			$pengabdian='';
-			$penunjang='';
+			$pengajaran="<ol>";
+			$penelitian="<ol>";
+			$pengabdian="<ol>";
+			$penunjang="<ol>";
 			while($row = $result->fetch_assoc()) {
 				if($row["IDDosen"]==$id){
-					if($row["IDCatagory"]==3) $pengajaran .= "<tr><td>".$row["Isi"]."</tr></td>";
-					if($row["IDCatagory"]==1) $penelitian .= "<tr><td>".$row["Isi"]."</tr></td>";
-					if($row["IDCatagory"]==2) $pengabdian .= "<tr><td>".$row["Isi"]."</tr></td>";
-					if($row["IDCatagory"]==4) $penunjang .= "<tr><td>".$row["Isi"]."</tr></td>";
+					if($row["IDCatagory"]==3) $pengajaran .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==1) $penelitian .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==2) $pengabdian .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==4) $penunjang .= "<li>".$row["Isi"]."</li>";
 				}
 			}
+			$pengajaran.="</ol>";
+			$penelitian.="</ol>";
+			$pengabdian.="</ol>";
+			$penunjang.="</ol>";
 			?>
         <div class="grid-dosen-data">
             <div class="menu-bar-aspek">
@@ -71,38 +75,25 @@
             </div>
             <div class="menu-bar-konten">
                 <div id="pengajaran-d" class="konten-data">
-					<p>
-					<table style="width:100%;">
 					<?php
 						echo $pengajaran;
 					?>
-					</table>
-					</p>
 				</div>
                 <div id="penelitian-d" class="konten-data">
-					<p>
 					<?php
 						echo $penelitian;
 					?>
-					</p>
 				</div>
                 <div id="pengabdian-d" class="konten-data">
-					<p>
 					<?php
 						echo $pengabdian;
 					?>
-					</p>
 				</div>
                 <div id="penunjang-d" class="konten-data">
-					<p>
 					<?php
 						echo $penunjang;
 					?>
-					</p>
 				</div>
-				<?php
-				
-				?>
             </div>
         </div>
     </div>
