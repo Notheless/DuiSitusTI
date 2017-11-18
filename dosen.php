@@ -16,6 +16,7 @@
             <h1 class="headline-header">TENAGA <span class="header-revcolor">PENDIDIK</span></h1>
         </div>
 		<?php
+		error_reporting(0);
 		include 'database.php';
 		$sql = "SELECT * FROM dosen";
 		$result = $conn->query($sql);
@@ -34,7 +35,7 @@
 		</div>
         <div class="grid-dosen-pic">
         <div class="photo-border">
-			<img src="img/<?php echo $row["ID"];?>.jpg"></div>
+			<img src="img/<?php echo $row["ID"];?>.jpg" style="height:300px;"></div>
 		</div>
         <div class="grid-dosen-stats">
 			<div class="dosen-stats">
@@ -102,8 +103,34 @@
 				</tr>
 			</table>
         </div>
+<<<<<<< HEAD
 		<?php } ?>
 	</div>
     <script type="text/javascript" src="js/menu_aspek_dosen.js"></script>
+=======
+		<?php 
+		}
+			else{
+		?>
+        <div class="grid-dosen-stats">
+			<table>
+				<tr><th>Daftar Dosen</th></tr>
+		<?php 
+				$i = 1;
+				while($row = $result->fetch_assoc()) {
+		?>
+				<tr><td><a href="?ID=<?php echo $row["ID"]?>"> <?php echo $row["Nama"]?> </a></td></tr>			
+		<?php	
+					$i+=1;
+				}
+		?>
+			</table>
+		</div>
+		<?php
+			}
+		?>
+    </div>
+	
+>>>>>>> 8b7e9d4121104ff12e271bdd93fd8105ddee47b3
 </body>
 </html>
