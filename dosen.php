@@ -61,7 +61,7 @@
 					if($row["IDCatagory"]==1) $penelitian .= "<li>".$row["Isi"]."</li>";
 					if($row["IDCatagory"]==2) $pengabdian .= "<li>".$row["Isi"]."</li>";
 					if($row["IDCatagory"]==4) $penunjang .= "<li>".$row["Isi"]."</li>";
-				}
+				} 
 			}
 			$pengajaran.="</ol>";
 			$penelitian.="</ol>";
