@@ -19,6 +19,8 @@
 		include 'database.php';
 		$sql = "SELECT * FROM dosen";
 		$result = $conn->query($sql);
+		$id = 0;
+		if($_GET["ID"]){
 		$id = $_GET["ID"];
 		while($row = $result->fetch_assoc()) {
 		if($row["ID"]==$id){
@@ -96,6 +98,7 @@
 				</div>
             </div>
         </div>
+		<?php } ?>
     </div>
 	
 </body>
