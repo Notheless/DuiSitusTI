@@ -36,7 +36,7 @@
 						<td> <?php echo	$row["Tanggal"] ?></td>
 						<td>
 							<button id="update-button" type="button" onclick="showUpdateDiv(<?php echo	$row["ID"] ?>)">edit</button>
-							<button id="delete-button" type="button" onclick="showDeleteDiv()">hapus</button></td>
+							<button id="delete-button" type="button" onclick="showDeleteDiv(<?php echo	$row["ID"] ?>)">hapus</button></td>
 						</tr>
 						
 				<?php
@@ -85,30 +85,12 @@
         <!-- delete -->
         <div id="divDelete" class="background-content">
             <div class="background" onclick="hideDeleteDiv()"></div>
-            <div id="divDelete" class="admin-content"> 
-                <h2 class="content-title">Hapus Artikel</h2>
-                <form action="" method="get">
-                    <table style="text-align:center">
-                        <tr>
-                            <td colspan="2"><p>Artikel dengan judul : </p></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><p>- ... -</p></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><p>Akan dihapus dan tidak bisa dikembalikan, apakah anda yakin? </p></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><input type="checkbox" style="display:inline-block; margin-top: 20px;"><p style="display:inline">Saya yakin dengan apa yang saya lakukan</p></td>
-                        </tr>
-                            <td><button type="button" onclick="hideInsertDiv()">kembali</button></td>
-                            <td style="text-align: right"><input class="button" type="submit" value="Hapus"></td>
-                    </table>
-                </form>
+            <div id="delete" class="admin-content"> 
+                
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/show-div [A].js"></script>
+    <script type="text/javascript" src="js/show-div[A].js"></script>
     <script type="text/javascript" src="js/textarea.js"></script>
 </body>
 </html>

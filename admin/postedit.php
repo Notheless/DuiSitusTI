@@ -7,7 +7,11 @@
 	$isi ='';
 	$i=1;
 	if($_GET["ID"]) 
-	{
+	{		
+echo "
+		<script>
+			alert('Data berhasil dihapus');
+		</script>";
 		$id=$_GET["ID"];
 		if ($result->num_rows > 0) 
 		{
