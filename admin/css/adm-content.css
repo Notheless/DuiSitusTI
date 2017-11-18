@@ -31,7 +31,7 @@
     background-color: #aaa;
     border-radius: 20px;
     z-index: 6;
-    animation: show-div-effect 1s;
+    animation: show-div-effect 0.6s;
 }
 .admin-content .content-title {
     margin-bottom: 40px;
