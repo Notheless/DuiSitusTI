@@ -103,13 +103,9 @@
 				</tr>
 			</table>
         </div>
-<<<<<<< HEAD
 		<?php } ?>
 	</div>
-    <script type="text/javascript" src="js/menu_aspek_dosen.js"></script>
-=======
-		<?php 
-		}
+		<?php
 			else{
 		?>
         <div class="grid-dosen-stats">
@@ -130,7 +126,6 @@
 			}
 		?>
     </div>
-	
->>>>>>> 8b7e9d4121104ff12e271bdd93fd8105ddee47b3
+    <script type="text/javascript" src="js/menu_aspek_dosen.js"></script>
 </body>
 </html>
