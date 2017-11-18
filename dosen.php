@@ -70,35 +70,44 @@
 			$penunjang.="</ol>";
 			?>
         <div class="grid-dosen-data">
-            <div class="menu-bar-aspek">
-                <div class="button-menu" onclick="showPengajaranDosen()"><p>Pengajaran</p></div>
-                <div class="button-menu" onclick="showPenelitianDosen()"><p>Penelitian</p></div>
-                <div class="button-menu" onclick="showPengabdianDosen()"><p>Pengabdian</p></div>
-                <div class="button-menu" onclick="showPenunjangDosen()"><p>Penunjang</p></div>
-            </div>
-            <div class="menu-bar-konten">
-                <div id="pengajaran-d" class="konten-data">
-					<?php
-						echo $pengajaran;
-					?>
-				</div>
-                <div id="penelitian-d" class="konten-data">
-					<?php
-						echo $penelitian;
-					?>
-				</div>
-                <div id="pengabdian-d" class="konten-data">
-					<?php
-						echo $pengabdian;
-					?>
-				</div>
-                <div id="penunjang-d" class="konten-data">
-					<?php
-						echo $penunjang;
-					?>
-				</div>
-            </div>
+			<table>
+				<tr>
+					<td class="data-column-button"><button onclick="showPengajaranDosen()">Pengajaran</button></td>
+					<td class="data-column-button"><button onclick="showPenelitianDosen()">Penelitian</button></td>
+					<td class="data-column-button"><button onclick="showPenunjangDosen()">Penunjang</button></td>
+					<td class="data-column-button"><button onclick="showPengabdianDosen()">Pengabdian</button></td>					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="data-column-fill">
+						<div id="pengajaran-d" class="konten-data">
+							<?php
+								echo $pengajaran;
+								?>
+						</div>
+						<div id="penelitian-d" class="konten-data">
+							<?php
+								echo $penelitian;
+								?>
+						</div>
+						<div id="pengabdian-d" class="konten-data">
+							<?php
+								echo $pengabdian;
+								?>
+						</div>
+						<div id="penunjang-d" class="konten-data">
+							<?php
+								echo $penunjang;
+								?>
+						</div>
+					</td>
+				</tr>
+			</table>
         </div>
+<<<<<<< HEAD
+		<?php } ?>
+	</div>
+    <script type="text/javascript" src="js/menu_aspek_dosen.js"></script>
+=======
 		<?php 
 		}
 			else{
@@ -122,5 +131,6 @@
 		?>
     </div>
 	
+>>>>>>> 8b7e9d4121104ff12e271bdd93fd8105ddee47b3
 </body>
 </html>

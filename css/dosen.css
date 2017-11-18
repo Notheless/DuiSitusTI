@@ -25,6 +25,41 @@
     font-size: 18px;
     font-family: 'Futura bk BT';
 }
-.menu-bar-aspek {
-    
+.grid-dosen-data table {
+    width: 100%;
+    font-family: 'Futura bk BT';
+    border-collapse: collapse;
+}
+.data-column-button {
+    border: 1px solid black;
+    width: 25%;
+}
+.data-column-button button {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #bbb;
+    cursor: pointer;
+}
+.data-column-fill {
+    width: calc(100% - 80px);
+    padding: 20px 40px;
+    border: 2px solid #555;
+    background-color: #bbb;
+}
+.konten-data {
+    display: block;
+}
+#pengajaran-d {
+    display: show;
+}
+#penelitian-d {
+    display: none;
+}
+#pengabdian-d {
+    display: none;
+}
+#penunjang-d {
+    display: none;
 }
