@@ -32,7 +32,7 @@
 		</div>
         <div class="grid-dosen-pic">
         <div class="photo-border">
-			<img src="img/sam.png"></div>
+			<img src="img/<?php echo $row["ID"];?>.jpg"></div>
 		</div>
         <div class="grid-dosen-stats">
 			<div class="dosen-stats">
