@@ -7,7 +7,62 @@
 	<?php include 'header.html';?>
 </head>
 <body>
-    <?php include 'Navbar.html';?>
+	<?php
+		include 'database.php';
+		$id=0;
+		$sql = "SELECT * FROM posting";
+		$result = $conn->query($sql);
+		$judul ='';
+		$tanggal ='';
+		$isi ='';
+		$auth ='';
+		$tag0 ='';
+		$tag1 ='';
+		$tag2 ='';
+		$tag3 ='';
+		$tag4 ='';
+		$tag5 ='';
+		$tag6 ='';
+		$tag7 ='';
+		$tag8 ='';
+		
+		if($_GET["ID"]) 
+		{
+			$id=$_GET["ID"];
+		}			
+		if ((!$id==0)&&($result->num_rows > 0)) 
+		{
+			while($row = $result->fetch_assoc()) 
+			{
+				if($row["ID"]==$id)
+				{
+					$judul =$row["Judul"];
+					$tanggal =$row["Tanggal"];
+					$isi =$row["Isi"];
+					$auth =$row["Author"];
+					$tag0 =$row["tag0"];
+					$tag1 =$row["tag1"];
+					$tag2 =$row["tag2"];
+					$tag3 =$row["tag3"];
+					$tag4 =$row["tag4"];
+					$tag5 =$row["tag5"];
+					$tag6 =$row["tag6"];
+					$tag7 =$row["tag7"];
+					$tag8 =$row["tag8"];
+				}
+			}
+			if($judul==='')notfound();
+		}
+		else
+		{	
+			notfound();
+		}
+		function notfound() {
+			//header("Location: ViewP.php"); /* Redirect browser */
+			exit();
+		}
+	?>
+		<?php include 'Navbar.html';?>
     <div class="grid-container">
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
@@ -21,64 +76,27 @@
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
-                <?php
-				include 'database.php';
-				$id=0;
-				$sql = "SELECT * FROM posting";
-				$result = $conn->query($sql);
-				$judul ='';
-				$tanggal ='';
-				$isi ='';
-				$auth ='';
-				$tag0 ='';
-				$tag1 ='';
-				$tag2 ='';
-				$tag3 ='';
-				$tag4 ='';
-				$tag5 ='';
-				$tag6 ='';
-				$tag7 ='';
-				$tag8 ='';
-				
-				if($_GET["ID"]) 
-				{
-					$id=$_GET["ID"];
-				}			
-				if ((!$id==0)&&($result->num_rows > 0)) 
-				{
-					while($row = $result->fetch_assoc()) 
+                <?php 
+					echo $isi;
+					
+					//gambar
+					$sqlx = "SELECT * FROM gambar";
+					$resultx = $conn->query($sqlx);			
+					if ((!$id==0)&&($resultx->num_rows > 0)) 
 					{
-						if($row["ID"]==$id)
+						while($rowx = $resultx->fetch_assoc()) 
 						{
-							$judul =$row["Judul"];
-							$tanggal =$row["Tanggal"];
-							$isi =$row["Isi"];
-							$auth =$row["Author"];
-							$tag0 =$row["tag0"];
-							$tag1 =$row["tag1"];
-							$tag2 =$row["tag2"];
-							$tag3 =$row["tag3"];
-							$tag4 =$row["tag4"];
-							$tag5 =$row["tag5"];
-							$tag6 =$row["tag6"];
-							$tag7 =$row["tag7"];
-							$tag8 =$row["tag8"];
+							if($rowx["TagPost"]==$id){
+								?>
+								
+								<a href="imgpost\<?php echo $rowx["ID"]; ?>.jpg"><img src="imgpost\<?php echo $rowx["ID"]; ?>.jpg"></a>
+								
+								<?php
+							}
 						}
 					}
-					if($judul==='')notfound();
-					else{
-						echo $isi;
-					}
-				}
-				else
-				{	
-					notfound();
-				}
-				function notfound() {
-					//header("Location: ViewP.php"); /* Redirect browser */
-					exit();
-				}
 				?>
+					
                 <!-- content end -->
             </div>
         </div>

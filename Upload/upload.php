@@ -1,13 +1,22 @@
 <?php
+include '../database.php';
+$sql = "SELECT MAX(ID) AS last FROM gambar";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$id = $row["last"];
+$id +=1;
+
 $ResTarget = 2000;
+$count = 0;
 if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
-    $name = $_FILES['gambar']['name'];
-    $size = $_FILES['gambar']['size'];
+	foreach ($_FILES['gambar']['name'] as $name){
+    $size = $_FILES['gambar']['size'][$count];
     if (strlen($name)) {
         if ($size < (1024 *1024 * 1024)) { // Image size max 1 MB
 			//upload and convert
-            $actual_image_name = "hasil/".time().".jpg";
-            $tmp = $_FILES['gambar']['tmp_name'];
+			$id += $count;
+            $actual_image_name = "hasil/".$id.".jpg";
+            $tmp = $_FILES['gambar']['tmp_name'][$count];
             move_uploaded_file($tmp,$actual_image_name);
 				
 			$check =  exif_imagetype ( $actual_image_name );
@@ -43,7 +52,11 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
 			
 			//actual upload process
             move_uploaded_file($tmp,$actual_image_name);
+			$sql = "INSERT INTO `gambar` (`ID`, `TagPost`, `Utama`) VALUES ('".$id."',2,0);";
+			$conn->query($sql);
+			$count+=1;
         }
+	}
 	}
 	//header("Location: index.html"); /* Redirect browser */
 	exit;
