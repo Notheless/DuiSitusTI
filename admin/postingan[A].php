@@ -5,11 +5,6 @@
     <meta charset="utf-8" />
     <title>Fasilitas dan Sistem Informasi</title>
     <?php include 'admin-header.html';?>
-	<script>
-		function showUser(str) {
-
-}
-</script>
 </head>
 <body>
     <?php include 'admin-navbar.html';?>

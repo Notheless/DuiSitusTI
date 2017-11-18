@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2017 at 06:31 AM
+-- Generation Time: Nov 18, 2017 at 10:35 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -250,10 +250,21 @@ INSERT INTO `dosen` (`ID`, `Nama`, `Email`, `HP`, `Telp`, `Alamat`, `Pendidikan`
 
 CREATE TABLE `gambar` (
   `ID` int(11) NOT NULL,
-  `Nama` text NOT NULL,
   `TagPost` int(11) NOT NULL,
   `Utama` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gambar`
+--
+
+INSERT INTO `gambar` (`ID`, `TagPost`, `Utama`) VALUES
+(1, 2, 0),
+(2, 8, 0),
+(3, 9, 0),
+(4, 9, 0),
+(6, 9, 0),
+(9, 9, 0);
 
 -- --------------------------------------------------------
 
@@ -379,7 +390,9 @@ INSERT INTO `posting` (`ID`, `Judul`, `Tanggal`, `Isi`, `Author`, `tag0`, `tag1`
 (4, 'B', '2017-11-13 09:29:20', 'B', 'EX', 13, 0, 0, 0, 15, 0, 15, 0, 0),
 (5, 'C', '2017-11-13 09:30:52', '<div class=\"entry-content\">\r\n						<p>Pada tanggal 1-4 Nov 2017, Dosen Teknik Informatika, Universitas Padjadjaran ikut berpartisipasi aktif pada kegiatan Rapat Koordinasi Nasional (RAKORNAS) Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM) 2017. Kegiatan Rakornas yang bekerjasama dengan Universitas YAPIS Papua ini mengusung tema â€œPeningkatan Kompetensi SDM TIK dan Daya Saing Daerah di Era Globalâ€. Pada kesempatan yang sama juga diselenggarakan beberapa kegiatan:</p>\r\n<li>Seminar Nasional Aptikom (Semnastikom) â€“ Call For Paper dengan tema : â€œPengembangan SDM TIK Untuk Percepatan Pembangunan Daerah â€.</li>\r\n<li>The 2nd International Conference on Informatics and Computing (ICIC 2017) dengan tema : â€œImproving Competencies of ICT Human Resources and Regional Competitiveness in Global Eraâ€.</li>\r\n<li>Higher Education Sharing of Best Practice</li>\r\n<li>Industrial Sharing of Technology</li>\r\n<li>Higher Education Clinics</li>\r\n<li>Country Side Tour</li>\r\n<p></p>\r\n<p>Adapun kegiatan ICIC 2017 ini menyajikan sekitar 97 artikel, diantaranya adalah </p>\r\n<li>â€œA Novel Scheme for Handwritten Binarization Method on Sundanese Palm Leaf Document Imagesâ€ oleh Erick Paulus, Mira Suryani, Setiawan Hadi and Intan Nurma Yulita</li>\r\n<li>â€œQuality enhancement of degraded Sundanese lontar images using direct subtraction and retrospective correction methods in several color spacesâ€ oleh Setiawan Hadi, Undang Ahmad Darsa, Erick Paulus and Mira Suryani</li>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-07-at-15.39.46.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-07-at-15.39.46-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3099\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-1.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-1-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3100\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3101\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-01-at-17.36.52.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-01-at-17.36.52-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3102\"></a></p>\r\n<p></p>\r\n											</div>', 'EX', 13, 0, 0, 0, 15, 0, 15, 0, 0),
 (6, 'A', '2017-11-13 23:05:37', 'A', 'EX', 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(7, 'L', '2017-11-13 23:27:56', 'L', 'EX', 1, 0, 0, 0, 0, 0, 0, 0, 0);
+(7, 'L', '2017-11-13 23:27:56', 'L', 'EX', 1, 0, 0, 0, 0, 0, 0, 0, 0),
+(8, 'Rakornas APTIKOM dan ICIC 2017', '2017-11-18 03:26:50', 'MMMNNNBBB', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(9, 'Rakornas APTIKOM dan ICIC 2017', '2017-11-18 03:29:05', '<p>Pada tanggal 1-4 Nov 2017, Dosen Teknik Informatika, Universitas Padjadjaran ikut berpartisipasi aktif pada kegiatan Rapat Koordinasi Nasional (RAKORNAS) Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM) 2017. Kegiatan Rakornas yang bekerjasama dengan Universitas YAPIS Papua ini mengusung tema â€œPeningkatan Kompetensi SDM TIK dan Daya Saing Daerah di Era Globalâ€. Pada kesempatan yang sama juga diselenggarakan beberapa kegiatan:</p>\r\n<li>Seminar Nasional Aptikom (Semnastikom) â€“ Call For Paper dengan tema : â€œPengembangan SDM TIK Untuk Percepatan Pembangunan Daerah â€.</li>\r\n<li>The 2nd International Conference on Informatics and Computing (ICIC 2017) dengan tema : â€œImproving Competencies of ICT Human Resources and Regional Competitiveness in Global Eraâ€.</li>\r\n<li>Higher Education Sharing of Best Practice</li>\r\n<li>Industrial Sharing of Technology</li>\r\n<li>Higher Education Clinics</li>\r\n<li>Country Side Tour</li>\r\n<p></p>\r\n<p>Adapun kegiatan ICIC 2017 ini menyajikan sekitar 97 artikel, diantaranya adalah </p>\r\n<li>â€œA Novel Scheme for Handwritten Binarization Method on Sundanese Palm Leaf Document Imagesâ€ oleh Erick Paulus, Mira Suryani, Setiawan Hadi and Intan Nurma Yulita</li>\r\n<li>â€œQuality enhancement of degraded Sundanese lontar images using direct subtraction and retrospective correction methods in several color spacesâ€ oleh Setiawan Hadi, Undang Ahmad Darsa, Erick Paulus and Mira Suryani</li>\r\n<p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -476,7 +489,7 @@ ALTER TABLE `dosen`
 -- AUTO_INCREMENT for table `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `lulusan`
 --
@@ -486,7 +499,7 @@ ALTER TABLE `lulusan`
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `tags`
 --

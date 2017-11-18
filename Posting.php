@@ -89,7 +89,7 @@
 							if($rowx["TagPost"]==$id){
 								?>
 								
-								<a href="imgpost\<?php echo $rowx["ID"]; ?>.jpg"><img src="imgpost\<?php echo $rowx["ID"]; ?>.jpg"></a>
+								<a href="imgpost\<?php echo $rowx["ID"]; ?>.jpg" style="width:300px; height:300px; overflow: hidden;"><img src="imgpost\<?php echo $rowx["ID"]; ?>.jpg" width=300px></a>
 								
 								<?php
 							}
