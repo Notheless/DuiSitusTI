@@ -1,5 +1,5 @@
 <?php
-	include '../database.php';
+	include '../../database.php';
 	
 	$newpost = $_POST["ID"];
 	

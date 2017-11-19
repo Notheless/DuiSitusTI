@@ -1,5 +1,5 @@
  <?php
-	include '../database.php';$id=0;
+	include '../../database.php';$id=0;
 	$sql = "SELECT * FROM posting";
 	$result = $conn->query($sql);
 	$judul ='';
@@ -27,7 +27,7 @@ echo "
 	}
 ?>
 <h2 class="content-title">Update Artikel</h2>
-                <form action="test.php" method="get">
+                <form action="jeroan/test.php" method="get">
 				<input type="hidden" name="ID"  <?php echo "value=\"".$id."\""; ?>>
                     <table>
                         <tr>

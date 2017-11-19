@@ -51,7 +51,7 @@
         <div id="divInsert" class="background-content">
             <div class="background" onclick="hideInsertDiv()"></div>
             <div class="admin-content" id="insert"> 
-                
+                A
             </div>
         </div>
 

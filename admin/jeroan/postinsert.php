@@ -1,5 +1,5 @@
 <h2 class="content-title">Input Dosen</h2>
-                <form action="insertPE.php" enctype="multipart/form-data" method="POST">
+                <form action="jeroan/insertPE.php" enctype="multipart/form-data" method="POST">
                     <input type="hidden" value="<?php echo $_GET["ID"] ?>" name="ID">
                     <input type="hidden" value="NULL" name="auth">
 					<input type="hidden" value="0" name="tag0">

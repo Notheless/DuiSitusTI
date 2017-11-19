@@ -1,5 +1,5 @@
 <?php
-	include '../database.php';
+	include '../../database.php';
 	$id =$_GET["ID"];	
 	$judul =$_GET["judul_artikel"];
 	$tanggal =$_GET["tanggal_artikel"];

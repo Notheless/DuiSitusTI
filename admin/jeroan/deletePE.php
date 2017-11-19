@@ -1,5 +1,5 @@
 <?php
-	include '../database.php';
+	include '../../database.php';
 	
 	$id =$_POST["ID"];
 	
@@ -17,6 +17,6 @@
 	}
 		echo "
 		<script>
-			window.location.href='postingan[A].php';
+			window.location.href='../postingan.php';
 		</script>";
 ?>
