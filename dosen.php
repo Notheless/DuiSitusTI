@@ -58,9 +58,9 @@
 			$penunjang="<ol>";
 			while($row = $result->fetch_assoc()) {
 				if($row["IDDosen"]==$id){
-					if($row["IDCatagory"]==3) $pengajaran .= "<li>".$row["Isi"]."</li>";
-					if($row["IDCatagory"]==1) $penelitian .= "<li>".$row["Isi"]."</li>";
-					if($row["IDCatagory"]==2) $pengabdian .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==1) $pengajaran .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==2) $penelitian .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==3) $pengabdian .= "<li>".$row["Isi"]."</li>";
 					if($row["IDCatagory"]==4) $penunjang .= "<li>".$row["Isi"]."</li>";
 				} 
 			}
@@ -103,9 +103,18 @@
 				</tr>
 			</table>
         </div>
+<<<<<<< HEAD
 		<?php } ?>
 	</div>
 		<?php
+=======
+<<<<<<< HEAD
+	</div>
+    <script type="text/javascript" src="js/menu_aspek_dosen.js"></script>
+=======
+		<?php
+		}
+>>>>>>> b1e93baf76cd2dca165344b47313f64bdd0ccc2b
 			else{
 		?>
         <div class="grid-dosen-stats">
