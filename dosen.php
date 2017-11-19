@@ -58,9 +58,9 @@
 			$penunjang="<ol>";
 			while($row = $result->fetch_assoc()) {
 				if($row["IDDosen"]==$id){
-					if($row["IDCatagory"]==3) $pengajaran .= "<li>".$row["Isi"]."</li>";
-					if($row["IDCatagory"]==1) $penelitian .= "<li>".$row["Isi"]."</li>";
-					if($row["IDCatagory"]==2) $pengabdian .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==1) $pengajaran .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==2) $penelitian .= "<li>".$row["Isi"]."</li>";
+					if($row["IDCatagory"]==3) $pengabdian .= "<li>".$row["Isi"]."</li>";
 					if($row["IDCatagory"]==4) $penunjang .= "<li>".$row["Isi"]."</li>";
 				} 
 			}
@@ -104,11 +104,10 @@
 			</table>
         </div>
 <<<<<<< HEAD
-		<?php } ?>
 	</div>
     <script type="text/javascript" src="js/menu_aspek_dosen.js"></script>
 =======
-		<?php 
+		<?php
 		}
 			else{
 		?>
