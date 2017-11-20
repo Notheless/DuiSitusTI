@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2017 at 10:35 AM
+-- Generation Time: Nov 20, 2017 at 11:34 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -259,12 +259,28 @@ CREATE TABLE `gambar` (
 --
 
 INSERT INTO `gambar` (`ID`, `TagPost`, `Utama`) VALUES
-(1, 2, 0),
-(2, 8, 0),
-(3, 9, 0),
-(4, 9, 0),
-(6, 9, 0),
-(9, 9, 0);
+(1, 1, 0),
+(2, 1, 0),
+(4, 1, 0),
+(7, 1, 0),
+(11, 1, 0),
+(16, 1, 0),
+(17, 2, 0),
+(18, 2, 0),
+(20, 2, 0),
+(23, 2, 0),
+(27, 2, 0),
+(32, 2, 0),
+(38, 2, 0),
+(45, 2, 0),
+(46, 3, 0),
+(47, 3, 0),
+(49, 3, 0),
+(50, 4, 0),
+(51, 4, 0),
+(53, 4, 0),
+(56, 4, 0),
+(60, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -385,14 +401,10 @@ CREATE TABLE `posting` (
 --
 
 INSERT INTO `posting` (`ID`, `Judul`, `Tanggal`, `Isi`, `Author`, `tag0`, `tag1`, `tag2`, `tag3`, `tag4`, `tag5`, `tag6`, `tag7`, `tag8`) VALUES
-(2, 'A', '2017-11-13 13:37:57', 'A', 'A', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'A', '2017-11-13 13:39:20', 'A', 'A', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'B', '2017-11-13 09:29:20', 'B', 'EX', 13, 0, 0, 0, 15, 0, 15, 0, 0),
-(5, 'C', '2017-11-13 09:30:52', '<div class=\"entry-content\">\r\n						<p>Pada tanggal 1-4 Nov 2017, Dosen Teknik Informatika, Universitas Padjadjaran ikut berpartisipasi aktif pada kegiatan Rapat Koordinasi Nasional (RAKORNAS) Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM) 2017. Kegiatan Rakornas yang bekerjasama dengan Universitas YAPIS Papua ini mengusung tema â€œPeningkatan Kompetensi SDM TIK dan Daya Saing Daerah di Era Globalâ€. Pada kesempatan yang sama juga diselenggarakan beberapa kegiatan:</p>\r\n<li>Seminar Nasional Aptikom (Semnastikom) â€“ Call For Paper dengan tema : â€œPengembangan SDM TIK Untuk Percepatan Pembangunan Daerah â€.</li>\r\n<li>The 2nd International Conference on Informatics and Computing (ICIC 2017) dengan tema : â€œImproving Competencies of ICT Human Resources and Regional Competitiveness in Global Eraâ€.</li>\r\n<li>Higher Education Sharing of Best Practice</li>\r\n<li>Industrial Sharing of Technology</li>\r\n<li>Higher Education Clinics</li>\r\n<li>Country Side Tour</li>\r\n<p></p>\r\n<p>Adapun kegiatan ICIC 2017 ini menyajikan sekitar 97 artikel, diantaranya adalah </p>\r\n<li>â€œA Novel Scheme for Handwritten Binarization Method on Sundanese Palm Leaf Document Imagesâ€ oleh Erick Paulus, Mira Suryani, Setiawan Hadi and Intan Nurma Yulita</li>\r\n<li>â€œQuality enhancement of degraded Sundanese lontar images using direct subtraction and retrospective correction methods in several color spacesâ€ oleh Setiawan Hadi, Undang Ahmad Darsa, Erick Paulus and Mira Suryani</li>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-07-at-15.39.46.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-07-at-15.39.46-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3099\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-1.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-1-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3100\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-02-at-10.06.38-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3101\"></a></p>\r\n<p><a href=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-01-at-17.36.52.jpeg\"><img src=\"http://informatika.unpad.ac.id/new/wp-content/uploads/2017/11/WhatsApp-Image-2017-11-01-at-17.36.52-150x150.jpeg\" alt=\"\" width=\"150\" height=\"150\" class=\"alignleft size-thumbnail wp-image-3102\"></a></p>\r\n<p></p>\r\n											</div>', 'EX', 13, 0, 0, 0, 15, 0, 15, 0, 0),
-(6, 'A', '2017-11-13 23:05:37', 'A', 'EX', 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(7, 'L', '2017-11-13 23:27:56', 'L', 'EX', 1, 0, 0, 0, 0, 0, 0, 0, 0),
-(8, 'Rakornas APTIKOM dan ICIC 2017', '2017-11-18 03:26:50', 'MMMNNNBBB', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(9, 'Rakornas APTIKOM dan ICIC 2017', '2017-11-18 03:29:05', '<p>Pada tanggal 1-4 Nov 2017, Dosen Teknik Informatika, Universitas Padjadjaran ikut berpartisipasi aktif pada kegiatan Rapat Koordinasi Nasional (RAKORNAS) Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM) 2017. Kegiatan Rakornas yang bekerjasama dengan Universitas YAPIS Papua ini mengusung tema â€œPeningkatan Kompetensi SDM TIK dan Daya Saing Daerah di Era Globalâ€. Pada kesempatan yang sama juga diselenggarakan beberapa kegiatan:</p>\r\n<li>Seminar Nasional Aptikom (Semnastikom) â€“ Call For Paper dengan tema : â€œPengembangan SDM TIK Untuk Percepatan Pembangunan Daerah â€.</li>\r\n<li>The 2nd International Conference on Informatics and Computing (ICIC 2017) dengan tema : â€œImproving Competencies of ICT Human Resources and Regional Competitiveness in Global Eraâ€.</li>\r\n<li>Higher Education Sharing of Best Practice</li>\r\n<li>Industrial Sharing of Technology</li>\r\n<li>Higher Education Clinics</li>\r\n<li>Country Side Tour</li>\r\n<p></p>\r\n<p>Adapun kegiatan ICIC 2017 ini menyajikan sekitar 97 artikel, diantaranya adalah </p>\r\n<li>â€œA Novel Scheme for Handwritten Binarization Method on Sundanese Palm Leaf Document Imagesâ€ oleh Erick Paulus, Mira Suryani, Setiawan Hadi and Intan Nurma Yulita</li>\r\n<li>â€œQuality enhancement of degraded Sundanese lontar images using direct subtraction and retrospective correction methods in several color spacesâ€ oleh Setiawan Hadi, Undang Ahmad Darsa, Erick Paulus and Mira Suryani</li>\r\n<p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(1, 'Partisipasi Mahasiswa Informatika pada Kegiatan IndonesiaNEXT', '2017-11-20 04:16:12', '<p>Para mahasiswa Teknik Informatika telah berpartisipasi dalam kegiatan IndonesiaNEXT pada hari Jumat 20 Oktober 2017. Program IndonesiaNEXT 2017 ini merupakan acara yang diselenggarakan atas kerja sama Unpad dengan Telkomsel sebagai program edukasi yang memberikan kesempatan kepada para mahasiswa untuk meningkatkan kompetensinya dengan mengikuti sertifikasi standar International yang diverifikasi oleh Microsoft dan Adobe. Tidak hanya itu, para peserta akan mendapat <em>Communication Skills Training</em> yang dapat meningkatkan kepercayaan diri serta wawasan dalam menghadapi persaingan global.</p>\r\n<p>Acara ini juga sekaligus merupakan Kuliah Umum yang diberikan oleh Direktur Human Capital Management Telkomsel Irfan A. Tachrir yang intinya mengatakan bahwa para mahasiswa saat ini harus lebih mempersiapkan diri dengan lebih baik untuk masa depannya. Dengan revolusi ekonomi saat ini, salah satu yang harus dipersiapkan adalah bersaing dalam era digital. â€œ<em>Kita harus bisa membangun digital competitiveness.  Salah satu tantangan yang harus dihadapi adalah VUCA</em> (Volatility, Uncertainty, Complexity, Ambiguity),â€ ujar alumni Unpad ini.</p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'Sertifikat Profesional Dosen Departemen Ilmu Komputer', '2017-11-20 04:21:06', '<p>Sampai saat ini telah 6 dosen Departemen Ilmu Komputer telah memiliki Sertifikasi Profesional dari institusi internasional yaitu dari Microsoft dan dari Oracle. Sertifikat dari Microsoft berupa  Microsoft Certified Educator (MCE) untuk 3 orang dosen, Microsoft Technology Associate (MTA) untuk satu orang dosen, dan Microsoft Office Specialist (MOS) untuk satu orang dosen. Sedangkan dari Oracle adalah sertifikat  Database Design and Programming with SQL. Berkaitan dengan Oracle, Departemen Ilmu Komputer juga telah menjadi â€œInstitution Memberâ€ dari Oracle Academy. Sedangkan untuk spersiapan pembentukan asesor profesi informatika, dua dosen telah dilatih dan siap menjadi asesor LSP Informatika yang akan dibangun.  Berikut sertifikat yang telah dimiliki.</p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Prestasi Mahasiswa TI Unpad di 3rd International Conference on Science in Information Technology (ICSITech) 2017', '2017-11-20 04:26:57', '\r\n<p style=\"text-align: left\">Pada tanggal 25 â€“ 26 Oktober 2017 , 7 orang mahasiswa TI yang tergabung dalam 2 tim berhasil melaksanakan presentasi dua artikel ilmiah di ajang 3rd International Conference on Science in Information Technology (ICSITech 2017) yang dilaksanakan di GH Universal Hotel, Bandung, Jawa Barat.</p>\r\n\r\n<p>Tim pertama terdiri dari <strong>Fajar Satria, Hafiz Aditra, M. Dean Aji Wibowo, dan Hilmi Luthfiansyah</strong> yaitu mahasiswa TI angkatan 2014 yang diwakili presentasinya oleh M. Dean Aji Wibowo. Tim pertama ini mempresentasikan artikel yang berjudul â€œEFL Learning Media for Early Childhood Through Speech Recognition Applicationâ€, sebuah <em>game-based learning</em> untuk pembelajaran bahasa Inggris bagi anak-anak melalui pengenalan suara.</p>\r\n<p>Tim kedua terdiri dari <strong>Gustara Sapto Ajie, M. Azhari Marpaung, dan Agung Kurniawan</strong> yaitu mahasiswa TI angkatan 2014 juga, diwakili presentasinya oleh Gustara Sapto Ajie. Tim kedua mempresentasikan artikel yang berjudul â€œThe Development and Usability Testing of Game-based Learning as A Medium to Introduce Zoology to Young Learnersâ€, sebuah aplikasi <em>game-based learning</em> pengenalan aneka hewan bagi anak-anak melalui teknik hand gesture recognition.</p>\r\n<p><span id=\"more-3075\"></span></p>\r\n<p>Kedua artikel yang dihasilkan merupakan hasil penelitian dari kedua tim selama 1 semester perkuliahan Human Computer Interaction. Selain aplikasi yang dihasilkan, mahasiswa juga harus mampu menuangkan hasil karyanya ke dalam artikel ilmiah. Kegiatan penelitian ini dibimbing oleh 3 dosen pengampu yaitu: Mira Suryani, S.Pd., M.Kom Erick Paulus, S.Si., M.Kom, dan Ino Suryana, Drs., M.Kom.</p>\r\n</p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 'Teknik Informatika Unpad di Tech in Asia Jakarta', '2017-11-20 04:28:43', 'Pada tanggal 1-2 November 2017, Prodi Teknik Informatika Unpad yang diwakili oleh Dr. Asep Sholahuddin, M.T dan Aditya Pradana, M.Eng serta 50 mahasiswa dari berbagai angkatan mengikuti acara Tech in Asia yang berlangsung di Jakarta Convention Center.\r\nAcara terdiri dari presentasi dari beberapa sponsor, perwakilan startup serta pameran dari para Bootstrap Alley. Diharapkan dengan mengikuti acara seperti ini akan menumbuhkan kreatifitas dari pada mahasiswa untuk berkreasi dan mengetahui perkembangan teknologi terbaru.', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -489,7 +501,7 @@ ALTER TABLE `dosen`
 -- AUTO_INCREMENT for table `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `lulusan`
 --

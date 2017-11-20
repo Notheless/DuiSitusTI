@@ -1,7 +1,7 @@
 <?php
 	include '../../database.php';
 	
-	$newpost = 0;
+	$newpost = 1;
 	
 	$sqlx = "SELECT MAX(ID) AS last FROM gambar";
 	$resultx = $conn->query($sqlx);
@@ -11,9 +11,11 @@
 	
 	$sqlx = "SELECT MAX(ID) AS last FROM posting";
 	$resultx = $conn->query($sqlx);
-	$rowx = $resultx->fetch_assoc();
-	$newpost = $rowx["last"];
-	
+	if($resultx->num_rows > 0){
+		$rowx = $resultx->fetch_assoc();
+		$newpost = $rowx["last"];
+	}
+	$newpost +=1;
 	$ResTarget = 2000;
 	$count = 0;
 	if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
@@ -129,11 +131,8 @@
 		</script>";
 		//echo $sql;
 	}
-	
-	
-	//balik
-	/* echo"
+	echo"
 		<script>
-			window.location.href='postingan[A].php';
-		</script>"; */
+			window.location.href='../postingan.php';
+		</script>";
 ?>

@@ -92,7 +92,7 @@
 						}
 					}
 					if($id==0){
-						$sqlx = "SELECT * FROM posting";
+						$sqlx = "SELECT * FROM posting ORDER BY ID DESC LIMIT 10";
 						$resultx = $conn->query($sqlx);			
 						if (($resultx->num_rows > 0)) 
 						{
