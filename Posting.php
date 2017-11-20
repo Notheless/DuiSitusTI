@@ -8,6 +8,7 @@
 </head>
 <body>
 	<?php
+		error_reporting(0);
 		include 'database.php';
 		$id=0;
 		$sql = "SELECT * FROM posting";
@@ -53,10 +54,6 @@
 			}
 			if($judul==='')notfound();
 		}
-		else
-		{	
-			notfound();
-		}
 		function notfound() {
 			//header("Location: ViewP.php"); /* Redirect browser */
 			exit();
@@ -77,7 +74,7 @@
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
                 <?php 
-					echo $isi;
+					echo $isi."<br>";
 					
 					//gambar
 					$sqlx = "SELECT * FROM gambar";
@@ -88,14 +85,34 @@
 						{
 							if($rowx["TagPost"]==$id){
 								?>
-								
-								<a href="imgpost\<?php echo $rowx["ID"]; ?>.jpg" style="width:300px; height:300px; overflow: hidden;"><img src="imgpost\<?php echo $rowx["ID"]; ?>.jpg" width=300px></a>
+								<a href="imgpost\<?php echo $rowx["ID"]; ?>.jpg"><img src="imgpost\<?php echo $rowx["ID"]; ?>-thumbnail.jpg" ></a>
 								
 								<?php
 							}
 						}
 					}
+					if($id==0){
+						$sqlx = "SELECT * FROM posting";
+						$resultx = $conn->query($sqlx);			
+						if (($resultx->num_rows > 0)) 
+						{
+							?>
+							<ul>
+							<?php
+							while($rowx = $resultx->fetch_assoc()) 
+							{
+								?>
+									<li><a href="?ID=<?php echo $rowx["ID"]."\">".$rowx["Judul"]; ?></a></li>
+								<?php
+							}
+							?>
+							</ul>
+							<?php
+						}
+						
+					}
 				?>
+				
 					
                 <!-- content end -->
             </div>

@@ -33,18 +33,11 @@
 							<button id="update-button" type="button" onclick="showUpdateDiv(<?php echo	$row["ID"] ?>)">edit</button>
 							<button id="delete-button" type="button" onclick="showDeleteDiv(<?php echo	$row["ID"] ?>)">hapus</button></td>
 						</tr>
-						
-				<?php
+						<?php 
 					}
-					
-					$sql = "SELECT MAX(ID) as LAST FROM `posting`";
-					$result = $conn->query($sql);
-					$row = $result->fetch_assoc();
-					$id = 1 + $row["LAST"];
-					
 				?>
             </table>
-            <button id="insert-button" style="left:0;" type="button" onclick="showInsertDiv(<?php echo $id ?>)">tambahkan</button>
+            <button id="insert-button" style="left:0;" type="button" onclick="showInsertDiv()">tambahkan</button>
         </div>
 
         <!-- insert -->

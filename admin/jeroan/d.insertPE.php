@@ -1,13 +1,19 @@
 <?php
 	include '../../database.php';
 	
-	$newpost = $_POST["ID"];
+	$newpost = 0;
 	
 	$sqlx = "SELECT MAX(ID) AS last FROM gambar";
 	$resultx = $conn->query($sqlx);
 	$rowx = $resultx->fetch_assoc();
 	$id = $rowx["last"];
 	$id +=1;
+	
+	$sqlx = "SELECT MAX(ID) AS last FROM posting";
+	$resultx = $conn->query($sqlx);
+	$rowx = $resultx->fetch_assoc();
+	$newpost = $rowx["last"];
+	
 	$ResTarget = 2000;
 	$count = 0;
 	if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
@@ -17,7 +23,7 @@
 			if ($size < (1024 *1024 * 1024)) { // Image size max 1 MB
 				//upload and convert
 				$id += $count;
-				$actual_image_name = "../imgpost/".$id.".jpg";
+				$actual_image_name = "../../imgpost/".$id.".jpg";
 				$tmp = $_FILES['gambar']['tmp_name'][$count];
 				move_uploaded_file($tmp,$actual_image_name);
 					
@@ -36,9 +42,9 @@
 				$ext = $exploded[count($exploded) - 1]; 
 				
 				//resize
-				$filename = $tmp;
-				$percent = 1;
-				list($width, $height) = getimagesize($filename);
+				
+				$filenamex = $tmp;
+				list($width, $height) = getimagesize($filenamex);
 				if($width>$ResTarget||$height>$ResTarget){
 					if($width>$height) $percent = $ResTarget / $width;
 					else $percent = $ResTarget / $width;
@@ -47,16 +53,43 @@
 					$new_height = $height * $percent;
 			
 					$image_p = imagecreatetruecolor($new_width, $new_height);
-					$image = imagecreatefromjpeg($filename);
+					$image = imagecreatefromjpeg($filenamex);
 					imagecopyresampled($image_p, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
 					imagejpeg($image_p, $tmp, 100);	
 				}
-			
+				
 				//actual upload process
 				move_uploaded_file($tmp,$actual_image_name);
 				$sql = "INSERT INTO `gambar` (`ID`, `TagPost`, `Utama`) VALUES ('".$id."',".$newpost.",0);";
 				$conn->query($sql);
 				$count+=1;
+				
+				
+				$thumbnail_image_name = "../../imgpost/".$id."-thumbnail.jpg";
+				copy($actual_image_name, $thumbnail_image_name);
+				
+				//thumbnail
+				$tmp = $thumbnail_image_name;
+				$thumbsize = 200;
+				$filename = $thumbnail_image_name;
+				$percent = 1;
+				list($width, $height) = getimagesize($filename);
+				if($width>$thumbsize||$height>$thumbsize){
+					$startX = 0;
+					$startY = 0;
+					$diff = $width - $height;
+					if($diff>0) $startX = $diff/2;
+					else $startY = ($diff*(-1))/2;
+					
+					$new_width = $thumbsize;
+					$new_height = $thumbsize;
+					
+					$image_p = imagecreatetruecolor($new_width, $new_height);
+					$image = imagecreatefromjpeg($filename);
+					imagecopyresampled($image_p, $image, 0, 0, $startX, $startY, $new_width, $new_height, $width-($startX*2), $height-($startY*2));
+					imagejpeg($image_p, $tmp, 100);	
+				}
+				move_uploaded_file($tmp,$thumbnail_image_name);
 			}
 		}
 		}

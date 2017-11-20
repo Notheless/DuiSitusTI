@@ -1,9 +1,5 @@
-function showInsertDiv(str) {
+function showInsertDiv() {
 	document.getElementById('divInsert').style.display = "block";
-	if (str=="") {
-		document.getElementById("insert").innerHTML="";
-		return;
-	} 
 	if (window.XMLHttpRequest) {
 		// code for IE7+, Firefox, Chrome, Opera, Safari
 		xmlhttp=new XMLHttpRequest();
@@ -15,7 +11,7 @@ function showInsertDiv(str) {
 			document.getElementById("insert").innerHTML=this.responseText;
 		}
 	}
-	xmlhttp.open("GET","jeroan/d.postinsert.php?ID="+str,true);
+	xmlhttp.open("GET","jeroan/d.postinsert.php",true);
 	xmlhttp.send();	
 }
 
