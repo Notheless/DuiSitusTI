@@ -32,4 +32,10 @@
         </div>
     </div>
 </body>
+    <?php 		
+	echo "
+		<script>
+			alert('Ketika si Arthur ulang tahun, dia ditanyakan oleh bojonya.\\n \"Your Highness, ulang tahun nanti ingin hadiah apa.\" \\n \"Aing pen dragon.\"');
+		</script>";
+		?>
 </html>
