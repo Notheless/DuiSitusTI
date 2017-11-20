@@ -1,2 +1,3 @@
 14/11/2017  08:58  Halaman admin/postingan.php dibuat, penambahan javascript halaman admin/postingan.php (fungsi tombol), beberapa tambahan css pada halaman admin/postingan.php (efek tombol, desain)
 20/11/2017  01:32  Pembuatan beberapa halaman baru pada folder admin serta pemindahan beberapa fungsi pada folder admin
+20/11/2017  03:41  Perubahan beberapa nama file serta beberapa halaman

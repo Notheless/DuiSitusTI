@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/show-div[A].js"></script>
+    <script type="text/javascript" src="js/show-div-dosen.js"></script>
     <script type="text/javascript" src="js/textarea.js"></script>
 </body>
 </html>

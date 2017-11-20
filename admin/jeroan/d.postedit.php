@@ -27,9 +27,9 @@ echo "
 	}
 ?>
 <h2 class="content-title">Update Artikel</h2>
-                <form action="jeroan/test.php" method="get">
+                <form action="jeroan/d.test.php" method="get">
 				<input type="hidden" name="ID"  <?php echo "value=\"".$id."\""; ?>>
-                    <table>
+                    <table class="table-index">
                         <tr>
                             <td><p>Judul Artikel : </p></td>
                             <td width="70%"><input class="data-input" type="text" name="judul_artikel" placeholder="judul artikel" <?php echo "value=\"".$judul."\""; ?>></td>

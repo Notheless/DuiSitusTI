@@ -11,7 +11,7 @@
     <div class="admin-content-pos">
         
         <div class="admin-main-content">
-            <table>
+            <table class="table-post">
                 <col><col><col>
                 <tr>
                     <td>Judul</td>
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/show-div[A].js"></script>
+    <script type="text/javascript" src="js/show-div-post.js"></script>
     <script type="text/javascript" src="js/textarea.js"></script>
 </body>
 </html>

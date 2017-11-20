@@ -23,7 +23,7 @@
 	}
 ?>
 <h2 class="content-title">Hapus Artikel</h2>
-                <form action="jeroan/deletePE.php" method="POST">
+                <form action="jeroan/d.deletePE.php" method="POST">
                     <input type="hidden" value="<?php echo $_GET["ID"] ?>" name="ID">
                     <table style="text-align:center">
                         <tr>

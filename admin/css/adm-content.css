@@ -31,7 +31,7 @@
     background-color: #aaa;
     border-radius: 20px;
     z-index: 6;
-    animation: show-div-effect 0.6s;
+    animation: show-div-effect 0.4s;
 }
 .admin-content .content-title {
     margin-bottom: 40px;
@@ -105,15 +105,15 @@
     background-color: #aaa;
     border-radius: 5px;
 }
-.admin-main-content table {
+.admin-main-content .table-post {
     width: 100%;
     border-collapse: collapse;
     background-color: #ccc;
 }
-.admin-main-content table col:nth-child(1) { width:100%; }
-.admin-main-content table col:nth-child(2) { width:100px; }
-.admin-main-content table col:nth-child(3) { min-width:205px; }
-.admin-main-content table td {
+.admin-main-content .table-post col:nth-child(1) { width:100%; }
+.admin-main-content .table-post col:nth-child(2) { width:100px; }
+.admin-main-content .table-post col:nth-child(3) { min-width:205px; }
+.admin-main-content .table-post td {
     padding: 10px;
     border: 1px solid black;
     font-family: 'Futura Bk BT';
