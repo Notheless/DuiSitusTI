@@ -1,4 +1,4 @@
-<h2 class="content-title">Input Dosen</h2>
+<h2 class="content-title">Artikel Baru</h2>
                 <form action="jeroan/d.insertPE.php" enctype="multipart/form-data" method="POST">
                     <input type="hidden" value="NULL" name="auth">
 					<input type="hidden" value="0" name="tag0">
@@ -27,7 +27,8 @@
                         </tr>
                         <tr>
                             <td><p>Unggah gambar:</p></td>
-							<td><input type="file" name="gambar[]" multiple="multiple" accept="image/*" /></td>
+							<td><label class ="button"><input type="file" name="gambar[]" multiple="multiple" accept="image/*" style ="display: none;"/>Tambah gambar</label></td>
+						</tr>
                         </tr>
                         <tr>
                             <td><button type="button" onclick="hideInsertDiv()">kembali</button></td>

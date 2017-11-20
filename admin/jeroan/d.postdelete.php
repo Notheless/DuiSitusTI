@@ -36,7 +36,7 @@
                             <td colspan="2"><p>Akan dihapus dan tidak bisa dikembalikan, apakah anda yakin? </p></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><input type="checkbox" name="checkbox" style="display:inline-block; margin-top: 20px;"><p style="display:inline">Saya yakin dengan apa yang saya lakukan</p></td>
+                            <td colspan="2"><label><input type="checkbox" name="checkbox" style="display:inline-block; margin-top: 20px;"><p style="display:inline">Saya yakin dengan apa yang saya lakukan</p></label></td>
                         </tr>
                             <td><button type="button" onclick="hideInsertDiv()">kembali</button></td>
                             <td style="text-align: right"><input class="button" type="submit" value="Hapus" onclick="if(!this.form.checkbox.checked){alert('Silahkan centang Saya yakin dengan apa yang saya lakukan');return false}"></td>

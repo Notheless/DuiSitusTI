@@ -15,7 +15,18 @@
 			alert('terjadi kelasahan');
 		</script>";
 	}
-		echo "
+	$sql = "SELECT * FROM `gambar` WHERE `gambar`.`TagPost` = ".$id.";";
+	$result = $conn->query($sql);
+	while($row = $result->fetch_assoc()) 
+		{
+			$file = '../../imgpost/'.$row["ID"].".jpg";
+			$fileT = '../../imgpost/'.$row["ID"]."-thumbnail.jpg";
+			unlink($file);
+			unlink($fileT);
+			$sql = "DELETE FROM `gambar` WHERE `gambar`.`ID` = ".$row["ID"].";";
+			$conn->query($sql);
+		}
+	echo "
 		<script>
 			window.location.href='../postingan.php';
 		</script>";

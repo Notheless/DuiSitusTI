@@ -1,18 +1,14 @@
  <?php
-	include '../../database.php';$id=0;
-	$sql = "SELECT * FROM posting";
-	$result = $conn->query($sql);
+	include '../../database.php';
+	$id=0;
 	$judul ='';
 	$tanggal ='';
 	$isi ='';
-	$i=1;
 	if($_GET["ID"]) 
-	{		
-echo "
-		<script>
-			alert('Data berhasil dihapus');
-		</script>";
+	{	
 		$id=$_GET["ID"];
+		$sql = "SELECT * FROM posting";
+		$result = $conn->query($sql);
 		if ($result->num_rows > 0) 
 		{
 			while($row = $result->fetch_assoc()) 
@@ -24,10 +20,11 @@ echo "
 				}
 			}
 		}
+		
 	}
 ?>
 <h2 class="content-title">Update Artikel</h2>
-                <form action="jeroan/d.test.php" method="get">
+                <form action="jeroan/d.test.php" enctype="multipart/form-data" method="POST">
 				<input type="hidden" name="ID"  <?php echo "value=\"".$id."\""; ?>>
                     <table class="table-index">
                         <tr>
@@ -44,7 +41,34 @@ echo "
                         <tr>
                             <td colspan="2"><textarea rows="3" name="isi_artikel" placeholder="isi artikel"><?php echo $isi; ?></textarea></td>
                         </tr>
+                        <tr>
+							<td><p>Gambar: </p></td>
+							<td><label class ="button"><input type="file" name="gambar[]" multiple="multiple" accept="image/*" style ="display: none;"/>Tambah gambar</label></td>
+						</tr>
+                        <tr>
+							<td colspan="2">
+								<?php
+								if($_GET["ID"]) 
+								{	
+									$id=$_GET["ID"];
+									$sql = "SELECT * FROM `gambar` WHERE `gambar`.`TagPost` = ".$id.";";
+									$result = $conn->query($sql);
+									if ($result->num_rows > 0) 
+									{
+										while($row = $result->fetch_assoc()) 
+										{
+								?>
+											<img src="../imgpost/<?php echo $row['ID'];?>-thumbnail.jpg">	
+								<?php
+										}
+									}
+								}
+								?>
+							</td>
+						</tr>
+                        <tr>
                             <td><button type="button" onclick="hideInsertDiv()">kembali</button></td>
                             <td style="text-align: right"><input class="button" type="submit" value="Masukkan"></td>
+                        </tr>
                     </table>
                 </form>
