@@ -82,9 +82,8 @@
     transition: 0.5s;
 }
 .grid-headline-thumbnail {
+    float: top;
     overflow: hidden;
-    text-align: center;
-    white-space: nowrap;
     margin: 1em 40px 0 0;
     transition: 0.5s;
 }
