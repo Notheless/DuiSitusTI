@@ -23,20 +23,19 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/12.jpg" height="100%px" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
+            <img style="thumbnail" src="f_img/12.jpg" height="auto" width="100%"/>
+        <div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2>Alumni Program Studi S1 FMIPA Unpad</h2>
                 <p>Sampai 18 Agustus 2017, Jumlah lulusan adalah sebanyak 64 orang.</p>
             </div>
         </div>
+        </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
 				<h1>Alumni</h1><br>
-				<table style="size:100%;">
-				<tbody>
+				<table>
 				<tr>
 				<th>#</th>
 				<th>Nama/Pembimbing</th>
@@ -447,7 +446,6 @@
 				<td>18 Oktober 2017/***</td>
 				<td>Sistem Pendukung Keputusan Berbasis Fuzzy Analytical Hierarchy Process Untuk Penentuan Kelayakan Penerimaan Kredit (Studi Kasus : Koperasi Keluarga Besar Dinas Pendapatan (KKBD) Provinsi Jawa Barat)</td>
 				</tr>
-				</tbody>
 				</table>
                 <!-- content end -->
             </div>

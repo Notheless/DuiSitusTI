@@ -22,14 +22,14 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/05.jpg" height="100%px" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
-            <div style="padding:10px;font-style:italic;color:white">
-                <h2>SDM Prodi Teknik Informatia Unpad</h2>
-                <p>Terdiri dari para Tenaga Pengajar dan Tenaga Kependidikan.</p>
-            </div>
-        </div>
+            <img style="thumbnail" src="f_img/05.jpg" height="auto" width="100%"/>
+			<div class="headline-thumbnail-det">
+					<div style="padding:10px;font-style:italic;color:white">
+						<h2>SDM Prodi Teknik Informatia Unpad</h2>
+						<p>Terdiri dari para Tenaga Pengajar dan Tenaga Kependidikan.</p>
+					</div>
+			</div>
+		</div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->

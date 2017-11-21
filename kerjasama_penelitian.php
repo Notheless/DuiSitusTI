@@ -23,15 +23,15 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/08.jpg" height="100%px" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
+            <img style="thumbnail" src="f_img/08.jpg" height="auto" width="100%"/>
+        <div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2></h2>
                 <p>Research is to see what everybody else has seen, and to think what nobody else has thought.
 				<br> <div style="text-align:right"> - Albert Szent-Gyorgyi</div>
 				</p>
             </div>
+        </div>
         </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">

@@ -24,13 +24,13 @@
         </div>
         <div class="grid-headline-thumbnail">
             <span class="center-im"></span>
-            <img class="thumbnail" src="f_img/09	.jpg" height="auto" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
+            <img class="thumbnail" src="f_img/09.jpg" height="auto" width="100%"/>
+			<div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2></h2>
 				<p><br>Gedung Dekanat Fakultas Matematika dan Ilmu Pengetahun Alam Universitas Padjadjaran.</p>
             </div>
+        </div>
         </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">

@@ -23,15 +23,15 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/06.jpg" height="100%px" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
+            <img style="thumbnail" src="f_img/06.jpg" height="auto" width="100%"/>
+        <div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2></h2>
                 <p>A teacher who is attempting to teach without inspiring the pupil with a desire to learn is hammering on cold iron.
 				<br> <div style="text-align:right"> - Horace Mann</div>
 				</p>
             </div>
+        </div>
         </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">

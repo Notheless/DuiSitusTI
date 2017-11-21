@@ -24,15 +24,15 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/03.jpg" height="100%px" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
+            <img style="thumbnail" src="f_img/03.jpg" height="auto" width="100%"/>
+        <div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2></h2>
                 <p>An organization, no matter how well designed, is only as good as the people who live and work in it.
 				<br> <div style="text-align:right"> - Dee Hock</div>
 				</p>
             </div>
+        </div>
         </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">

@@ -22,13 +22,13 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/07.jpg" height="100%" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
+            <img style="thumbnail" src="f_img/07.jpg" height="auto" width="100%"/>
+        <div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2>Laboratorium Komputer</h2>
                 <p>Merupakan tempat mahasiswa melaksanakan kegiatan praktikum maupun kegiatan belajar mengajar biasa.</p>
             </div>
+        </div>
         </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">

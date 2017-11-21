@@ -12,8 +12,7 @@
         
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
-		<!--Recent-->
-			<?php include 'recent.html' ?>
+		<!--Recent-->	
         <!-- konten -->
 		<div class="grid-headline-header">
             <h1 class="headline-header"> MAHASISWA <span class="header-revcolor"> DAN LULUSAN</span></h1>
@@ -24,13 +23,13 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/04.jpg" height="100%px" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
+            <img style="thumbnail" src="f_img/04.jpg" height="auto" width="100%"/>
+        <div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2>Acara Pelulusan Mahasiswa</h2>
                 <p>Anggota mahasiswa Teknik Informatika berkumpul merayakan hari widusa mahasiswa yang telah selesai menempuh pendidikan S1.</p>
             </div>
+        </div>
         </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
