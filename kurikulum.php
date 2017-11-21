@@ -12,11 +12,10 @@
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
 		<!--Recent-->
-			<?php include 'recent.html' ?>
         <!-- konten -->
 		
         <div class="grid-headline-header">
-            <h1 class="headline-header"> KURIKULUM <span class="header-revcolor"> </span></h1>
+            <h1 class="headline-header"><span class="header-revcolor"> KURIKULUM </span></h1>
         </div>
         <div class="grid-headline-para">
             <p class="headline-para">

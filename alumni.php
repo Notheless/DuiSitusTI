@@ -13,7 +13,6 @@
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
 		<!--Recent-->
-			<?php include 'recent.html' ?>
         <!-- konten -->
 		<div class="grid-headline-header">
             <h1 class="headline-header"><span class="header-revcolor">ALUMNI</span></h1>
@@ -36,7 +35,7 @@
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
 				<h1>Alumni</h1><br>
-				<table style="font-size:9pt; border:1px solid black; size=100%;">
+				<table style="size:100%;">
 				<tbody>
 				<tr>
 				<th>#</th>
