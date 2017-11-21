@@ -7,7 +7,13 @@
     <?php include 'header.html';?>
 </head>
 <body>
-    <?php include 'Navbar.html';?>
+	<?php include 'Navbar.html';?>
+	<?php
+		error_reporting(0);
+		include 'database.php';
+		$sql = "SELECT * FROM dosen";
+		$result = $conn->query($sql);
+	?>
 	<div class="grid-dosen-container">
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
@@ -16,15 +22,11 @@
             <h1 class="headline-header">TENAGA <span class="header-revcolor">PENDIDIK</span></h1>
         </div>
 		<?php
-		error_reporting(0);
-		include 'database.php';
-		$sql = "SELECT * FROM dosen";
-		$result = $conn->query($sql);
-		$id = 0;
-		if($_GET["ID"]){
-		$id = $_GET["ID"];
-		while($row = $result->fetch_assoc()) {
-		if($row["ID"]==$id){
+			$id = 0;
+			if($_GET["ID"]){
+			$id = $_GET["ID"];
+			while($row = $result->fetch_assoc()) {
+			if($row["ID"]==$id){
         ?>
 		<div class="grid-dosen-info">
 			<div class="dosen-info">
@@ -103,24 +105,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="grid-dosen-list">
-			<div style="margin:1vw">
-				<div class="dosen-list-header">DAFTAR DOSEN</div>
-				<?php 
-					$i = 1;
-					while($row = $result->fetch_assoc()) {
-				?>
-					<div class="dosen-list-content"><a href="?ID=<?php echo $row["ID"]?>"> <?php echo $row["Nama"]?> </a></div>			
-				<?php	
-						$i+=1;
-					}
-				?>
-			</div>
-		</div>
-		<?php } 
-			else{
-		?>
-
+		<?php } else { ?>
         <div class="grid-dosen-block">
 			<div class="dosen-block-list-container">
 			<?php 
@@ -130,8 +115,7 @@
 				<a href="?ID=<?php echo $row["ID"]?>">
 					<div>
 						<div class="image-dosen"><img src="img/<?php echo $row["ID"];?>.jpg" style="width:100%;"></div>
-						<!-- <div class="image-dosen"><img src="img/<?php echo $row["ID"];?>.jpg" style="height:300px;"><div> -->
-						<div class="name"><?php echo $row["Nama"]?><br /> dasdasdfas </div>
+						<div class="name"><?php echo $row["Nama"]?></div>
 					</div>
 				</a>
 			<?php	
@@ -139,19 +123,30 @@
 				}
 			?>
 			</div>
-			<table>
-				<tr><th>Daftar Dosen</th></tr>
-
+		</div>
+		<?php
+			}
+		?>
 		<?php 
-				$i = 1;
-				while($row = $result->fetch_assoc()) {
-		?>
-				<tr><td><a href="?ID=<?php echo $row["ID"]?>"> <?php echo $row["Nama"]?> </a></td></tr>			
-		<?php	
-					$i+=1;
-				}
-		?>
-			</table>
+		$id = 0;
+		if($_GET["ID"]){
+        ?>
+		<div class="grid-dosen-list">
+			<div style="margin:1vw; background-color:#ccc;">
+				<div class="dosen-list-header">DAFTAR DOSEN</div>
+					<?php 
+						$i = 1;	
+						while($row = $result->fetch_assoc()) {
+					?>
+					<a href="?ID=<?php echo $row["ID"]?>">
+						<div class="dosen-list-content"><?php echo $row["Nama"]?></div>
+					</a>		
+					<?php	
+							$i+=1;
+						}
+					?>
+				<div style="height:20px;width:100%;background-color:#aaa;"></div>
+			</div>
 		</div>
 		<?php
 			}

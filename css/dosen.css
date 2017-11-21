@@ -64,23 +64,25 @@
     display: none;
 }
 .dosen-list-header {
-    background-color: #888;
+    background-color: #aaa;
     font-family: 'Futura md BT';
     font-size: 25px;
     padding: 10px 20px;
     color: white;
 }
-.dosen-list-content {
-    padding: 10px 2px;
-    border-bottom: 1px solid white;
+a .dosen-list-content {
+    display: block;
+    padding: 4px 10px;
+    margin: 0 10px;
+    border-bottom: 2px solid #eee;
     font-family: 'Futura bk BT';
-    background-color: #aaa;
+    background-color: #ccc;
     color: black;
 }
-.dosen-list-content a {
-    display: block;
+.grid-dosen-list a {
+    text-decoration: none;
 }
-.dosen-list-content:last-child {
+.grid-dosen-list a:first-child .dosen-list-content {
     border-bottom: none;
 }
 .dosen-block-list-container {
@@ -98,7 +100,7 @@
     margin: 10px;
     text-align: center;
     font-size: 30px;
-    line-height: 25px;
+    line-height: 15px;
     overflow: hidden;
 }
 .image-dosen {
@@ -111,13 +113,13 @@
 }
 .dosen-block-list-container > a > div > .name {
     position: relative;
-    padding-top: 18px;
+    padding-top: 14px;
     width: 100%;
-    height: 120px;
+    height: 60px;
     font-size: 14px;
     color: white;
     font-family: 'Futura bk BT';
-    transform: translateY(150px);
+    transform: translateY(160px);
     background-color: rgba(121, 121, 121, 0.7);
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(121, 121, 121, 0.7) 20%);
     transition: 0.4s ease-in-out;
