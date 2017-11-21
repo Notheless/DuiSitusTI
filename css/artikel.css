@@ -42,3 +42,22 @@ p {
     width: calc(100% - 40px);
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+.daftar-artikel {
+    height: auto;
+    margin: 0 2% 10px 2%;
+    padding: 10px 0;
+    color: black;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+}
+.daftar-artikel-header {
+    margin: 20px;
+    font-family: 'Futura md BT';
+    font-size: 20px;
+}
+.daftar-artikel-content {
+    margin: 20px;
+    font-family: 'Futura bk BT';
+    font-size: 14px;
+}

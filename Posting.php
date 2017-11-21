@@ -64,12 +64,9 @@
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
 		<!--Recent-->
-			<?php include 'recent.html' ?>
         <!-- konten -->
 		
-        <div class="grid-headline-header">
-            <h1 class="headline-header"> POSTINGAN <span class="header-revcolor">DAN TEMAN-TEMANNYA </span></h1>
-        </div>
+        <div class="grid-headline-header"></div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
@@ -102,18 +99,22 @@
 							while($rowx = $resultx->fetch_assoc()) 
 							{
 								?>
-									<li><a href="?ID=<?php echo $rowx["ID"]?>">
-									<b><?php echo $rowx["Judul"]; ?></b></a>
-									<br>
-									<?php 
-										$str = $rowx["Isi"]; 
-										$isi = substr($str, 0, 300);
-										$isi .= "...";
-										echo $isi;
-									?>
-									<a href="?ID=<?php echo $rowx["ID"]?>">
-									<b>Read More</b></a><br>
-									</li>
+									<div class="daftar-artikel">
+										<div class="daftar-artikel-header">
+											<a href="?ID=<?php echo $rowx["ID"]?>">
+											<b><?php echo $rowx["Judul"]; ?></b></a>
+										</div>
+										<div class="dafter-artikel-content">
+											<?php 
+												$str = $rowx["Isi"]; 
+												$isi = substr($str, 0, 300);
+												$isi .= "...";
+												echo $isi;
+											?>
+											<a href="?ID=<?php echo $rowx["ID"]?>">
+											<b>Read More</b></a><br>
+										</div>
+									</div>
 								<?php
 							}
 							?>
