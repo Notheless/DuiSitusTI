@@ -1,10 +1,10 @@
 ﻿@media screen and (min-width: 1200px) {
     .grid-container {
         grid-template-rows: 40px 120px auto 180px 1fr;
-        grid-template-columns: 1fr auto 350px;
+        grid-template-columns: 1fr 1fr;
     }
     .grid-headline-header {
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
         grid-row: 2;
     }
     .grid-headline-para {
@@ -12,21 +12,21 @@
         grid-row: 3;
     }
     .grid-headline-thumbnail {
-        grid-column: 2 / span 2;
+        grid-column: 2;
         grid-row: 3;
     }
-    .grid-headline-thumbnail-det {
+    /* .grid-headline-thumbnail-det {
         grid-column: 3;
         grid-row: 4;
-    }
+    } */
     .grid-content {
         grid-column: 1 / span 2;
         grid-row: 4 / span 2;
     }
-    .grid-right-sidebar {
+    /* .grid-right-sidebar {
         grid-column: 3;
         grid-row: 5;
-    }
+    } */
 }
 @media screen and (max-width: 1199px) and (min-width: 700px) {
     .grid-container {
@@ -77,7 +77,6 @@
     }
 }
 .grid-container {
-    margin-right: 4%;
     display: grid;
     z-index: 5;
     transition: 0.5s;
@@ -86,16 +85,12 @@
     overflow: hidden;
     text-align: center;
     white-space: nowrap;
-    margin: 1em 0 0 0;
+    margin: 1em 40px 0 0;
     transition: 0.5s;
 }
 .grid-content {
     position: relative;
     font-family: 'Futura bk BT';
-}
-.grid-headline-thumbnail-det {
-    background-color: #aaa;
-    margin-bottom: 30px;
 }
 .grid-right-sidebar {
     position: relative;

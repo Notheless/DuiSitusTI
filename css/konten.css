@@ -1,6 +1,6 @@
 ﻿.headline-header {
-    margin: 38px;
-    text-align: center;
+    margin: 38px 65px;
+    text-align: left;
     font-size: 54px;
     font-family: 'Futura md BT';
 }
@@ -8,9 +8,12 @@ span.header-revcolor {
     color: #f4ae00;
 }
 .headline-para {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
     text-align: justify;
     text-indent: 50px;
-    margin: 20px;
+    margin: auto 40px;
     font-size: 18px;
     font-family: 'Futura bk BT';
 }
@@ -31,11 +34,13 @@ p {
 }
 .center-im {
     display: inline-block;
+    position: absolute;
     height: 100%;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 .thumbnail {
-    vertical-align: middle;
+    position: relative;
+    vertical-align: top;
     transition: width 1s;
 }
 .contentstyle p {
@@ -53,4 +58,10 @@ p {
 .content-image {
     height : auto;
     width : 300px;
+}
+.headline-thumbnail-det {
+    height: auto;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-40px);
 }

@@ -140,8 +140,8 @@
 				?>
 				<a href="?ID=<?php echo $row["ID"]?>">
 					<div class="dosen-list-content"><?php echo $row["Nama"]?></div>
-				</a>		
-				<?php	
+				</a>
+				<?php
 						$i+=1;
 					}
 				?>

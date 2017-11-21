@@ -12,7 +12,6 @@
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
 		<!--Recent-->
-			<?php include 'recent.html' ?>
         <!-- konten -->
 		<div class="grid-headline-header">
             <h1 class="headline-header"> VISI <span class="header-revcolor">DAN MISI </span></h1>
@@ -24,15 +23,14 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <span class="center-im"></span>
             <img class="thumbnail" src="f_img/02.jpg" height="auto" width="100%"/>
-        </div>
-        <div class="grid-headline-thumbnail-det">
-            <div style="padding:10px;font-style:italic;color:white">
-                <h2></h2>
-                <p>Vision without action is merely a dream. Action without vision just passed the time. Vision with action can change the world.
-					<br> <div style="text-align:right"> - Joel A. Barker</div>
-				</p>
+            <div class="headline-thumbnail-det">
+                <div style="padding:10px;font-style:italic;color:white">
+                    <h2></h2>
+                    <p>Vision without action is merely a dream. Action without vision just passed the time. Vision with action can change the world.
+                        <br> <div style="text-align:right"> - Joel A. Barker</div>
+                    </p>
+                </div>
             </div>
         </div>
         <div class="grid-content">

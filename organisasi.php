@@ -12,7 +12,6 @@
         <!-- navigasi kiri -->
 			<?php include 'left_nav.html';?>
 		<!--Recent-->
-			<?php include 'recent.html' ?>
         <!-- konten -->
 		
         <div class="grid-headline-header">
