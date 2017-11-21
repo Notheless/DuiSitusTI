@@ -1,6 +1,6 @@
 ﻿@media screen and (min-width: 1200px) {
     .grid-container {
-        grid-template-rows: 40px 120px auto 180px 1fr;
+        grid-template-rows: 40px 120px auto 1fr;
         grid-template-columns: 1fr 1fr;
     }
     .grid-headline-header {
@@ -21,7 +21,7 @@
     } */
     .grid-content {
         grid-column: 1 / span 2;
-        grid-row: 4 / span 2;
+        grid-row: 4;
     }
     /* .grid-right-sidebar {
         grid-column: 3;
@@ -30,7 +30,7 @@
 }
 @media screen and (max-width: 1199px) and (min-width: 700px) {
     .grid-container {
-        grid-template-rows: 40px 120px auto 180px 1fr;
+        grid-template-rows: 40px 120px 400px 1fr;
         grid-template-columns: 1fr 300px;
     }
     .grid-headline-header {
@@ -88,6 +88,7 @@
     transition: 0.5s;
 }
 .grid-content {
+    top: -100px;
     position: relative;
     font-family: 'Futura bk BT';
 }
