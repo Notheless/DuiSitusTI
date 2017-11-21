@@ -8,16 +8,14 @@
 </head>
 <body>
     <?php include 'Navbar.html';?>
-	<?php
-		error_reporting(0);
-		include 'database.php';
-		$sql = "SELECT * FROM posting";
-		$result = $conn->query($sql);
-	?>
 	<div class="grid-article-container">
         <!-- navigasi kiri -->
         <?php include 'left_nav.html';?>
 		<?php
+            error_reporting(0);
+            include 'database.php';
+            $sql = "SELECT * FROM posting";
+            $result = $conn->query($sql);
 			$id = 0;
 			if($_GET["ID"]){
 			$id = $_GET["ID"];
@@ -47,7 +45,8 @@ Kedua artikel yang dihasilkan merupakan hasil penelitian dari kedua tim selama 1
             a
         </div>
 		<?php
-			}
+            }
+        }
 		?>
     </div>
 </body>
