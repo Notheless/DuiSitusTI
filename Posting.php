@@ -102,7 +102,18 @@
 							while($rowx = $resultx->fetch_assoc()) 
 							{
 								?>
-									<li><a href="?ID="<?php echo $rowx["ID"]."\">".$rowx["Judul"]; ?></a></li>
+									<li><a href="?ID=<?php echo $rowx["ID"]?>">
+									<b><?php echo $rowx["Judul"]; ?></b></a>
+									<br>
+									<?php 
+										$str = $rowx["Isi"]; 
+										$isi = substr($str, 0, 300);
+										$isi .= "...";
+										echo $isi;
+									?>
+									<a href="?ID=<?php echo $rowx["ID"]?>">
+									<b>Read More</b></a><br>
+									</li>
 								<?php
 							}
 							?>
