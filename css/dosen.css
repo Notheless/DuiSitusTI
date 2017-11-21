@@ -52,7 +52,7 @@
     display: block;
 }
 #pengajaran-d {
-    display: show;
+    display: block;
 }
 #penelitian-d {
     display: none;
@@ -62,4 +62,68 @@
 }
 #penunjang-d {
     display: none;
+}
+.dosen-list-header {
+    background-color: #888;
+    font-family: 'Futura md BT';
+    font-size: 25px;
+    padding: 10px 20px;
+    color: white;
+}
+.dosen-list-content {
+    padding: 10px 2px;
+    border-bottom: 1px solid white;
+    font-family: 'Futura bk BT';
+    background-color: #aaa;
+    color: black;
+}
+.dosen-list-content a {
+    display: block;
+}
+.dosen-list-content:last-child {
+    border-bottom: none;
+}
+.dosen-block-list-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.dosen-block-list-container > a {
+    margin: 20px auto;
+    text-decoration: none;
+}
+.dosen-block-list-container > a > div {
+    background-color: #f1f1f1;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 25px;
+    overflow: hidden;
+}
+.image-dosen {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    overflow: hidden;
+    background-color:#ccc;
+    z-index: 1;
+}
+.dosen-block-list-container > a > div > .name {
+    position: relative;
+    padding-top: 18px;
+    width: 100%;
+    height: 120px;
+    font-size: 14px;
+    color: white;
+    font-family: 'Futura bk BT';
+    transform: translateY(150px);
+    background-color: rgba(121, 121, 121, 0.7);
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(121, 121, 121, 0.7) 20%);
+    transition: 0.4s ease-in-out;
+    z-index: 3;
+}
+.dosen-block-list-container > a:hover > div > .name {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6) 20%); */
 }
