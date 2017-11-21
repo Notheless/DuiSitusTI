@@ -102,7 +102,7 @@
 							while($rowx = $resultx->fetch_assoc()) 
 							{
 								?>
-									<li><a href="?ID=<?php echo $rowx["ID"]."\">".$rowx["Judul"]; ?></a></li>
+									<li><a href="?ID="<?php echo $rowx["ID"]."\">".$rowx["Judul"]; ?></a></li>
 								<?php
 							}
 							?>
