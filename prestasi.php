@@ -23,12 +23,12 @@
             </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/07.jpg" height="100%" width="100%"/>
+            <img style="thumbnail" src="f_img/10.jpg" height="100%" width="100%"/>
         </div>
         <div class="grid-headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
-                <h2>Laboratorium Komputer</h2>
-                <p>Merupakan tempat mahasiswa melaksanakan kegiatan praktikum maupun kegiatan belajar mengajar biasa.</p>
+                <h2></h2>
+                <p>Every Accomplishment Starts with the Decision to Try.</p>
             </div>
         </div>
         <div class="grid-content">
