@@ -144,7 +144,7 @@ div.box-hover-style {
 }
 @media screen and (max-width: 1599px) and (min-width: 700px) {
     ul.lower-navbar {
-        top: 45px;
+        top: 44 px;
         width: 50%;
         margin: 0 25%;
     }

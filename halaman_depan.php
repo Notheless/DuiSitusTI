@@ -22,7 +22,7 @@
                     <div class="text">
                         <h1>WELCOME</h1>
                         <p>TO INFORMATICS UNPAD WEBSITE</p>
-                        <a class="midbutton" href="posting.net">VISIT</a>
+                        <a class="midbutton" href="posting.php">VISIT</a>
                     </div>
                 </div>
                 <div class="presSlides fade">
