@@ -45,8 +45,8 @@ p {
 
 .daftar-artikel {
     height: auto;
-    margin: 0 2% 10px 2%;
-    padding: 10px 0;
+    margin: 10px 2% 10px 2%;
+    padding: 0 0 20px;
     color: black;
     border-bottom: 2px solid black;
     text-decoration: none;

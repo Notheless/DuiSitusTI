@@ -161,7 +161,7 @@ a.left-sidebar {
 .tags-container {
     background: linear-gradient(to right bottom, white, #bbb);
     overflow: hidden;
-    height: 170px;
+    height: 80px;
     transition: 0.3s;
 }
 .tags-container:hover {
