@@ -35,7 +35,7 @@
     <?php 		
 	echo "
 		<script>
-			alert('Ketika si Arthur ulang tahun, dia ditanyakan oleh bojonya.\\n \"Your Highness, ulang tahun nanti ingin hadiah apa.\" \\n \"Aing pen dragon.\"');
+			alert('Ketika si Arthur ulang tahun, dia ditanyakan oleh bojonya.\\n\\n \"Your Highness, ulang tahun nanti ingin hadiah apa.\" \\n \"Aing pen dragon.\" \\n\\nDan tibalah Arthur di suatu tempat yang bernama Avalon.');
 		</script>";
 		?>
 </html>
