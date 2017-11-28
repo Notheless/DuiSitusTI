@@ -14,7 +14,9 @@
                 <tr>
                     <td>
                         <a class="superlink-button" href="postingan.php">
-                            <div class="backback">Postingan</div>
+                            <div class="superlink-block">
+                                <p>Postingan</p>
+                            </div>
                         </a>
                     </td>
                 </tr>

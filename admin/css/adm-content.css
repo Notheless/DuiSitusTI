@@ -16,7 +16,6 @@ body {
     height: 100%;
     position: fixed;
     /* background-color: rgba(1,1,1,0.6); */
-    background-color: #ffefcc;
     z-index: 4;
 }
 .background-content .background {
@@ -32,6 +31,7 @@ body {
     height: auto;
     padding: 30px;
     background-color: #aaa;
+    background-color: #ffefcc;
     border-radius: 20px;
     z-index: 6;
     animation: show-div-effect 0.4s;

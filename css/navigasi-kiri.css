@@ -115,10 +115,22 @@ h2.left-sidebar {
     font-family: 'Futura md BT';
 }
 a.left-sidebar {
+    position: relative;
     color: white;
-    margin-top: 30px;
+    margin-top: 0;
     font-family: 'Futura bk BT';
     text-decoration: none;
+}
+a.left-sidebar div {
+    content: "";
+    height: 1px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.4s;
+}
+a.left-sidebar:hover div {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
 }
 .search-input {
     display: inline-block;
@@ -258,6 +270,7 @@ a.left-sidebar {
 .end-of-left-nav {
     padding: 40px;
 }
+
 @media screen and (max-width: 1700px) and (min-width: 700px) {
     .left-sidebar-container {
         padding-top: 10px;
