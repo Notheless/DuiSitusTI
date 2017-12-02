@@ -9,6 +9,7 @@
 }
 .superlink-button {
     position: relative;
+    overflow: hidden;
     display: inline-block;
     width: 80%;
     height: 8vw;
@@ -19,19 +20,20 @@
 .superlink-block {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.400);
-    right: 0;
-    width: 100px;
+    right: -100px;
+    width: 200px;
     height: 8vw;
-    transition: width 0.6s, border-radius 0.6s, background-color 0.4s;
+    transition: width 0.6s, border-radius 0.6s, background-color 0.4s, right 0.6s;
 }
 .superlink-block p {
-    padding-left: 8px;
+    padding-left: 10px;
     text-align: left;
     transform: translateY(3vw);
     transition: 0.6s;
     color: #ccc;
 }
 .superlink-button:hover .superlink-block {
+    right: 0;
     width: 40%;
     border-radius: 4px;
 }
@@ -43,4 +45,15 @@
 }
 .superlink-block:hover {
     background-color: rgba(0, 0, 0, 0.600);
+}
+#dive-text {
+    color: #bbb;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.superlink-button:hover .superlink-block #dive-text {
+    opacity: 1;
+}
+.superlink-block:hover #dive-text {
+    color: white;
 }

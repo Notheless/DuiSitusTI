@@ -15,19 +15,56 @@
                     <td>
                         <a class="superlink-button" href="postingan.php">
                             <div class="superlink-block">
-                                <p>Postingan</p>
+                                <p>Postingan<br /><br />
+                                <span id="dive-text">
+                                    - tambah postingan<br />
+                                    - edit postingan<br />
+                                    - hapus postingan<br />
+                                </span>
+                                </p>
                             </div>
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a class="superlink-button" href="dosen.php">Dosen</a>
+                        <a class="superlink-button" href="dosen.php">
+                            <div class="superlink-block">
+                                <p>Dosen<br /><br />
+                                <span id="dive-text">
+                                    - tambah keterangan dosen<br />
+                                    - edit keterangan dosen<br />
+                                </span>
+                                </p>
+                            </div>
+                        </a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a class="superlink-button" href="lulusan.php">lulusan</a>
+                        <a class="superlink-button" href="lulusan.php">
+                            <div class="superlink-block">
+                                <p>Lulusan<br /><br />
+                                <span id="dive-text">
+                                    - tambah lulusan<br />
+                                    - edit lulusan<br />
+                                </span>
+                                </p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="superlink-button" href="/">
+                            <div class="superlink-block">
+                                <p>Keluar<br /><br />
+                                <span id="dive-text">
+                                    Kembali ke halaman utama<br />
+                                </span>
+                                </p>
+                            </div>
+                        </a>
                     </td>
                 </tr>
             </table>
