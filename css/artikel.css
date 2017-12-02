@@ -58,6 +58,30 @@ p {
 }
 .daftar-artikel-content {
     margin: 20px;
+    margin-left: 0;
     font-family: 'Futura bk BT';
+    font-size: 16px;
+}
+#artikel-ket, #artikel-tags {
     font-size: 14px;
+}
+.page-list-row {
+    width: 100%;
+    text-align: center;
+}
+.page-list-counter {
+    display: inline-block;
+    margin: 0 7px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: .4s;
+}
+.page-list-counter:hover {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.page-list-counter p {
+    transform: translateY(-5px);
 }

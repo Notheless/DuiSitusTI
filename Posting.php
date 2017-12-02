@@ -104,7 +104,15 @@
 											<a href="?ID=<?php echo $rowx["ID"]?>">
 											<b><?php echo $rowx["Judul"]; ?></b></a>
 										</div>
-										<div class="dafter-artikel-content">
+										<div>
+											<p id="artikel-ket">
+												Diposting pada tanggal 
+												<?php echo $rowx["Tanggal"]?>
+												oleh 
+												<?php echo $rowx["Author"]?>
+											</p>
+										</div>
+										<div class="daftar-artikel-content">
 											<?php 
 												$str = $rowx["Isi"]; 
 												$isi = substr($str, 0, 300);
@@ -115,7 +123,7 @@
 											<b>Read More</b></a><br>
 										</div>
 										<div>
-											<p>Tags : 
+											<p id="artikel-tags">Tags : 
 												<?php 
 													$tgn = 0;
 													$tgsp = 0;
@@ -144,6 +152,11 @@
 							}
 							?>
 							</ul>
+							<div class="page-list-row">
+								<a href><div class="page-list-counter"><p>1<p></div></a>
+								<div class="page-list-counter"><p>2<p></div>
+								<div class="page-list-counter"><p>3<p></div>
+							</div>
 							<?php
 						}
 						
