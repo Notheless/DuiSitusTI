@@ -114,6 +114,31 @@
 											<a href="?ID=<?php echo $rowx["ID"]?>">
 											<b>Read More</b></a><br>
 										</div>
+										<div>
+											<p>Tags : 
+												<?php 
+													$tgn = 0;
+													$tgsp = 0;
+													while ($tgn <= 8)
+													{
+														if ($rowx["tag".$tgn] == 1) {
+															if ($tgsp == 0) {$tgsp = 1;}
+															else {echo ", ";}
+															if ($tgn == 0) {echo "Kecendikiawanan";}
+															elseif ($tgn == 1) {echo "Kerjasama";}
+															elseif ($tgn == 2) {echo "Laboratorium";}
+															elseif ($tgn == 3) {echo "Lulusan";}
+															elseif ($tgn == 4) {echo "Mahasiswa";}
+															elseif ($tgn == 5) {echo "Monev-Mutu";}
+															elseif ($tgn == 6) {echo "Pendidikan";}
+															elseif ($tgn == 7) {echo "Penelitian";}
+															elseif ($tgn == 8) {echo "Pengabdian";}											;	
+														}
+														$tgn += 1;
+													}
+												?>
+											</p>
+										</div>
 									</div>
 								<?php
 							}
