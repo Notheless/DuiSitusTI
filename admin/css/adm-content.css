@@ -1,5 +1,5 @@
 body {
-    background-color: #fff7e6;
+    background-color: #f1fbff;
 }
 .admin-content-pos {
     position: relative;
@@ -91,7 +91,7 @@ body {
     font-size: 16px;
     font-family: 'Futura Bk BT';
     transition: 0.3s;
-    cursor: pointer
+    cursor: pointer;
 }
 .admin-content .button:hover {
     background-color: #72d1f3;

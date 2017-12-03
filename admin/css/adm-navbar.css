@@ -4,6 +4,7 @@
     top : 0;
     height: auto;
     background-color: #555;
+    list-style-type: none;
     z-index: 9;
 }
 .admin-top-box-bar {
@@ -11,16 +12,15 @@
     width : 600px;
     margin: auto;
     height: auto;
-    list-style-type: none;
     padding: 0;
     color: white;
 }
-.admin-top-box-bar li {
+.admin-top-box-wrapper li {
     float: left;
     width: 200px;
     transition: 0.2s;
 }
-.admin-top-box-bar li a {
+.admin-top-box-wrapper li a {
     width: 100%;
     display: inline-block;
     color: white;
@@ -30,7 +30,7 @@
     text-decoration: none;
     margin-bottom: 4px;
 }
-.admin-top-box-bar li:hover {
+.admin-top-box-wrapper li:hover {
     background-color: #aaa;
 }
 .admin-left-box-bar {
@@ -71,4 +71,16 @@
     opacity: 100%;
     color: rgba(255,255,255,1);
     margin-right: 5px;
+}
+#left-bar {
+    float: left;
+}
+#right-bar {
+    float: right;
+}
+.admin-top-box-wrapper li:hover#left-bar {
+    background-color: rgb(151, 170, 175);
+}
+.admin-top-box-wrapper li:hover#right-bar {
+    background-color: rgb(179, 154, 154);
 }
