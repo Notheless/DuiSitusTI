@@ -144,7 +144,7 @@ div.box-hover-style {
 }
 @media screen and (max-width: 1599px) and (min-width: 700px) {
     ul.lower-navbar {
-        top: 44 px;
+        top: 42px;
         width: 50%;
         margin: 0 25%;
     }
@@ -156,6 +156,11 @@ div.box-hover-style {
     }
 }
 @media screen and (min-width: 1600px) {
+    ul.lower-navbar {
+        top: 50px;
+        width: 50%;
+        margin: 0 25%;
+    }
     li.lnavbar a, li.rnavbar a, .dropdown a, li.lower-lnavbar a, li.lower-rnavbar a {
         font-size: 22px;
     }

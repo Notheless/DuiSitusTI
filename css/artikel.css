@@ -45,16 +45,41 @@ p {
 
 .daftar-artikel {
     height: auto;
-    margin: 10px 2% 10px 2%;
-    padding: 0 0 20px;
+    margin: 20px 2% 20px 2%;
+    padding: 3px 0 20px;
     color: black;
-    border-bottom: 2px solid black;
-    text-decoration: none;
+    background-color: #fdefcc;
+}
+.daftar-artikel div:not(.daftar-artikel-header):not(.daftar-artikel-thumbnail) {
+    padding-left: 360px;
+}
+.daftar-artikel-header a span:first-child {
+    text-decoration: underline;
+    color: #f0ac00;
+}
+.daftar-artikel-header a span:last-child {
+    text-decoration: underline;
+    color: black;
 }
 .daftar-artikel-header {
-    margin: 20px;
+    display: block;
+    margin: 40px 40px 15px;
+    margin-top: 5px;
     font-family: 'Futura md BT';
-    font-size: 20px;
+    font-size: 28px;
+}
+.daftar-artikel-thumbnail {
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    margin-left: 35px;
+    width: 300px;
+    height: 160px;
+    border: 1px solid black;
+}
+.artikel-list-thumbnail {
+    height: 100%;
+    width: auto;
 }
 .daftar-artikel-content {
     margin: 20px;
@@ -62,7 +87,12 @@ p {
     font-family: 'Futura bk BT';
     font-size: 16px;
 }
+.daftar-artikel-content a {
+    font-style: italic;
+    color: black;
+}
 #artikel-ket, #artikel-tags {
+    font-style: italic;
     font-size: 14px;
 }
 .page-list-row {
@@ -77,6 +107,18 @@ p {
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0);
     transition: .4s;
+}
+.ultimate-header {
+    transform: translateY(-30px);
+    background-color: #f4ae00;
+    width: 100%;
+    height: auto;
+    border-bottom: 40px;
+    text-align: center;
+}
+.ultimate-header p {
+    font-size: 80px;
+    color: white;
 }
 .page-list-counter:hover {
     border: 1px solid black;

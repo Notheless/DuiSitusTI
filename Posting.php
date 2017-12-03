@@ -90,19 +90,37 @@
 					}
 					if($id==0){
 						$sqlx = "SELECT * FROM posting ORDER BY ID DESC LIMIT 10";
-						$resultx = $conn->query($sqlx);			
+						$resultx = $conn->query($sqlx);
 						if (($resultx->num_rows > 0)) 
 						{
 							?>
+							<div class="ultimate-header">
+								<p>NEWS</p>
+							</div>
 							<ul>
 							<?php
 							while($rowx = $resultx->fetch_assoc()) 
 							{
+								$sqly = "SELECT * FROM gambar";
+								$resulty = $conn->query($sqly);	
 								?>
 									<div class="daftar-artikel">
 										<div class="daftar-artikel-header">
+											<?php 
+											$mid = strrpos(substr($rowx["Judul"], 0, floor(strlen($rowx["Judul"]) / 2)), ' ') + 1;
+											
+											$judulf = substr($rowx["Judul"], 0, $mid);
+											$judulb = substr($rowx["Judul"], $mid);
+											?>
 											<a href="?ID=<?php echo $rowx["ID"]?>">
-											<b><?php echo $rowx["Judul"]; ?></b></a>
+											<b><span><?php echo $judulf; ?></span><span><?php echo $judulb; ?></span></b></a>
+										</div>
+										<div class="daftar-artikel-thumbnail">
+											<?php 
+											while($rowy = $resulty->fetch_assoc()) {
+												if (($rowx["ID"] == $rowy["TagPost"]) and ($rowy["Utama"] == 1)) { ?>
+													<img class="artikel-list-thumbnail" src="imgpost\<?php echo $rowy["ID"]; ?>.jpg">
+											<?php } } ?>
 										</div>
 										<div>
 											<p id="artikel-ket">

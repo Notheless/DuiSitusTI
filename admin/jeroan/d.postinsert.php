@@ -31,7 +31,7 @@
 						</tr>
                         </tr>
                         <tr>
-                            <td><button type="button" onclick="hideInsertDiv()">kembali</button></td>
+                            <td><button type="button" onclick="hideInsertDiv()">◀ kembali</button></td>
                             <td style="text-align: right"><input class="button" type="submit" value="Masukkan"></td>
 						</tr>
                     </table>
