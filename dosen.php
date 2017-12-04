@@ -131,23 +131,6 @@
 		$id = 0;
 		if($_GET["ID"]){
         ?>
-		<div class="grid-dosen-list">
-			<div style="margin:1vw; background-color:#ccc;">
-				<div class="dosen-list-header">DAFTAR DOSEN</div>
-				<?php 
-					$i = 1;	
-					while($row = $result->fetch_assoc()) {
-				?>
-				<a href="?ID=<?php echo $row["ID"]?>">
-					<div class="dosen-list-content"><?php echo $row["Nama"]?></div>
-				</a>
-				<?php
-						$i+=1;
-					}
-				?>
-				<div style="height:20px;width:100%;background-color:#aaa;"></div>
-			</div>
-		</div>
 		<?php
 			}
 		?>
