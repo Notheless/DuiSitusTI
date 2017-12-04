@@ -55,10 +55,14 @@ p {
 }
 .daftar-artikel-header a span:first-child {
     text-decoration: underline;
-    color: #f0ac00;
 }
 .daftar-artikel-header a span:last-child {
     text-decoration: underline;
+}
+.daftar-artikel-header span:first-child {
+    color: #f0ac00;
+}
+.daftar-artikel-header span:last-child {
     color: black;
 }
 .daftar-artikel-header {

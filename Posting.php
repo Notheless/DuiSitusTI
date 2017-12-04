@@ -70,7 +70,17 @@
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
-                <?php 
+                <?php ?>
+					<div class="daftar-artikel-header">
+						<?php 
+						$mid = strrpos(substr($judul, 0, floor(strlen($judul) / 2)), ' ') + 1;
+						
+						$judulf = substr($judul, 0, $mid);
+						$judulb = substr($judul, $mid);
+						?>
+						<b><span><?php echo $judulf; ?></span><span><?php echo $judulb; ?></span></b></a>
+					</div>
+				<?php
 					echo $isi."<br>";
 					
 					//gambar
