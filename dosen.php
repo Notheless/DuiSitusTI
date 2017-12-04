@@ -19,7 +19,7 @@
 			<?php include 'left_nav.html';?>
         <!-- konten -->
         <div class="grid-dosen-header">
-            <h1 class="headline-header">TENAGA <span class="header-revcolor">PENDIDIK</span></h1>
+            <h1 class="headline-header" style=" text-align: left">TENAGA <span class="header-revcolor">PENDIDIK</span></h1>
         </div>
 		<?php
 			$id = 0;
