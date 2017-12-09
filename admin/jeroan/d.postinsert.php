@@ -1,5 +1,7 @@
+
 <h2 class="content-title">Artikel Baru</h2>
-                <form action="jeroan/d.insertPE.php" enctype="multipart/form-data" method="POST">
+                <form action="jeroan/d.insertPE.php"  enctype="multipart/form-data" method="POST" onload="loaded();">
+                    <input type="hidden" value="0" id="imgnum">
                     <input type="hidden" value="NULL" name="auth">
 					<input type="hidden" value="0" name="tag0">
 					<input type="hidden" value="0" name="tag1">
@@ -10,7 +12,7 @@
 					<input type="hidden" value="0" name="tag6">
 					<input type="hidden" value="0" name="tag7">
 					<input type="hidden" value="0" name="tag8">
-					<table>
+					<table id="myTable">
                         <tr>
                             <td><p>Judul Artikel : </p></td>
                             <td width="70%"><input class="data-input" type="text" name="judul_artikel" placeholder="judul artikel" required></td>
@@ -27,12 +29,16 @@
                         </tr>
                         <tr>
                             <td><p>Unggah gambar:</p></td>
-							<td><label class ="button"><input type="file" name="gambar[]" multiple="multiple" accept="image/*" style ="display: none;"/>Tambah gambar</label></td>
+							<td><label class ="button"><input id ="imgbutton" type="file" multiple="multiple" accept="image/*" style ="display: none;" onchange="handleFileSelect()"/>Tambah gambar</label></td>
 						</tr>
+                        <tr>
+                        <td colspan="2"> 
+                            <label id="result"></label>
+                        </td>
                         </tr>
                         <tr>
-                            <td><button type="button" onclick="hideInsertDiv()">◀ kembali</button></td>
-                            <td style="text-align: right"><input class="button" type="submit" value="Masukkan"></td>
+                            <td><button  type="button" onclick="hideInsertDiv()">◀ kembali</button></td>
+                            <td style="text-align: right"><input id="submit" class="button" type="submit" value="Masukkan"></td>
 						</tr>
                     </table>
                 </form>

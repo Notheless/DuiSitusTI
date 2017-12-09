@@ -19,15 +19,16 @@
 	$ResTarget = 2000;
 	$count = 0;
 	if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
-		foreach ($_FILES['gambar']['name'] as $name){
-		$size = $_FILES['gambar']['size'][$count];
-		if (strlen($name)) {
-			if ($size < (1024 *1024 * 1024)) { // Image size max 1 MB
+		
+	$str = $_POST['gambar'];
+	foreach( $str as $key) {
 				//upload and convert
 				$id += $count;
-				$actual_image_name = "../../imgpost/".$id.".jpg";
-				$tmp = $_FILES['gambar']['tmp_name'][$count];
-				move_uploaded_file($tmp,$actual_image_name);
+				$actual_image_name = "..\\..\\imgpost\\".$id.".jpg";
+				$img = $key;
+				$img = substr($img, 1+strrpos($img, ','));
+				$data = base64_decode($img);
+				$success = file_put_contents($actual_image_name,$data);
 					
 				$check =  exif_imagetype ( $actual_image_name );
 				$tmp = $actual_image_name;
@@ -93,8 +94,6 @@
 				}
 				move_uploaded_file($tmp,$thumbnail_image_name);
 			}
-		}
-		}
 	//header("Location: index.html"); /* Redirect browser */
 	}
 	

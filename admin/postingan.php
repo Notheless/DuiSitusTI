@@ -67,5 +67,6 @@
     <script type="text/javascript" src="js/show-div-post.js"></script>
     <script type="text/javascript" src="js/textarea.js"></script>
 	<script type="text/javascript" src="js/post-edit.js"></script>
+    <script type="text/javascript" src="/dui/admin/js/insert-img.js"></script>
 </body>
 </html>
