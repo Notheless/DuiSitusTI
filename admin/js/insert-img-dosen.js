@@ -1,6 +1,18 @@
 
+function deletethis(id){
+    document.getElementById(id).remove();
+}
+
+function handleFileSelectI(){
+    handleFileSelect("resultI");
+}
+
+function handleFileSelectE(){
+    handleFileSelect("resultE");
+}
+
+
 function handleFileSelect(input) {
-    alert(input);
     //Check File API support
     if (window.File && window.FileList && window.FileReader) {
         var x = document.getElementById('imgnum').value;
@@ -28,13 +40,4 @@ function handleFileSelect(input) {
     } else {
         console.log("Your browser does not support File API");
     }
-}
-function deletethis(id){
-    document.getElementById(id).remove()
-}
-function handleFileSelectI(){
-    handleFileSelect("resultI")
-}
-function handleFileSelectE(){
-    handleFileSelect("resultE")
 }

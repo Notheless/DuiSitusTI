@@ -11,7 +11,7 @@
     <div class="admin-content-pos">
         
         <div class="admin-main-content">
-            <table>
+            <table class="table-post">
                 <col><col><col>
                 <tr>
                     <td>Judul</td>
@@ -20,15 +20,15 @@
                 </tr>
 				<?php
 					include '../database.php';
-					$sql = "SELECT `ID`, `Judul`, `Tanggal`, `Author` FROM `posting`";
+					$sql = "SELECT `ID`, `Nama`, `Email` FROM `dosen`";
 					$result = $conn->query($sql);
 					$i=1;
 					while($row = $result->fetch_assoc()) 
 					{
 				?>
 						<tr>
-						<td> <?php echo	$row["Judul"] ?></td>
-						<td> <?php echo	$row["Tanggal"] ?></td>
+						<td> <?php echo	$row["Nama"] ?></td>
+						<td> <?php echo	$row["Email"] ?></td>
 						<td>
 							<button id="update-button" type="button" onclick="showUpdateDiv(<?php echo	$row["ID"] ?>)">edit</button>
 							<button id="delete-button" type="button" onclick="showDeleteDiv(<?php echo	$row["ID"] ?>)">hapus</button></td>
@@ -73,6 +73,6 @@
     </div>
     <script type="text/javascript" src="js/show-div-dosen.js"></script>
     <script type="text/javascript" src="js/textarea.js"></script>
-    <script type="text/javascript" src="/dui/admin/js/insert-img.js"></script>
+    <script type="text/javascript" src="js/insert-img-dosen.js"></script>
 </body>
 </html>

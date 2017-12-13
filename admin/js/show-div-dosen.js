@@ -11,7 +11,7 @@ function showInsertDiv() {
 			document.getElementById("insert").innerHTML=this.responseText;
 		}
 	}
-	xmlhttp.open("GET","jeroan/d.postinsert.php",true);
+	xmlhttp.open("GET","jeroan/d.doseninsert.php",true);
 	xmlhttp.send();	
 }
 
@@ -31,7 +31,7 @@ function showUpdateDiv(str) {
 			document.getElementById("update").innerHTML=this.responseText;
 		}
 	}
-	xmlhttp.open("GET","jeroan/d.postedit.php?ID="+str,true);
+	xmlhttp.open("GET","jeroan/d.dosenedit.php?ID="+str,true);
 	xmlhttp.send();
 }
 function hideUpdateDiv() {
@@ -55,7 +55,7 @@ function showDeleteDiv(str) {
 			document.getElementById("delete").innerHTML=this.responseText;
 		}
 	}
-	xmlhttp.open("GET","jeroan/d.postdelete.php?ID="+str,true);
+	xmlhttp.open("GET","jeroan/d.dosendelete.php?ID="+str,true);
 	xmlhttp.send();
 }
 function hideDeleteDiv() {

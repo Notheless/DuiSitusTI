@@ -14,6 +14,14 @@
 			$conn->query($sql);
 		}
 	}
+	$newpost = $_POST["ID"];
+	$sqlx = "SELECT MAX(ID) AS last FROM gambar";
+	$resultx = $conn->query($sqlx);
+	$rowx = $resultx->fetch_assoc();
+	$id = $rowx["last"];
+	$id +=1;
+	$ResTarget = 2000;
+	$count = 0;
 	
 	if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
 		
@@ -141,6 +149,7 @@
 			alert('Terjadi Kelasahan');
 		</script>";
 	}
+	
 		echo "
 		<script>
 			window.location.href='../postingan.php';
