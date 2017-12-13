@@ -29,11 +29,11 @@
                         </tr>
                         <tr>
                             <td><p>Unggah gambar:</p></td>
-							<td><label class ="button"><input id ="imgbutton" type="file" multiple="multiple" accept="image/*" style ="display: none;" onchange="handleFileSelect()"/>Tambah gambar</label></td>
+							<td><label class ="button"><input id ="imgbutton" type="file" multiple="multiple" accept="image/*" style ="display: none;" onchange="handleFileSelectI()"/>Tambah gambar</label></td>
 						</tr>
                         <tr>
                         <td colspan="2"> 
-                            <label id="result"></label>
+                            <label id="resultI"></label>
                         </td>
                         </tr>
                         <tr>

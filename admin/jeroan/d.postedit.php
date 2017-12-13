@@ -59,9 +59,19 @@
                         </tr>
                         <tr>
                             <td colspan="2"><textarea rows="3" name="isi_artikel" placeholder="isi artikel"><?php echo $isi; ?></textarea></td>
-                        </tr>                        <tr>
-							<td><p>Gambar: </p></td>
-							<td><label class ="button"><input type="file" name="gambar[]" multiple="multiple" accept="image/*" style ="display: none;"/>Tambah gambar</label></td>
+                        </tr>  
+						<tr>
+							<td><p>Unggah gambar:</p></td>
+							<td><label class ="button"><input id ="imgbutton" type="file" multiple="multiple" accept="image/*" style ="display: none;" onchange="handleFileSelectE()"/>Tambah gambar</label></td>
+						</tr>
+						<tr>
+							<td colspan="2"> 
+								<label id="resultE"></label>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">Hapus gambar :
+							</td>
 						</tr>
                         <tr>
 							<td colspan="2">
@@ -77,7 +87,7 @@
 										{
 								?>
 											<label >
-												<img id="Gambar<?php echo $row['ID'];?>" src="../imgpost/<?php echo $row['ID'];?>-thumbnail.jpg" onclick="enable(<?php echo $row['ID'];?>)">
+												<img id="Gambar<?php echo $row['ID'];?>" src="/dui/imgpost/<?php echo $row['ID'];?>-thumbnail.jpg" onclick="enable(<?php echo $row['ID'];?>)">
 												<input id="GC<?php echo $row['ID'];?>" type='checkbox' name='gambardel[]' value='<?php echo $row['ID'];?>' style="display:none">
 											</label>
 								<?php

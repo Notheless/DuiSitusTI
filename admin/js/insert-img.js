@@ -1,11 +1,12 @@
 
-function handleFileSelect() {
+function handleFileSelect(input) {
+    alert(input);
     //Check File API support
     if (window.File && window.FileList && window.FileReader) {
         var x = document.getElementById('imgnum').value;
         var y = Number(x);
         var files = event.target.files; //FileList object
-        var output = document.getElementById("result");
+        var output = document.getElementById(input);
 
         for (var i = 0; i < files.length; i++) {
             var file = files[i];
@@ -30,4 +31,10 @@ function handleFileSelect() {
 }
 function deletethis(id){
     document.getElementById(id).remove()
+}
+function handleFileSelectI(){
+    handleFileSelect("resultI")
+}
+function handleFileSelectE(){
+    handleFileSelect("resultE")
 }

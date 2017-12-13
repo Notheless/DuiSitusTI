@@ -27,7 +27,7 @@
 					{
 				?>
 						<tr>
-						<td> <?php echo	$row["Judul"] ?></td>
+						<td> <a href="/dui/posting.php?ID=<?php echo $row["ID"] ?>"> <?php echo	$row["Judul"] ?></a></td>
 						<td> <?php echo	$row["Tanggal"] ?></td>
 						<td>
 							<button id="update-button" type="button" onclick="showUpdateDiv(<?php echo	$row["ID"] ?>)">edit</button>
