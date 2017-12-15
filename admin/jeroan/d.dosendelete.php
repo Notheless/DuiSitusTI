@@ -1,10 +1,8 @@
  <?php
 	include '../../database.php';$id=0;
-	$sql = "SELECT * FROM posting";
+	$sql = "SELECT * FROM dosen";
 	$result = $conn->query($sql);
-	$judul ='';
-	$tanggal ='';
-	$isi ='';
+	$Nama ='';
 	$i=1;
 	if($_GET["ID"]) 
 	{
@@ -14,23 +12,21 @@
 			while($row = $result->fetch_assoc()) 
 			{
 				if($id==$row['ID']){
-					$judul =$row["Judul"];
-					$tanggal =$row["Tanggal"];
-					$isi =$row["Isi"];
+					$Nama = $row["Nama"];
 				}
 			}
 		}
 	}
 ?>
-<h2 class="content-title">Hapus Artikel</h2>
-                <form action="jeroan/d.deletePE.php" method="POST">
+<h2 class="content-title">Hapus Dosen</h2>
+                <form action="jeroan/d.deleteDE.php" method="POST">
                     <input type="hidden" value="<?php echo $_GET["ID"] ?>" name="ID">
                     <table style="text-align:center">
                         <tr>
-                            <td colspan="2"><p>Artikel dengan judul : </p></td>
+                            <td colspan="2"><p>Dosen bernama : </p></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><p><?php echo $judul; ?></p></td>
+                            <td colspan="2"><p><?php echo $Nama; ?></p></td>
                         </tr>
                         <tr>
                             <td colspan="2"><p>Akan dihapus dan tidak bisa dikembalikan, apakah anda yakin? </p></td>

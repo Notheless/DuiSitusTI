@@ -1,43 +1,86 @@
+var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+        var output = document.getElementById('preview');
+        output.src = reader.result;
+        var Val = document.getElementById('imgval');
+        Val.value = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
 
-function deletethis(id){
+  function deletethis(id){
     document.getElementById(id).remove();
 }
 
-function handleFileSelectI(){
-    handleFileSelect("resultI");
+function newA(inp){
+    var output = document.getElementById('LastA');
+    var x = document.getElementById('Anum').value;
+    var y = Number(x);
+
+    if(inp==y){
+        document.getElementById('Anum').value = y+1;
+        x = document.getElementById('Anum').value;
+        var output = document.getElementById("LastA");
+        
+        var div = document.createElement("label");
+        div.innerHTML = "<input class=\"data-input\" type=\"text\" name=\"Pengajaran[]\" onkeypress=\"newA("+x+")\"  id=\"Pengajaran"+x+"\";>";
+        output.insertBefore(div, null);
+    }
+    if(false){
+    }
 }
 
-function handleFileSelectE(){
-    handleFileSelect("resultE");
+function newB(inp){
+    var output = document.getElementById('LastB');
+    var x = document.getElementById('Bnum').value;
+    var y = Number(x);
+
+    if(inp==y){
+        document.getElementById('Bnum').value = y+1;
+        x = document.getElementById('Bnum').value;
+        var output = document.getElementById("LastB");
+        
+        var div = document.createElement("label");
+        div.innerHTML = "<input class=\"data-input\" type=\"text\" name=\"Penelitian[]\" onkeypress=\"newB("+x+")\"  id=\"Penelitian"+x+"\";>";
+        output.insertBefore(div, null);
+    }
+    if(false){
+    }
 }
 
+function newC(inp){
+    var output = document.getElementById('LastC');
+    var x = document.getElementById('Cnum').value;
+    var y = Number(x);
 
-function handleFileSelect(input) {
-    //Check File API support
-    if (window.File && window.FileList && window.FileReader) {
-        var x = document.getElementById('imgnum').value;
-        var y = Number(x);
-        var files = event.target.files; //FileList object
-        var output = document.getElementById(input);
+    if(inp==y){
+        document.getElementById('Cnum').value = y+1;
+        x = document.getElementById('Cnum').value;
+        var output = document.getElementById("LastC");
+        
+        var div = document.createElement("label");
+        div.innerHTML = "<input class=\"data-input\" type=\"text\" name=\"Penunjang[]\" onkeypress=\"newC("+x+")\"  id=\"Penunjang"+x+"\";>";
+        output.insertBefore(div, null);
+    }
+    if(false){
+    }
+}
 
-        for (var i = 0; i < files.length; i++) {
-            var file = files[i];
-            //Only pics
-            if (!file.type.match('image')) continue;
+function newD(inp){
+    var output = document.getElementById('LastD');
+    var x = document.getElementById('Dnum').value;
+    var y = Number(x);
 
-            var picReader = new FileReader();
-            picReader.addEventListener("load", function (event) {
-                var picFile = event.target;
-                var div = document.createElement("label");
-                div.id = "label_"+x;
-                div.innerHTML = "<img class='thumbnail' onclick=\"deletethis(\'"+div.id+"\')\" src='" + picFile.result + "'" + "width='200px' height='200px'/> <input type='hidden' name='gambar[]' value='"+picFile.result+"'/>";
-                output.insertBefore(div, null);
-            });
-            //Read the image
-            picReader.readAsDataURL(file);
-        }
-        document.getElementById('imgnum').value = y+1;
-    } else {
-        console.log("Your browser does not support File API");
+    if(inp==y){
+        document.getElementById('Dnum').value = y+1;
+        x = document.getElementById('Dnum').value;
+        var output = document.getElementById("LastD");
+        
+        var div = document.createElement("label");
+        div.innerHTML = "<input class=\"data-input\" type=\"text\" name=\"Pengabdian[]\" onkeypress=\"newD("+x+")\"  id=\"Pengabdian"+x+"\";>";
+        output.insertBefore(div, null);
+    }
+    if(false){
     }
 }
