@@ -48,6 +48,7 @@
 					<tr><td width="110px"><p>HP</p></td><td><p>:</p></td><td><p><?php echo $row["HP"];?></p></td></tr>
 					<tr><td width="110px"><p>Alamat</p></td><td><p>:</p></td><td><p><?php echo $row["Alamat"];?></p></td></tr>
 					<tr><td width="110px"><p>Pendidikan</p></td><td><p>:</p></td><td><p><?php echo $row["Pendidikan"];?></td></tr>
+					<tr><td width="110px"><p>Bidang</p></td><td><p>:</p></td><td><p><?php echo $row["Bidang"];?></td></tr>
 				</table>
         	</div>
         </div>
