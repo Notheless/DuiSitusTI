@@ -17,7 +17,7 @@
                         </tr>
                         <tr>
                             <td><p>Tanggal : </p></td>
-                            <td><input class="data-input" type="datetime-local" name="Tanggal" placeholder="Tanggal" ></td>
+                            <td><input class="data-input" type="date" name="Tanggal" placeholder="Tanggal" ></td>
                         </tr>
                         <tr>
                             <td><p>Pembimbing 1 : </p></td>
