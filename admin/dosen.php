@@ -15,7 +15,7 @@
                 <col><col><col>
                 <tr>
                     <td>Judul</td>
-                    <td>Tanggal</td>
+                    <td>Email</td>
                     <td>Pengaturan</td>
                 </tr>
 				<?php
@@ -27,7 +27,7 @@
 					{
 				?>
 						<tr>
-						<td> <?php echo	$row["Nama"] ?></td>
+						<td> <a href="../dosen.php?ID=<?php echo $row["ID"];?>"><?php echo	$row["Nama"] ?></a></td>
 						<td> <?php echo	$row["Email"] ?></td>
 						<td>
 							<button id="update-button" type="button" onclick="showUpdateDiv(<?php echo	$row["ID"] ?>)">edit</button>

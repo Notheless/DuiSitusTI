@@ -11,24 +11,24 @@
     <div class="admin-content-pos">
         
         <div class="admin-main-content">
-            <table>
+            <table  class="table-post">
                 <col><col><col>
                 <tr>
+                    <td>Nama</td>
                     <td>Judul</td>
-                    <td>Tanggal</td>
                     <td>Pengaturan</td>
                 </tr>
 				<?php
 					include '../database.php';
-					$sql = "SELECT `ID`, `Judul`, `Tanggal`, `Author` FROM `posting`";
+					$sql = "SELECT * FROM lulusan";
 					$result = $conn->query($sql);
 					$i=1;
 					while($row = $result->fetch_assoc()) 
 					{
 				?>
 						<tr>
+						<td> <?php echo	$row["Nama"] ?></td>
 						<td> <?php echo	$row["Judul"] ?></td>
-						<td> <?php echo	$row["Tanggal"] ?></td>
 						<td>
 							<button id="update-button" type="button" onclick="showUpdateDiv(<?php echo	$row["ID"] ?>)">edit</button>
 							<button id="delete-button" type="button" onclick="showDeleteDiv(<?php echo	$row["ID"] ?>)">hapus</button></td>
@@ -37,7 +37,7 @@
 				<?php
 					}
 					
-					$sql = "SELECT MAX(ID) as LAST FROM `posting`";
+					$sql = "SELECT MAX(ID) as LAST FROM `lulusan`";
 					$result = $conn->query($sql);
 					$row = $result->fetch_assoc();
 					$id = 1 + $row["LAST"];

@@ -114,8 +114,8 @@ body {
     border-collapse: collapse;
     background-color: #ccc;
 }
-.admin-main-content .table-post col:nth-child(1) { width:100%; }
-.admin-main-content .table-post col:nth-child(2) { width:100px; }
+.admin-main-content .table-post col:nth-child(1) { width:50%; }
+.admin-main-content .table-post col:nth-child(2) { width:50%; }
 .admin-main-content .table-post col:nth-child(3) { min-width:205px; }
 .admin-main-content .table-post td {
     padding: 10px;
