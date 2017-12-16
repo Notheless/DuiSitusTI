@@ -18,7 +18,7 @@
 		}
 	}
 ?>
-<h2 class="content-title">Hapus Dosen</h2>
+<h2 class="content-title">Hapus Lulusan</h2>
                 <form action="jeroan/d.deleteLE.php" method="POST">
                     <input type="hidden" value="<?php echo $_GET["ID"] ?>" name="ID">
                     <table style="text-align:center">

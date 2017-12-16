@@ -35,8 +35,8 @@
 	$sql = "SELECT * FROM dosen";
 	$result = $conn->query($sql);
 ?>
-<h2 class="content-title">Dosen Edit</h2>
-               <form action="jeroan/d.editDE.php"  enctype="multipart/form-data" method="POST" onload="loaded();">
+<h2 class="content-title">Lulusan Edit</h2>
+               <form action="jeroan/d.editLE.php"  enctype="multipart/form-data" method="POST" onload="loaded();">
 					<table id="myTable">
 						<input type="hidden" value="<?php echo $id ; ?>" name="ID">
                         
