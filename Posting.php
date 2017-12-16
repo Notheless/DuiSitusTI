@@ -111,6 +111,7 @@
 							<?php
 							while($rowx = $resultx->fetch_assoc()) 
 							{
+								$avaible = true;
 								$sqly = "SELECT * FROM gambar";
 								$resulty = $conn->query($sqly);	
 								?>
@@ -128,8 +129,8 @@
 										<div class="daftar-artikel-thumbnail">
 											<?php 
 											while($rowy = $resulty->fetch_assoc()) {
-												if (($rowx["ID"] == $rowy["TagPost"]) and ($rowy["Utama"] == 1)) { ?>
-													<img class="artikel-list-thumbnail" src="imgpost\<?php echo $rowy["ID"]; ?>.jpg">
+												if (($rowx["ID"] == $rowy["TagPost"]) and ($rowy["Utama"] == 0) and $avaible) { $avaible=false;?>
+													<img class="artikel-list-thumbnail" src="imgpost\<?php echo $rowy["ID"]; ?>-thumbnail.jpg">
 											<?php } } ?>
 										</div>
 										<div>

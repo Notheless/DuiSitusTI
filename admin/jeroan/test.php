@@ -1,25 +1,36 @@
-<form action="test.php" enctype="multipart/form-data" method="POST">
-	<table>
-		<tr>
-			<input type='checkbox' name='checkboxvar[]' value='satu'>1<br>
-		</tr>
-		<tr>
-			<input type='checkbox' name='checkboxvar[]' value='dua'>2<br>
-		</tr>
-		<tr>
-			<input type='checkbox' name='checkboxvar[]' value='tiga'>3<br>
-		</tr>
-		<tr>
-			<input class="button" type="submit" value="Masukkan">
-		</tr>
-		
-	</table>
-</form>
-<?php 
-if (isset($_POST['checkboxvar'])) 
-{
-	foreach($_POST['checkboxvar'] as $Z){
-		echo $Z."<br>";
+<?php
+	$Nama = $_POST["Nama"];
+	$Email = $_POST["Email"];
+	$Telp = $_POST["Telp"];
+	$HP = $_POST["HP"];
+	$Alamat = $_POST["Alamat"];
+	$Pendidikan = $_POST["Pendidikan"];
+	$Bidang = $_POST["Bidang"];
+
+	$Pengajaran = $_POST["Pengajaran"];
+	$pengabdian = $_POST["Pengabdian"];
+	$penunjang = $_POST["Penunjang"];
+	$Penelitian = $_POST["Penelitian"];
+
+	echo "Nama : ".$Nama."<br>";
+	echo "Email : ".$Email."<br>";
+	echo "Telp : ".$Telp."<br>";
+	echo "HP : ".$HP."<br>";
+	echo "Alamat : ".$Alamat."<br>";
+	echo "Pendidikan : ".$Pendidikan."<br>";
+	echo "Bidang Riset : ".$Bidang."<br>";
+
+	foreach($Pengajaran as $input){
+		if(strcmp($input,"")) echo "Pengajaran : ".$input."<br>";
 	}
-}
+	foreach($pengabdian as $input){
+		if(strcmp($input,"")) echo "pengabdian : ".$input."<br>";
+	}
+	foreach($penunjang as $input){
+		if(strcmp($input,"")) echo "penunjang : ".$input."<br>";
+	}
+	foreach($Penelitian as $input){
+		if(strcmp($input,"")) echo "Penelitian : ".$input."<br>";
+	}
+	echo "gambar <img src='".$_POST["Foto"]."'>";
 ?>

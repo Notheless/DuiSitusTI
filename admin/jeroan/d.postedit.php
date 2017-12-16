@@ -34,6 +34,7 @@
 ?>
 <h2 class="content-title">Update Artikel</h2>
                 <form action="jeroan/d.editPE.php" enctype="multipart/form-data" method="POST">
+                <input type="hidden" value="0" id="imgnum">
 				<input type="hidden" name="ID"  <?php echo "value=\"".$id."\""; ?>>
 				<input type="hidden" value="NULL" name="auth">
 				<input type="hidden" value="<?php echo $tag0 ?>" name="tag0">
@@ -59,9 +60,19 @@
                         </tr>
                         <tr>
                             <td colspan="2"><textarea rows="3" name="isi_artikel" placeholder="isi artikel"><?php echo $isi; ?></textarea></td>
-                        </tr>                        <tr>
-							<td><p>Gambar: </p></td>
-							<td><label class ="button"><input type="file" name="gambar[]" multiple="multiple" accept="image/*" style ="display: none;"/>Tambah gambar</label></td>
+                        </tr>  
+						<tr>
+							<td><p>Unggah gambar:</p></td>
+							<td><label class ="button"><input id ="imgbutton" type="file" multiple="multiple" accept="image/*" style ="display: none;" onchange="handleFileSelectE()"/>Tambah gambar</label></td>
+						</tr>
+						<tr>
+							<td colspan="2"> 
+								<label id="resultE"></label>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">Hapus gambar :
+							</td>
 						</tr>
                         <tr>
 							<td colspan="2">

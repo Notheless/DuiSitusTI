@@ -42,12 +42,41 @@
 				<th>Lulus/Penguji</th>
 				<th>Skripsi</th>
 				</tr>
+				<?php
+					include 'database.php';
+					$sql = "SELECT * FROM `lulusan`";
+					$result = $conn->query($sql);
+					$i=1;
+					while($row = $result->fetch_assoc()) 
+					{
+						
+						$Penguji1="***";
+						$Penguji2="***";
+						$Penguji3="***";
+						$Pembimbing1="***";
+						$Pembimbing2="***";
+					
+						$sqlx = "SELECT * FROM `dosen`";
+						$resultx = $conn->query($sqlx);
+						while($rowx = $resultx->fetch_assoc()) 
+						{
+							if($rowx["ID"]==$row["Pembimbing1"])$Pembimbing1=$rowx["Nama"];
+							if($rowx["ID"]==$row["Pembimbing2"])$Pembimbing2=$rowx["Nama"];
+							if($rowx["ID"]==$row["Penguji1"])$Penguji1=$rowx["Nama"];
+							if($rowx["ID"]==$row["Penguji2"])$Penguji2=$rowx["Nama"];
+							if($rowx["ID"]==$row["Penguji3"])$Penguji3=$rowx["Nama"];
+						}
+				?>
 				<tr>
-				<td><strong>1</strong></td>
-				<td><b>Jordy Saragih, S.Kom./<strong>Dr. Atje Setiawan A., M.Kom., Dr. Juli Rejito, M.Kom.</strong></b></td>
-				<td><strong>8 Januari 2016/***</strong></td>
-				<td><strong>Sistem Informasi Persediaan Barang Berbasis Web dan Sistem Monitoring Berbasis Mobile pada Perusahaan Distribusi</strong></td>
+				<td><strong><?php echo $i; ?></strong></td>
+				<td><b><?php echo $row["Nama"]; ?>/<strong><?php echo $Pembimbing1.",".$Pembimbing2; ?></strong></b></td>
+				<td><strong><?php echo $row["TanggalLulus"]."/".$Penguji1.",".$Penguji2.",".$Penguji3; ?></strong></td>
+				<td><strong><?php echo $row["Judul"]; ?></strong></td>
 				</tr>
+				<?php
+					$i+=1;
+					}
+				?>
 				<tr>
 				<td><strong>2</strong></td>
 				<td><b>Faishal Wahiduddin, S.Kom./<strong>Dr. Setiawan Hadi, M.Sc.CS., Deni Setiana, S.Si., M.Cs.</strong></b></td>

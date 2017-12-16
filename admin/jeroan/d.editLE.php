@@ -21,44 +21,38 @@
 		return true;
 	}
 
-	include '../database.php';
-	
-	$nama =$_GET["nama"];
-	$judul =$_GET["judul"];
-	$tanggal =$_GET["tanggal"];
-	$pembimbing1 =$_GET["pembimbing1"];
-	$pembimbing2 =$_GET["pembimbing2"];
-	$penguji1 =$_GET["penguji1"];
-	$penguji2 =$_GET["penguji2"];
-	$penguji3 =$_GET["penguji3"];
+	include '../../database.php';
+	$id=$_POST["ID"];
+	$nama =$_POST["Nama"];
+	$judul =$_POST["Judul"];
+	$tanggal =$_POST["Tanggal"];
+	$pembimbing1 =$_POST["Pembimbing1"];
+	$pembimbing2 =$_POST["Pembimbing2"];
+	$penguji1 =$_POST["Penguji1"];
+	$penguji2 =$_POST["Penguji2"];
+	$penguji3 =$_POST["Penguji3"];
 	
 	if(!$tanggal){
 		$t=getdate();
-		$tanggal = $t['year']."-".$t['mon']."-".$t['mday']." ".$t['hours'].":".$t['minutes'].":".$t['seconds'];
+		$tanggal = $t['year']."-".$t['mon']."-".$t['mday'];
 	}
 	if(checkValue($pembimbing1,$pembimbing2,$penguji1,$penguji2,$penguji3)){
 		
-		$sql = "INSERT INTO `lulusan` (`ID`, `Nama`, `Pembimbing1`, `Pembimbing2`, `Penguji1`, `Penguji2`, `Penguji3`, `TanggalLulus`, `Judul`) 
-		VALUES (NULL, '".$nama."', ".$pembimbing1.", ".$pembimbing2.", ".$penguji1.", ".$penguji2.", ".$penguji3.", '".$tanggal."', '".$judul."');";
+		$sql = "UPDATE `lulusan` SET `Nama`='".$nama."',`Pembimbing1`='".$pembimbing1."',`Pembimbing2`='".$pembimbing2."',`Penguji1`='".$penguji1."',`Penguji2`='".$penguji2."',`Penguji3`='".$penguji3."',`TanggalLulus`='".$tanggal."',`Judul`='".$judul."' WHERE ID=".$id.";";
 		if ($conn->query($sql) === TRUE) {
 			echo "
 			<script>
-				alert('Data berhasil ditambahkan');
-				window.location.href='ViewL.php'; 
+				alert('Data berhasil diperbaharui');
 			</script>";
 		} else {
 			echo "
 			<script>
 				alert('Terjadi Kelasahan');
-				window.location.href='insertL.php';
 			</script>";
 		}
 	}
-	else{
 			echo "
 			<script>
-				alert('Terjadi Kelasahan');
-				window.location.href='insertL.php';
+				window.location.href='../lulusan.php';
 			</script>";
-	}
 ?>

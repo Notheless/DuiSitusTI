@@ -13,7 +13,7 @@
             <table class="table-index">
                 <tr>
                     <td>
-                        <a class="superlink-button" href="postingan.php">
+                        <a class="superlink-button" href="postingan.php" style="background-size: cover; background-image: url('img/s1.jpg'); ">
                             <div class="superlink-block">
                                 <p>Postingan<br /><br />
                                 <span id="dive-text">
@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a class="superlink-button" href="dosen.php">
+                        <a class="superlink-button" href="dosen.php" style="background-size: cover; background-image: url('img/s2.jpg'); ">
                             <div class="superlink-block">
                                 <p>Dosen<br /><br />
                                 <span id="dive-text">
@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a class="superlink-button" href="lulusan.php">
+                        <a class="superlink-button" href="lulusan.php"  style="background-size: cover; background-image: url('img/s3.jpg'); ">
                             <div class="superlink-block">
                                 <p>Lulusan<br /><br />
                                 <span id="dive-text">
@@ -56,7 +56,21 @@
                 </tr>
                 <tr>
                     <td>
-                        <a class="superlink-button" href="/">
+                        <a class="superlink-button" href="Halaman.php"  style="background-size: cover; background-image: url('img/s4.jpg'); ">
+                            <div class="superlink-block">
+                                <p>Halaman<br /><br />
+                                <span id="dive-text">
+                                    <br>
+                                    - edit Halaman<br />
+                                </span>
+                                </p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="superlink-button" href="/dui" style="background-size: cover; background-image: url('img/s5.jpg'); ">
                             <div class="superlink-block">
                                 <p>Keluar<br /><br />
                                 <span id="dive-text">
@@ -71,10 +85,4 @@
         </div>
     </div>
 </body>
-    <?php 		
-	echo "
-		<script>
-			alert('Ketika si Arthur ulang tahun, dia ditanyakan oleh bojonya.\\n\\n \"Your Highness, ulang tahun nanti ingin hadiah apa.\" \\n \"Aing pen dragon.\" \\n\\nDan tibalah Arthur di suatu tempat yang bernama Avalon.');
-		</script>";
-		?>
 </html>

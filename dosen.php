@@ -19,7 +19,7 @@
 			<?php include 'left_nav.html';?>
         <!-- konten -->
         <div class="grid-dosen-header">
-            <h1 class="headline-header">TENAGA <span class="header-revcolor">PENDIDIK</span></h1>
+            <h1 class="headline-header" style=" text-align: left">TENAGA <span class="header-revcolor">PENDIDIK</span></h1>
         </div>
 		<?php
 			$id = 0;
@@ -48,6 +48,7 @@
 					<tr><td width="110px"><p>HP</p></td><td><p>:</p></td><td><p><?php echo $row["HP"];?></p></td></tr>
 					<tr><td width="110px"><p>Alamat</p></td><td><p>:</p></td><td><p><?php echo $row["Alamat"];?></p></td></tr>
 					<tr><td width="110px"><p>Pendidikan</p></td><td><p>:</p></td><td><p><?php echo $row["Pendidikan"];?></td></tr>
+					<tr><td width="110px"><p>Bidang</p></td><td><p>:</p></td><td><p><?php echo $row["Bidang"];?></td></tr>
 				</table>
         	</div>
         </div>
@@ -131,23 +132,6 @@
 		$id = 0;
 		if($_GET["ID"]){
         ?>
-		<div class="grid-dosen-list">
-			<div style="margin:1vw; background-color:#ccc;">
-				<div class="dosen-list-header">DAFTAR DOSEN</div>
-				<?php 
-					$i = 1;	
-					while($row = $result->fetch_assoc()) {
-				?>
-				<a href="?ID=<?php echo $row["ID"]?>">
-					<div class="dosen-list-content"><?php echo $row["Nama"]?></div>
-				</a>
-				<?php
-						$i+=1;
-					}
-				?>
-				<div style="height:20px;width:100%;background-color:#aaa;"></div>
-			</div>
-		</div>
 		<?php
 			}
 		?>
