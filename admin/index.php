@@ -56,7 +56,21 @@
                 </tr>
                 <tr>
                     <td>
-                        <a class="superlink-button" href="/dui" style="background-size: cover; background-image: url('img/s4.jpg'); ">
+                        <a class="superlink-button" href="Halaman.php"  style="background-size: cover; background-image: url('img/s4.jpg'); ">
+                            <div class="superlink-block">
+                                <p>Halaman<br /><br />
+                                <span id="dive-text">
+                                    <br>
+                                    - edit Halaman<br />
+                                </span>
+                                </p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="superlink-button" href="/dui" style="background-size: cover; background-image: url('img/s5.jpg'); ">
                             <div class="superlink-block">
                                 <p>Keluar<br /><br />
                                 <span id="dive-text">
