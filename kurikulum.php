@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Kurikulum</title>  
-	<?php include 'header.html';?>
+    <?php 
+        include 'header.html';
+        include 'database.php';
+    ?>
 </head>
 <body>
     <?php include 'Navbar.html';?>
@@ -19,8 +22,17 @@
         </div>
         <div class="grid-headline-para">
             <p class="headline-para">
-                Kurikulum adalah peran mata pelajaran dan program pendidikan yang diberikan oleh suatu lembaga penyelenggara pendidikan yang berisi rancangan pelajaran yang akan diberikan kepada peserta pelajaran dalam satu periode jenjang pendidikan. Penyusunan perangkat mata pelajaran ini disesuaikan dengan keadaan dan kemampuan setiap jenjang pendidikan dalam penyelenggaraan pendidikan tersebut serta kebutuhan lapangan kerja.
-            </p>
+            <?php
+                    
+                    $sql = "SELECT * FROM `datahalaman`";
+                    $result = $conn->query($sql);
+                    $id=10;
+                    while($row = $result->fetch_assoc()) 
+                    {
+                        if($id==$row["Katagori"]&& 1==$row["Header"]) echo nl2br($row["Isi"]);
+                    }
+                    mysqli_data_seek($result,0);
+                 ?></p>
         </div>
         <div class="grid-headline-thumbnail">
             <img style="thumbnail" src="f_img/06.jpg" height="auto" width="100%"/>
@@ -35,56 +47,23 @@
         </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
-                <!-- content start -->
-                <h1>Kurikulum</h1>
-
-                <p><b>Deskripsi</b>: Kurikulum Program Studi Teknik Informatika Universitas Padjadjaran disusun dengan fokus yang terletak pada teori, riset dan penerapan di bidang Teknik Informatika, bidang ilmu lainnya serta masyarakat dan industri.</a></p>
-                <br>
-
-                <p><b>Landasan Hukum</b>:</p>
-                <ul>
-                    <li>Undang‐Undang Republik Indonesia Nomor 12 Tahun 2012 tentang Pendidikan Tinggi</li>
-                    <li>Peraturan Menteri Riset, Teknologi, dan Pendidikan Tinggi Republik Indonesia Nomor 44 Tahun 2015 tentang Standar Nasional Pendidikan Tinggi (SN‐DIKTI)</li>
-                </ul>
-
-                <p><b>Informasi dan Rujukan Teknis:</b>:</p>
-                <ul>
-                    <li>Beban studi minimal 144 SKS yang dapat diselesaikan dalam waktu 8 semester.</li>
-                    <li><a href="http://www.acm.org/education/curricula-recommendations" target="_blank">Computing Curricula 2005</a> dari ACM dan IEEE serta Turunannya.</li>
-                </ul>
-
-                <h2>Daftar Mata Kuliah</h2>
-                <ul>
-                    <li>
-                        <b>Angkatan 2012-2015</b>
-                        <ul>
-                            <li><a href="http://informatika.unpad.ac.id/web/?page_id=70">Daftar Mata Kuliah Per Semester</a></li>
-                            <li><a href="http://informatika.unpad.ac.id/web/?page_id=83">Daftar Mata Kuliah Pilihan </a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <b>Angkatan 2016</b>
-                        <ul>
-                            <li>
-                                <a href="http://informatika.unpad.ac.id/web/?page_id=2557">Daftar Mata Kuliah Per Semester</a>
-                            </li>
-                            <li>
-                                <a href="http://informatika.unpad.ac.id/web/?page_id=2563">Daftar Mata Kuliah Pilihan </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <b>Angkatan 2017</b>
-                        <ul>
-                            <li>
-                                <a href="http://informatika.unpad.ac.id/web/?page_id=2568">Daftar Mata Kuliah Per Semester</a>
-                            </li>
-                            <li>
-                                <a href="http://informatika.unpad.ac.id/web/?page_id=2570">Daftar Mata Kuliah Pilihan </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <!-- content start -->                <?php
+                
+                $sql = "SELECT * FROM `datahalaman`";
+                $result = $conn->query($sql);
+                $id=10;
+                while($row = $result->fetch_assoc()) 
+                {
+                    if($id==$row["Katagori"]&& 0==$row["Header"]) {
+            ?>
+                    <h1><?php echo nl2br($row["Judul"]);?> </h1>
+            <p>
+                    <?php echo ($row["Isi"]);?>
+            </p>
+            <?php
+                    }
+                }
+             ?>
                 <!-- content end -->
             </div>
         </div>

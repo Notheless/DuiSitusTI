@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Prestasi</title>
-    <?php include 'header.html';?>
+    <?php 
+        include 'header.html';
+        include 'database.php';
+    ?>
 </head>
 <body>
     <?php include 'Navbar.html';?>
@@ -18,8 +21,18 @@
         </div>
         <div class="grid-headline-para">
             <p class="headline-para">
-              Apakah Program Studi S1 Teknik Informatika Universitas Padjadjaran belum memiliki prestasi sama sekali?
-            </p>
+            <?php
+                    
+                    $sql = "SELECT * FROM `datahalaman`";
+                    $result = $conn->query($sql);
+                    $id=9;
+                    while($row = $result->fetch_assoc()) 
+                    {
+                        if($id==$row["Katagori"]&& 1==$row["Header"]) echo nl2br($row["Isi"]);
+                    }
+                    mysqli_data_seek($result,0);
+                 ?>
+                 </p>
         </div>
         <div class="grid-headline-thumbnail">
             <img style="thumbnail" src="f_img/10.jpg" height="auto" width="100%"/>
@@ -33,8 +46,23 @@
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
-                <h1>Prestasi Mahasiswa</h1>
-                <h1>Prestasi Dosen</h1>
+                <?php
+                
+                $sql = "SELECT * FROM `datahalaman`";
+                $result = $conn->query($sql);
+                $id=9;
+                while($row = $result->fetch_assoc()) 
+                {
+                    if($id==$row["Katagori"]&& 0==$row["Header"]) {
+            ?>
+                    <h1><?php echo nl2br($row["Judul"]);?> </h1>
+            <p>
+                    <?php echo nl2br($row["Isi"]);?>
+            </p>
+            <?php
+                    }
+                }
+             ?>
                 <!-- content end -->
             </div>
         </div>

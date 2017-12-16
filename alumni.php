@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Alumni</title>    
-	<?php include 'header.html';?>
+	<?php 
+	include 'header.html';
+	include 'database.php';
+	?>
 </head>
 <body>
     <?php include 'Navbar.html';?>
@@ -19,8 +22,17 @@
         </div>
         <div class="grid-headline-para">
             <p class="headline-para">
-                Mahasiswa program studi S1 Teknik Informatika Universitas Padjadjaran bersumber dari seleksi masuk yang diadakan secara nasional dan terpadu. Secara umum komposisinya adalah mahasiswa undangan, mahasiswa reguler (melalui ujian tulis), dan mahasiswa bidikmisi.
-            </p>
+            <?php
+                    
+                    $sql = "SELECT * FROM `datahalaman`";
+                    $result = $conn->query($sql);
+                    $id=8;
+                    while($row = $result->fetch_assoc()) 
+                    {
+                        if($id==$row["Katagori"]&& 1==$row["Header"]) echo nl2br($row["Isi"]);
+                    }
+                    mysqli_data_seek($result,0);
+                 ?></p>
         </div>
         <div class="grid-headline-thumbnail">
             <img style="thumbnail" src="f_img/12.jpg" height="auto" width="100%"/>
@@ -34,7 +46,24 @@
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
-				<h1>Alumni</h1><br>
+				
+                <?php
+                
+                $sql = "SELECT * FROM `datahalaman`";
+                $result = $conn->query($sql);
+                $id=8;
+                while($row = $result->fetch_assoc()) 
+                {
+                    if($id==$row["Katagori"]&& 0==$row["Header"]) {
+            ?>
+                    <h1><?php echo nl2br($row["Judul"]);?> </h1>
+            <p>
+                    <?php echo nl2br($row["Isi"]);?>
+            </p>
+            <?php
+                    }
+                }
+             ?>
 				<table>
 				<tr>
 				<th>#</th>
@@ -43,7 +72,6 @@
 				<th>Skripsi</th>
 				</tr>
 				<?php
-					include 'database.php';
 					$sql = "SELECT * FROM `lulusan`";
 					$result = $conn->query($sql);
 					$i=1;
