@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2017 at 11:34 AM
+-- Generation Time: Dec 16, 2017 at 08:06 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -19,6 +19,46 @@ SET time_zone = "+00:00";
 --
 -- Database: `situsti`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `datahalaman`
+--
+
+CREATE TABLE `datahalaman` (
+  `ID` int(11) NOT NULL,
+  `Katagori` int(11) NOT NULL,
+  `Header` tinyint(1) NOT NULL,
+  `Judul` text,
+  `Isi` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `datahalaman`
+--
+
+INSERT INTO `datahalaman` (`ID`, `Katagori`, `Header`, `Judul`, `Isi`) VALUES
+(1, 1, 1, NULL, 'Program Studi Teknik Informatika Universitas Padjadjaran merupakan salah satu Program Studi dalam Fakultas Matematika dan Ilmu Pengetahun Alam Universitas Padjadjaran.\n\nPada awalnya Program Studi Teknik Informatika termasuk bagian dari Departemen Matematika.'),
+(2, 1, 0, 'Pendidikkan D3', 'Sebelum bedirinya pendidikan S1 untuk Prgram Studi Teknik Informatika FMIPA Universitas Padjadjaran, Program pendidikan D3 sudah berdiri dan sudah menghasilkan lulusan yang cukup berkualitas.'),
+(3, 1, 0, 'Pendiikan S1', 'Program Studi Teknik Informatika (TI) FMIPA Unpad bertujuan menghasilkan lulusan yang mampu menyerap, mengaplikasikan, dan mengembangkan TI dengan kompetensi utama Rekayasa Perangkat Lunak, meliputi 4 peminatan studi yaitu Sistem Informasi, Jaringan Komputer dan Komunikasi Data, Sistem Cerdas dan Grafika Komputer, serta Komputasi dan Metode Numerik.\r\n\r\nLulusan TI FMIPA Unpad diharapkan mampu mengembangkan perangkat lunak untuk berbagai keperluan, melakukan analisis terhadap sistem dalam suatu instansi, membuat solusi yang integratif dengan memanfaatkan perangkat lunak, mampu merencanakan dan mengevaluasi penerapan TI pada sebuah organisasi, mampu merancang dan memelihara basis data termasuk data warehouse untuk suatu instansi atau perusahaan, mampu melakukan pengujian fungsi-fungsi perangkat lunak, mampu mengembangkan, merancang dan membangun serta memelihara website dengan berbagai layanan dan fasilitasnya.'),
+(4, 1, 0, 'Prospek Kerja', 'Lulusan program studi TI FMIPA Unpad diarahkan dapat mengisi karir pekerjaan bidang supervisi, asisten manajer dan administrator. Sebagai contoh lulusan Teknik Informatika harus mampu menjadi Capacity Planning Supervisor, Database Administrator, Customer Service Supervisor, Data Communication Assistant manager, Data Entry Supervisor, Information Center Manager, Hardware Installation Supervisor, System Administrator, Webmaster, Project Manager Applications, Project Manager Distributed Systems, Project Network Technical Services, Project Manager Implementation Deployment, dan lain-lain.'),
+(5, 2, 1, NULL, 'Visi adalah pandangan jauh tentang suatu perusahaan ataupun lembaga, dapat di artikan sebagai tujuan dan apa yang harus dilakukan untuk mencapai tujuannya tersebut. \r\n\r\nSedangkan Misi adalah suatu pernyataan tentang apa yang harus dikerjakan oleh perusahaan atau lembaga dalam usaha mewujudkan Visi.'),
+(6, 2, 0, 'Visi', 'Pada tahun 2026, menjadi Prodi Teknik Informatika yang unggul di tingkat nasional serta diakui di tingkat regional dalam bidang pendidikan, penelitian, dan pengabdian kepada masyarakat.'),
+(7, 2, 0, 'Misi', '<ol>\r\n                        <li>Menghasilkan lulusan yang bermutu, bermoral, dan profesional dalam bidang teknik informatika serta mampu beradaptasi terhadap perkembangan ilmu pengetahuan dan teknologi sehingga dapat bersaing secara nasional dan regional.</li>\r\n                        <li>Meningkatkan pemberdayaan kelompok penelitian/kelompok bidang Minat (KBM) dalam pengembangan dan penerapan bidang sistem informasi dan rekayasa perangkat lunak, jaringan komputer dan komunikasi data, sistem cerdas dan sistem grafika, dan ilmu komputasi dan metode numerik. yang bertaraf nasional dan regional, untuk mendukung pengembangan ilmu pengetahuan dan teknologi.</li>\r\n                        <li>Meningkatkan penerapan hasil penelitian dasar dan terapan dalam bidang informatika untuk ikut serta dalam mendukung pembangunan nasional dan kesejahteraan masyarakat.</li>\r\n                    </ol>'),
+(8, 2, 0, 'Sasaran', NULL),
+(9, 2, 0, 'Tujuan', NULL),
+(10, 2, 0, 'Rencana Strategis', '<ol>\r\n                        <li><a href=\"\">Rencana Strategis UNPAD 2015-2019</a></li>\r\n                        <li><a href=\"\">Rencana Strategis Fakultas MIPA 2017-2021</a></li>\r\n                    </ol>'),
+(11, 2, 0, 'Latar Belakang', 'Program Sarjana Program Studi Teknik Informatika merupakan pengembangan dari Bidang Minat Ilmu Komputer di Jurusan Matematika FMIPA Universitas Padjadjaran, sesuai dengan rencana strategis jurusan, fakultas, dan universitas. Kurikulum Bidang Minat Ilmu Komputer diberlakukan tahun 2004 dan telah menghasilkan lulusan yang terserap di berbagai institusi baik negeri maupun swasta tersebar di Indonesia.\r\n\r\n\r\n                    Mengingat pertumbuhan teknologi yang cepat dan tingginya kebutuhan masyarakat dalam bidang Teknik Informatika (lulusan sekitar 5% dari kebutuhan), dan tingginya minat untuk mengikuti pendidikan bidang Teknik Informatika (sekitar 4% diterima dari peminat SNMPTN), serta mempertimbangkan berbagai masukan dari stakeholder dan alumni untuk menyempurnakan kurikulum yang mandiri sesuai dengan kebutuhan, maka disusun proposal pendirian Program Studi Teknik Informatika, dan telah mendapat persetujuan Dikti dengan\r\n                    <a href=\"\"><b>SK Mendikbud Nomor: 305/E/O/2011</b></a> tanggal 21 Desember 2011 tentang Ijin Penyelenggaraan Program Studi Teknik Informatika pada Universitas Padjadjaran. Pada tahun 2014 program studi S-1 Teknik Informatika memperoleh akreditasi B dari BAN PT sesuai dengan\r\n                    <a href=\"\"><b>Surat Keputusan Nomor 483/SK/BAN-PT/Akred/S/XII/2014</b></a>.'),
+(12, 2, 0, 'Kompetensi Lulusan\r\n', 'Lulusan Program Studi Teknik Informatika Universitas Padjadjaran bergelar Sarjana Teknik (S.Kom.,/S.Inf.), memiliki kompetensi sebagai berikut:\r\n\r\nKOMPETENSI UTAMA: mampu melakukan pengembangan perangkat lunak untuk berbagai keperluan, melakukan analisis terhadap sistem dalam suatu instansi atau perusahaan dan membuat solusi yang integratif dengan memanfaatkan perangkat lunak, mampu merencanakan dan pengevaluasian penerapan Teknologi Informasi pada sebuah organisasi, mampu merancang dan memelihara basis data termasuk data warehouse untuk suatu instansi atau perusahaan, mampu melakukan pengujian fungsi-fungsi perangkat lunak, mampu mengembangkan, merancang dan membangun serta memelihara website dengan berbagai layanan dan fasilitasnya.\r\n\r\nKOMPETENSI KHUSUS: lulusan teknik Informatika Unpad dapat memilih salah satu dari empat peminatan berikut: \r\n(1) Sistem Informasi dan Rekayasa Perangkat Lunak (SIRPL), \r\n(2) Jaringan Komputer dan Komunikasi Data (JKKD), \r\n(3) Sistem Cerdas dan Sistem Grafika (SCSG), serta \r\n(4) Ilmu Komputasi dan Metode Numerik (IKMN).'),
+(13, 2, 0, 'Prospek Lulusan', '<ul>\r\n                        <li>Lulusan program studi Teknik Informatika Universitas Padjadjaran diharapkan dapat mengisi lapangan kerja di berbagai institusi pemerintah, perusahaan swasta, dan industri.</li>\r\n                        <li>Lulusan Teknik Informatika dapat menjadi karyawan, wiraswastawan (entreupreneur), profesional, birokrat, dan akademisi.</li>\r\n                        <li>Lulusan diarahkan dapat mengisi karir pekerjaan bidang supervisi, asisten manajer dan administrator.</li>\r\n                        <li>Sebagai contoh lulusan Teknik Informatika harus mampu menjadi Capacity Planning Supervisor, Database Administrator, Customer Service Supervisor, Data Communication Assistant manager, Data Entry Supervisor, Information Center Manager, Hardware Installation Supervisor, System Administrator, Webmaster, Project Manager Applications, Project Manager Distributed Systems, Project Network Technical Services, Project Manager Implementation Deployment, dan lain-lain.</li>\r\n                    </ul>'),
+(14, 3, 1, NULL, 'Kegiatan akademik dilaksanakan di Kampus Jatinangor, didukung sarana ruang kuliah, ruang seminar, ruang dosen, perpustakaan, dan laboratorium.'),
+(15, 3, 0, NULL, 'Fasilitas tersebut didukung pula sarana akses internet/hotspot area, meeting-point area, lapangan olah raga, sarana ibadah, ruang himpunan, dan kantin mahasiswa. Sistem informasi terintegrasi dengan sistem informasi fakultas dan universitas meliputi hampir semua aspek pendidikan dan pengelolaannya termasuk juga fasilitas <a href=\"http://elearning-dev.unpad.ac.id\" target=\"_blank\">E-Learning</a> dan <a href=\"http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=ef1ad7d6-869b-e011-969d-0030487d8897&amp;vsro=8\">Perangkat Lunak berlisensi</a>'),
+(16, 3, 0, 'Ruang Kelas\r\n', ''),
+(17, 3, 0, 'Laboratorium', ''),
+(18, 3, 0, '<a href=\"http://informatika.unpad.ac.id/web/?page_id=404\">Perpustakaan</a>', ''),
+(19, 3, 0, 'Ruang Dosen', ''),
+(20, 3, 0, 'Fasilitas Lainnya', '');
 
 -- --------------------------------------------------------
 
@@ -251,36 +291,39 @@ INSERT INTO `dosen` (`ID`, `Nama`, `Email`, `HP`, `Telp`, `Alamat`, `Pendidikan`
 CREATE TABLE `gambar` (
   `ID` int(11) NOT NULL,
   `TagPost` int(11) NOT NULL,
-  `Utama` tinyint(1) NOT NULL
+  `Utama` tinyint(1) NOT NULL,
+  `caption` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gambar`
 --
 
-INSERT INTO `gambar` (`ID`, `TagPost`, `Utama`) VALUES
-(1, 1, 0),
-(2, 1, 0),
-(4, 1, 0),
-(7, 1, 0),
-(11, 1, 0),
-(16, 1, 0),
-(17, 2, 0),
-(18, 2, 0),
-(20, 2, 0),
-(23, 2, 0),
-(27, 2, 0),
-(32, 2, 0),
-(38, 2, 0),
-(45, 2, 0),
-(46, 3, 0),
-(47, 3, 0),
-(49, 3, 0),
-(50, 4, 0),
-(51, 4, 0),
-(53, 4, 0),
-(56, 4, 0),
-(60, 4, 0);
+INSERT INTO `gambar` (`ID`, `TagPost`, `Utama`, `caption`) VALUES
+(1, 1, 0, NULL),
+(2, 1, 0, NULL),
+(4, 1, 0, NULL),
+(7, 1, 0, NULL),
+(11, 1, 0, NULL),
+(16, 1, 0, NULL),
+(17, 2, 0, NULL),
+(18, 2, 0, NULL),
+(20, 2, 0, NULL),
+(23, 2, 0, NULL),
+(27, 2, 0, NULL),
+(32, 2, 0, NULL),
+(38, 2, 0, NULL),
+(45, 2, 0, NULL),
+(46, 3, 0, NULL),
+(47, 3, 0, NULL),
+(49, 3, 0, NULL),
+(50, 4, 0, NULL),
+(51, 4, 0, NULL),
+(53, 4, 0, NULL),
+(56, 4, 0, NULL),
+(60, 4, 0, NULL),
+(61, 5, 0, NULL),
+(62, 5, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -401,10 +444,11 @@ CREATE TABLE `posting` (
 --
 
 INSERT INTO `posting` (`ID`, `Judul`, `Tanggal`, `Isi`, `Author`, `tag0`, `tag1`, `tag2`, `tag3`, `tag4`, `tag5`, `tag6`, `tag7`, `tag8`) VALUES
-(1, 'Partisipasi Mahasiswa Informatika pada Kegiatan IndonesiaNEXT', '2017-11-20 04:16:12', '<p>Para mahasiswa Teknik Informatika telah berpartisipasi dalam kegiatan IndonesiaNEXT pada hari Jumat 20 Oktober 2017. Program IndonesiaNEXT 2017 ini merupakan acara yang diselenggarakan atas kerja sama Unpad dengan Telkomsel sebagai program edukasi yang memberikan kesempatan kepada para mahasiswa untuk meningkatkan kompetensinya dengan mengikuti sertifikasi standar International yang diverifikasi oleh Microsoft dan Adobe. Tidak hanya itu, para peserta akan mendapat <em>Communication Skills Training</em> yang dapat meningkatkan kepercayaan diri serta wawasan dalam menghadapi persaingan global.</p>\r\n<p>Acara ini juga sekaligus merupakan Kuliah Umum yang diberikan oleh Direktur Human Capital Management Telkomsel Irfan A. Tachrir yang intinya mengatakan bahwa para mahasiswa saat ini harus lebih mempersiapkan diri dengan lebih baik untuk masa depannya. Dengan revolusi ekonomi saat ini, salah satu yang harus dipersiapkan adalah bersaing dalam era digital. â€œ<em>Kita harus bisa membangun digital competitiveness.  Salah satu tantangan yang harus dihadapi adalah VUCA</em> (Volatility, Uncertainty, Complexity, Ambiguity),â€ ujar alumni Unpad ini.</p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(1, 'Partisipasi Mahasiswa Informatika pada Kegiatan IndonesiaNEXT', '2017-11-20 04:16:12', '<p>Para mahasiswa Teknik Informatika telah berpartisipasi dalam kegiatan IndonesiaNEXT pada hari Jumat 20 Oktober 2017. Program IndonesiaNEXT 2017 ini merupakan acara yang diselenggarakan atas kerja sama Unpad dengan Telkomsel sebagai program edukasi yang memberikan kesempatan kepada para mahasiswa untuk meningkatkan kompetensinya dengan mengikuti sertifikasi standar International yang diverifikasi oleh Microsoft dan Adobe. Tidak hanya itu, para peserta akan mendapat <em>Communication Skills Training</em> yang dapat meningkatkan kepercayaan diri serta wawasan dalam menghadapi persaingan global.</p>\n<p>Acara ini juga sekaligus merupakan Kuliah Umum yang diberikan oleh Direktur Human Capital Management Telkomsel Irfan A. Tachrir yang intinya mengatakan bahwa para mahasiswa saat ini harus lebih mempersiapkan diri dengan lebih baik untuk masa depannya. Dengan revolusi ekonomi saat ini, salah satu yang harus dipersiapkan adalah bersaing dalam era digital. â€œ<em>Kita harus bisa membangun digital competitiveness.  Salah satu tantangan yang harus dihadapi adalah VUCA</em> (Volatility, Uncertainty, Complexity, Ambiguity),â€ ujar alumni Unpad ini.</p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (2, 'Sertifikat Profesional Dosen Departemen Ilmu Komputer', '2017-11-20 04:21:06', '<p>Sampai saat ini telah 6 dosen Departemen Ilmu Komputer telah memiliki Sertifikasi Profesional dari institusi internasional yaitu dari Microsoft dan dari Oracle. Sertifikat dari Microsoft berupa  Microsoft Certified Educator (MCE) untuk 3 orang dosen, Microsoft Technology Associate (MTA) untuk satu orang dosen, dan Microsoft Office Specialist (MOS) untuk satu orang dosen. Sedangkan dari Oracle adalah sertifikat  Database Design and Programming with SQL. Berkaitan dengan Oracle, Departemen Ilmu Komputer juga telah menjadi â€œInstitution Memberâ€ dari Oracle Academy. Sedangkan untuk spersiapan pembentukan asesor profesi informatika, dua dosen telah dilatih dan siap menjadi asesor LSP Informatika yang akan dibangun.  Berikut sertifikat yang telah dimiliki.</p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (3, 'Prestasi Mahasiswa TI Unpad di 3rd International Conference on Science in Information Technology (ICSITech) 2017', '2017-11-20 04:26:57', '\r\n<p style=\"text-align: left\">Pada tanggal 25 â€“ 26 Oktober 2017 , 7 orang mahasiswa TI yang tergabung dalam 2 tim berhasil melaksanakan presentasi dua artikel ilmiah di ajang 3rd International Conference on Science in Information Technology (ICSITech 2017) yang dilaksanakan di GH Universal Hotel, Bandung, Jawa Barat.</p>\r\n\r\n<p>Tim pertama terdiri dari <strong>Fajar Satria, Hafiz Aditra, M. Dean Aji Wibowo, dan Hilmi Luthfiansyah</strong> yaitu mahasiswa TI angkatan 2014 yang diwakili presentasinya oleh M. Dean Aji Wibowo. Tim pertama ini mempresentasikan artikel yang berjudul â€œEFL Learning Media for Early Childhood Through Speech Recognition Applicationâ€, sebuah <em>game-based learning</em> untuk pembelajaran bahasa Inggris bagi anak-anak melalui pengenalan suara.</p>\r\n<p>Tim kedua terdiri dari <strong>Gustara Sapto Ajie, M. Azhari Marpaung, dan Agung Kurniawan</strong> yaitu mahasiswa TI angkatan 2014 juga, diwakili presentasinya oleh Gustara Sapto Ajie. Tim kedua mempresentasikan artikel yang berjudul â€œThe Development and Usability Testing of Game-based Learning as A Medium to Introduce Zoology to Young Learnersâ€, sebuah aplikasi <em>game-based learning</em> pengenalan aneka hewan bagi anak-anak melalui teknik hand gesture recognition.</p>\r\n<p><span id=\"more-3075\"></span></p>\r\n<p>Kedua artikel yang dihasilkan merupakan hasil penelitian dari kedua tim selama 1 semester perkuliahan Human Computer Interaction. Selain aplikasi yang dihasilkan, mahasiswa juga harus mampu menuangkan hasil karyanya ke dalam artikel ilmiah. Kegiatan penelitian ini dibimbing oleh 3 dosen pengampu yaitu: Mira Suryani, S.Pd., M.Kom Erick Paulus, S.Si., M.Kom, dan Ino Suryana, Drs., M.Kom.</p>\r\n</p>', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(4, 'Teknik Informatika Unpad di Tech in Asia Jakarta', '2017-11-20 04:28:43', 'Pada tanggal 1-2 November 2017, Prodi Teknik Informatika Unpad yang diwakili oleh Dr. Asep Sholahuddin, M.T dan Aditya Pradana, M.Eng serta 50 mahasiswa dari berbagai angkatan mengikuti acara Tech in Asia yang berlangsung di Jakarta Convention Center.\r\nAcara terdiri dari presentasi dari beberapa sponsor, perwakilan startup serta pameran dari para Bootstrap Alley. Diharapkan dengan mengikuti acara seperti ini akan menumbuhkan kreatifitas dari pada mahasiswa untuk berkreasi dan mengetahui perkembangan teknologi terbaru.', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(4, 'Teknik Informatika Unpad di Tech in Asia Jakarta', '2017-11-20 04:28:43', 'Pada tanggal 1-2 November 2017, Prodi Teknik Informatika Unpad yang diwakili oleh Dr. Asep Sholahuddin, M.T dan Aditya Pradana, M.Eng serta 50 mahasiswa dari berbagai angkatan mengikuti acara Tech in Asia yang berlangsung di Jakarta Convention Center.\r\nAcara terdiri dari presentasi dari beberapa sponsor, perwakilan startup serta pameran dari para Bootstrap Alley. Diharapkan dengan mengikuti acara seperti ini akan menumbuhkan kreatifitas dari pada mahasiswa untuk berkreasi dan mengetahui perkembangan teknologi terbaru.', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(5, 'Test', '2017-12-13 01:06:06', 'LOREM IPSUM ', 'NULL', 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -448,6 +492,12 @@ INSERT INTO `tags` (`ID`, `Text`) VALUES
 --
 
 --
+-- Indexes for table `datahalaman`
+--
+ALTER TABLE `datahalaman`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `detaildosen`
 --
 ALTER TABLE `detaildosen`
@@ -488,6 +538,11 @@ ALTER TABLE `tags`
 --
 
 --
+-- AUTO_INCREMENT for table `datahalaman`
+--
+ALTER TABLE `datahalaman`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
 -- AUTO_INCREMENT for table `detaildosen`
 --
 ALTER TABLE `detaildosen`
@@ -496,22 +551,22 @@ ALTER TABLE `detaildosen`
 -- AUTO_INCREMENT for table `dosen`
 --
 ALTER TABLE `dosen`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT for table `lulusan`
 --
 ALTER TABLE `lulusan`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tags`
 --

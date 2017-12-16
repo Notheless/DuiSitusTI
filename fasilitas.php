@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Fasilitas dan Sistem Informasi</title>
-    <?php include 'header.html';?>
+    <?php 
+        include 'header.html';
+        include 'database.php';
+    ?>
 </head>
 <body>
     <?php include 'Navbar.html';?>
@@ -17,9 +20,20 @@
             <h1 class="headline-header"> FASILITAS <span class="header-revcolor">DAN SISTEM INFORMASI </span></h1>
         </div>
         <div class="grid-headline-para">
-            <p class="headline-para">
-               Kegiatan akademik dilaksanakan di Kampus Jatinangor, didukung sarana ruang kuliah, ruang seminar, ruang dosen, perpustakaan, dan laboratorium.
-            </p>
+        <p class="headline-para">
+            
+        <?php
+                
+                $sql = "SELECT * FROM `datahalaman`";
+                $result = $conn->query($sql);
+                $id=3;
+                while($row = $result->fetch_assoc()) 
+                {
+                    if($id==$row["Katagori"]&& 1==$row["Header"]) echo nl2br($row["Isi"]);
+                }
+                mysqli_data_seek($result,0);
+             ?>
+        </p>
         </div>
         <div class="grid-headline-thumbnail">
             <img style="thumbnail" src="f_img/07.jpg" height="auto" width="100%"/>
@@ -33,14 +47,23 @@
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
-                <p>
-                    Fasilitas tersebut didukung pula sarana akses internet/hotspot area, meeting-point area, lapangan olah raga, sarana ibadah, ruang himpunan, dan kantin mahasiswa. Sistem informasi terintegrasi dengan sistem informasi fakultas dan universitas meliputi hampir semua aspek pendidikan dan pengelolaannya termasuk juga fasilitas <a href="http://elearning-dev.unpad.ac.id" target="_blank">E-Learning</a> dan <a href="http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=ef1ad7d6-869b-e011-969d-0030487d8897&amp;vsro=8">Perangkat Lunak berlisensi</a></p>
-                </p>
-                <h1>Ruang Kelas</h1>
-                <h1>Laboratorium</h1>
-				<h1><a href="http://informatika.unpad.ac.id/web/?page_id=404">Perpustakaan</a></h1>
-				<h1>Ruang Dosen</h1>
-				<h1>Fasilitas Lainnya</h1>
+            <?php
+            
+            $sql = "SELECT * FROM `datahalaman`";
+            $result = $conn->query($sql);
+            $id=3;
+            while($row = $result->fetch_assoc()) 
+            {
+                if($id==$row["Katagori"]&& 0==$row["Header"]) {
+        ?>
+                <h1><?php echo nl2br($row["Judul"]);?> </h1>
+        <p>
+                <?php echo nl2br($row["Isi"]);?>
+        </p>
+        <?php
+                }
+            }
+         ?>
                 <!-- content end -->
             </div>
         </div>

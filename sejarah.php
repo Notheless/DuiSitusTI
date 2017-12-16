@@ -4,13 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <title>Sejarah</title>  
-	<?php include 'header.html';?>
+    <?php 
+        include 'header.html';
+        include 'database.php';
+    ?>
 </head>
 <body>
     <?php include 'Navbar.html';?>
     <div class="grid-container">
         <!-- navigasi kiri -->
-			<?php include 'left_nav.html';?>
+            <?php include 'left_nav.html';
+            ?>
 		<!--Recent-->
         <!-- konten -->
 		<div class="grid-headline-header">
@@ -18,8 +22,17 @@
         </div>
         <div class="grid-headline-para">
             <p class="headline-para">
-                Program Studi Teknik Informatika Universitas Padjadjaran merupakan salah satu Program Studi dalam Fakultas Matematika dan Ilmu Pengetahun Alam Universitas Padjadjaran.
-				<br><br>Pada awalnya Program Studi Teknik Informatika termasuk bagian dari Departemen Matematika.
+                <?php
+                    
+					$sql = "SELECT * FROM `datahalaman`";
+					$result = $conn->query($sql);
+					$id=1;
+					while($row = $result->fetch_assoc()) 
+					{
+                        if($id==$row["Katagori"]&& 1==$row["Header"]) echo nl2br($row["Isi"]);
+                    }
+                    mysqli_data_seek($result,0);
+                 ?>
             </p>
         </div>
         <div class="grid-headline-thumbnail">
@@ -35,21 +48,24 @@
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
-                <h1>Pendidikkan D3</h1>
+                
+                <?php
+                    
+					$sql = "SELECT * FROM `datahalaman`";
+					$result = $conn->query($sql);
+					$id=1;
+					while($row = $result->fetch_assoc()) 
+					{
+                        if($id==$row["Katagori"]&& 0==$row["Header"]) {
+                ?>
+                        <h1><?php echo nl2br($row["Judul"]);?> </h1>
                 <p>
-                    Sebelum bedirinya pendidikan S1 untuk Prgram Studi Teknik Informatika FMIPA Universitas Padjadjaran, Program pendidikan D3 sudah berdiri dan sudah menghasilkan lulusan yang cukup berkualitas.
+                        <?php echo nl2br($row["Isi"]);?>
                 </p>
-                <h1>Pendiikan S1</h1>
-                <p>
-                    Program Studi Teknik Informatika (TI) FMIPA Unpad bertujuan menghasilkan lulusan yang mampu menyerap, mengaplikasikan, dan mengembangkan TI dengan kompetensi utama Rekayasa Perangkat Lunak, meliputi 4 peminatan studi yaitu Sistem Informasi, Jaringan Komputer dan Komunikasi Data, Sistem Cerdas dan Grafika Komputer, serta Komputasi dan Metode Numerik.
-                </p>
-                <p>
-                    Lulusan TI FMIPA Unpad diharapkan mampu mengembangkan perangkat lunak untuk berbagai keperluan, melakukan analisis terhadap sistem dalam suatu instansi, membuat solusi yang integratif dengan memanfaatkan perangkat lunak, mampu merencanakan dan mengevaluasi penerapan TI pada sebuah organisasi, mampu merancang dan memelihara basis data termasuk data warehouse untuk suatu instansi atau perusahaan, mampu melakukan pengujian fungsi-fungsi perangkat lunak, mampu mengembangkan, merancang dan membangun serta memelihara website dengan berbagai layanan dan fasilitasnya.
-                </p>
-                <h1>Prospek Kerja</h1>
-                <p>
-					Lulusan program studi TI FMIPA Unpad diarahkan dapat mengisi karir pekerjaan bidang supervisi, asisten manajer dan administrator. Sebagai contoh lulusan Teknik Informatika harus mampu menjadi Capacity Planning Supervisor, Database Administrator, Customer Service Supervisor, Data Communication Assistant manager, Data Entry Supervisor, Information Center Manager, Hardware Installation Supervisor, System Administrator, Webmaster, Project Manager Applications, Project Manager Distributed Systems, Project Network Technical Services, Project Manager Implementation Deployment, dan lain-lain.
-                </p>
+                <?php
+                        }
+                    }
+                 ?>
                 <!-- content end -->
             </div>
         </div>

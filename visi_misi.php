@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Visi dan Misi</title>  
-	<?php include 'header.html';?>
+    <?php 
+        include 'header.html';
+        include 'database.php';
+    ?>
 </head>
 <body>
     <?php include 'Navbar.html';?>
@@ -18,8 +21,18 @@
         </div>
         <div class="grid-headline-para">
             <p class="headline-para">
-                Visi adalah pandangan jauh tentang suatu perusahaan ataupun lembaga, dapat di artikan sebagai tujuan dan apa yang harus dilakukan untuk mencapai tujuannya tersebut.
-				<br><br>Sedangkan Misi adalah suatu pernyataan tentang apa yang harus dikerjakan oleh perusahaan atau lembaga dalam usaha mewujudkan Visi.
+                
+            <?php
+                    
+					$sql = "SELECT * FROM `datahalaman`";
+					$result = $conn->query($sql);
+					$id=2;
+					while($row = $result->fetch_assoc()) 
+					{
+                        if($id==$row["Katagori"]&& 1==$row["Header"]) echo nl2br($row["Isi"]);
+                    }
+                    mysqli_data_seek($result,0);
+                 ?>
             </p>
         </div>
         <div class="grid-headline-thumbnail">
@@ -34,7 +47,27 @@
         </div>
         <div class="grid-content">
             <div class="contentstyle" style="margin:40px;text-align:justify">
-                <!-- content start -->
+
+            
+            <?php
+                    
+					$sql = "SELECT * FROM `datahalaman`";
+					$result = $conn->query($sql);
+					$id=2;
+					while($row = $result->fetch_assoc()) 
+					{
+                        if($id==$row["Katagori"]&& 0==$row["Header"]) {
+                ?>
+                        <h1><?php echo nl2br($row["Judul"]);?> </h1>
+                <p>
+                        <?php echo nl2br($row["Isi"]);?>
+                </p>
+                <?php
+                        }
+                    }
+                 ?>
+
+                <!-- content start 
                 <h1>Visi</h1>
                 <p>
                     Pada tahun 2026, menjadi Prodi Teknik Informatika yang unggul di tingkat nasional serta diakui di tingkat regional dalam bidang pendidikan, penelitian, dan pengabdian kepada masyarakat.
@@ -88,7 +121,7 @@
                         <li>Sebagai contoh lulusan Teknik Informatika harus mampu menjadi Capacity Planning Supervisor, Database Administrator, Customer Service Supervisor, Data Communication Assistant manager, Data Entry Supervisor, Information Center Manager, Hardware Installation Supervisor, System Administrator, Webmaster, Project Manager Applications, Project Manager Distributed Systems, Project Network Technical Services, Project Manager Implementation Deployment, dan lain-lain.</li>
                     </ul>
                 </p>
-                <!-- content end -->
+                content end -->
             </div>
         </div>
     </div>
