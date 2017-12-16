@@ -7,7 +7,7 @@
     <?php include 'admin-header.html';?>
 </head>
 <body>
-    <?php include 'admin-navbar.html';?>
+    <?php include 'admin-navbar.php';?>
     <div class="admin-content-pos">
         
         <div class="admin-main-content">

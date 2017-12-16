@@ -154,24 +154,19 @@
 										<div>
 											<p id="artikel-tags">Tags : 
 												<?php 
-													$tgn = 0;
-													$tgsp = 0;
-													while ($tgn <= 8)
+													$tagn = 0;
+													while ($tagn <= 8)
 													{
-														if ($rowx["tag".$tgn] == 1) {
-															if ($tgsp == 0) {$tgsp = 1;}
-															else {echo ", ";}
-															if ($tgn == 0) {echo "Kecendikiawanan";}
-															elseif ($tgn == 1) {echo "Kerjasama";}
-															elseif ($tgn == 2) {echo "Laboratorium";}
-															elseif ($tgn == 3) {echo "Lulusan";}
-															elseif ($tgn == 4) {echo "Mahasiswa";}
-															elseif ($tgn == 5) {echo "Monev-Mutu";}
-															elseif ($tgn == 6) {echo "Pendidikan";}
-															elseif ($tgn == 7) {echo "Penelitian";}
-															elseif ($tgn == 8) {echo "Pengabdian";}											;	
+														$sql_tag = "SELECT * FROM tags";
+														$resultt = $conn->query($sql_tag);
+														if ($resultt->num_rows > 0) {
+															while($rowtag = $resultt->fetch_assoc()) {
+																if ($rowx['tag'.$tagn] == $rowtag['ID']) { echo $rowtag['Text']; }
+															}
 														}
-														$tgn += 1;
+														if ($rowx["tag".($tagn + 1)] != 0) { echo ", "; }
+
+														$tagn += 1;
 													}
 												?>
 											</p>

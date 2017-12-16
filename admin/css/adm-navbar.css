@@ -15,6 +15,7 @@
     padding: 0;
     color: white;
 }
+
 .admin-top-box-wrapper li {
     float: left;
     width: 200px;
@@ -30,8 +31,11 @@
     text-decoration: none;
     margin-bottom: 4px;
 }
-.admin-top-box-wrapper li:hover {
+.admin-top-box-wrapper li#active {
     background-color: #aaa;
+}
+.admin-top-box-wrapper li:hover {
+    background-color: #bcbcbc;
 }
 .admin-left-box-bar {
     position: fixed;

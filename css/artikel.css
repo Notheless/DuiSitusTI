@@ -74,7 +74,7 @@ p {
 }
 .daftar-artikel-thumbnail {
     text-align: center;
-    position: absolute;
+    position: absolute;  
     display: inline-block;
     margin-left: 45px;
     width: 150px;
