@@ -12,47 +12,64 @@
         
         <div class="admin-main-content">
             <table class="table-post">
-                <col><col><col>
+                <col><col>
                 <tr>
                     <td>Judul</td>
-                    <td>Email</td>
                     <td>Pengaturan</td>
                 </tr>
-				<?php
-					include '../database.php';
-					$sql = "SELECT `ID`, `Nama`, `Email` FROM `dosen`";
-					$result = $conn->query($sql);
-					$i=1;
-					while($row = $result->fetch_assoc()) 
-					{
-				?>
-						<tr>
-						<td> <a href="../dosen.php?ID=<?php echo $row["ID"];?>"><?php echo	$row["Nama"] ?></a></td>
-						<td> <?php echo	$row["Email"] ?></td>
-						<td>
-							<button id="update-button" type="button" onclick="showUpdateDiv(<?php echo	$row["ID"] ?>)">edit</button>
-							<button id="delete-button" type="button" onclick="showDeleteDiv(<?php echo	$row["ID"] ?>)">hapus</button></td>
-						</tr>
-						
-				<?php
-					}
-					
-					$sql = "SELECT MAX(ID) as LAST FROM `posting`";
-					$result = $conn->query($sql);
-					$row = $result->fetch_assoc();
-					$id = 1 + $row["LAST"];
-					
-				?>
+                <tr>
+                    <td>Sejarah</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(1)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Visi Misi</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(2)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Fasilitas</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(3)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Tata Pamong</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(4)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Kerjasama dan Penelitian</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(5)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Sumber Daya Manusia</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(6)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Mahasiswa dan Lulusan</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(7)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Alumni</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(8)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Prestasi</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(9)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Kurikulum</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(10)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Pengabdian</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(11)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Kerjasama</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(12)">edit</button></td>
+                </tr>
+                <tr>
+                    <td>Publikasi</td>
+					<td><button id="update-button" type="button" onclick="showUpdateDiv(13)">edit</button></td>
+                </tr>
             </table>
-            <button id="insert-button" style="left:0;" type="button" onclick="showInsertDiv(<?php echo $id ?>)">tambahkan</button>
-        </div>
-
-        <!-- insert -->
-        <div id="divInsert" class="background-content">
-            <div class="background" onclick="hideInsertDiv()"></div>
-            <div class="admin-content" id="insert"> 
-                A
-            </div>
         </div>
 
         <!-- update -->
@@ -63,16 +80,8 @@
             </div>
         </div>
 
-        <!-- delete -->
-        <div id="divDelete" class="background-content">
-            <div class="background" onclick="hideDeleteDiv()"></div>
-            <div id="delete" class="admin-content"> 
-                
-            </div>
-        </div>
     </div>
-    <script type="text/javascript" src="js/show-div-dosen.js"></script>
+    <script type="text/javascript" src="js/show-div-halaman.js"></script>
     <script type="text/javascript" src="js/textarea.js"></script>
-    <script type="text/javascript" src="js/insert-img-dosen.js"></script>
 </body>
 </html>
