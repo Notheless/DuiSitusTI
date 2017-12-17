@@ -17,3 +17,34 @@ function showUpdateDiv(str) {
 function hideUpdateDiv() {
 	document.getElementById('divUpdate').style.display = "none";
 }
+
+
+function newA(inp){
+    var output = document.getElementById('LastA');
+    var x = document.getElementById('Anum').value;
+    var y = Number(x);
+
+    if(inp==y){
+        document.getElementById('Anum').value = y+1;
+        x = document.getElementById('Anum').value;
+        var output = document.getElementById("LastA");
+        
+        var div = document.createElement("tr");
+		div.innerHTML = "<td><p>Judul Bagian : </p></td><td width=\"70%\"><input class=\"data-input\" type=\"text\" name=\"Judul[]\" placeholder=\"Judul Bagian\" onkeypress=\"newA("+x+")\"></td>";
+		output.insertBefore(div, null);
+		
+        var div = document.createElement("tr");
+		div.innerHTML = "<td><p>Isi Bagian : </p></td><td width=\"70%\"></td>";
+		output.insertBefore(div, null);
+		
+        var div = document.createElement("tr");
+		div.innerHTML = "<td colspan=\"2\"><textarea rows=\"3\" name=\"Isi[]\" placeholder=\"Isi bagian\" onkeypress=\"newA("+x+")\" ></textarea></td>";
+		output.insertBefore(div, null);
+		
+        var div = document.createElement("tr");
+		div.innerHTML = "<td><label><input name=\"header\" value="+x+" type=\"radio\" required>Header Konten</label></td>";
+        output.insertBefore(div, null);
+    }
+    if(false){
+    }
+}
