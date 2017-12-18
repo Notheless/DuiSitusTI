@@ -8,5 +8,5 @@
         <li id="<?php if ($path['filename'] == "lulusan") { echo "active"; } ?>"><a href="lulusan.php">Lulusan</a></li>
         <li id="<?php if ($path['filename'] == "Halaman") { echo "active"; } ?>"><a href="Halaman.php">Halaman</a></li>
     </div>
-    <li id="right-bar"><a href="/">Keluar</a></li>
+    <li id="right-bar"><a href="../">Keluar</a></li>
 </div>

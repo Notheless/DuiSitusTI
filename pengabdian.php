@@ -36,7 +36,7 @@
                  </p>
         </div>
         <div class="grid-headline-thumbnail">
-            <img style="thumbnail" src="f_img/15.jpg" height="auto" width="100%"/>
+        <img class="thumbnail" src="f_img/cont/<?php echo $id;?>.jpg" height="auto" width="100%"/>
         <div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2></h2>
