@@ -37,7 +37,7 @@
         </div>
         <div class="grid-headline-thumbnail">
             <span class="center-im"></span>
-            <img class="thumbnail" src="f_img/09.jpg" height="auto" width="100%"/>
+            <img class="thumbnail" src="f_img/cont/<?php echo $id;?>.jpg" height="auto" width="100%"/>
 			<div class="headline-thumbnail-det">
             <div style="padding:10px;font-style:italic;color:white">
                 <h2></h2>
@@ -53,7 +53,6 @@
                     
 					$sql = "SELECT * FROM `datahalaman`";
 					$result = $conn->query($sql);
-					$id=1;
 					while($row = $result->fetch_assoc()) 
 					{
                         if($id==$row["Katagori"]&& 0==$row["Header"]) {
