@@ -25,5 +25,5 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     setTimeout(function() {
         plusSlides(1);
-    },2000);
+    },7000);
 }
