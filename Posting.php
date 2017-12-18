@@ -98,8 +98,10 @@
 							}
 						}
 					}
-					if($id==0){
-						$sqlx = "SELECT * FROM posting ORDER BY ID DESC LIMIT 10";
+					if ($id==0){
+						if ( $_GET['page'] ) { $page_id = $_GET['page']; }
+						else { $page_id = 1; }
+						$sqlx = "SELECT * FROM posting ORDER BY ID DESC LIMIT ".(($page_id - 1) * 10).",10";
 						$resultx = $conn->query($sqlx);
 						if (($resultx->num_rows > 0)) 
 						{
@@ -177,13 +179,28 @@
 							?>
 							</ul>
 							<div class="page-list-row">
-								<a href><div class="page-list-counter"><p>1<p></div></a>
-								<div class="page-list-counter"><p>2<p></div>
-								<div class="page-list-counter"><p>3<p></div>
+								<?php 
+									$sqlm = "SELECT MAX(ID) FROM posting";
+									$resultm = $conn->query($sqlm);
+									while($rowm = $resultm->fetch_assoc()) { $max_page = ($rowm['MAX(ID)'] % 10) + 1; }
+								?>
+
+								<?php if ($page_id > 2) { ?> 
+									<a href="?page=<?php echo $page_id - 2; ?>"><div class="page-list-counter"><p><?php echo $page_id - 2; ?><p></div></a> 
+								<?php } 
+								if ($page_id > 1) { ?> 
+									<a href="?page=<?php echo $page_id - 1; ?>"><div class="page-list-counter"><p><?php echo $page_id - 1; ?><p></div></a> 
+								<?php } ?>
+								<a href><div class="page-list-counter" id="active"><p><?php echo $page_id; ?><p></div></a>
+								<?php if ($page_id < $max_page) { ?> 
+									<a href="?page=<?php echo $page_id + 1; ?>"><div class="page-list-counter"><p><?php echo $page_id + 1; ?><p></div></a> 
+								<?php } 
+								if ($page_id + 1 < $max_page) { ?> 
+									<a href="?page=<?php echo $page_id + 2; ?>"><div class="page-list-counter"><p><?php echo $page_id + 2; ?><p></div></a> 
+								<?php } ?>
 							</div>
 							<?php
 						}
-						
 					}
 				?>
 				
