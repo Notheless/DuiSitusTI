@@ -7,9 +7,28 @@
 	$id=0;
 	$sql = "SELECT * FROM datahalaman";
 	$result = $conn->query($sql);
+	
 	if($_GET["ID"]) 
 	{
 		$id=$_GET["ID"];
+		
+		$path = '..\\..\\f_img\\cont\\'.$id.'.jpg';
+		$type = pathinfo($path, PATHINFO_EXTENSION);
+		$data = file_get_contents($path);
+		$base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+
+		?>
+		
+		<tr>
+                            <td><p>gambar:</p></td>
+							<td><label class ="button"><input id ="imgbutton" type="file" accept="image/*" style ="display: none;" onchange="loadFile(event)" />Tambah gambar</label></td>
+						</tr>
+                        <tr>
+                            <td><input id="imgval" type="hidden" name="Foto[]" value="<?php echo $base64 ; ?>"></td>
+                        <td> 
+                            <img id="preview" src="<?php echo $base64 ; ?>" alt="Foto" width='200px' height='200px'/>
+                        </td>
+		<?php
 		if ($result->num_rows > 0) 
 		{
 			$count =1;
