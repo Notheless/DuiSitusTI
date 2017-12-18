@@ -86,8 +86,8 @@
         </div>
         <!-- tombol prev dan next -->
         <div class="grid-slider-button" style="z-index:6">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
         </div>
         <!-- tombol halaman -->
         <div class="grid-slider-select" style="z-index:7">
