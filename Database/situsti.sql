@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2017 at 11:53 AM
+-- Generation Time: Dec 18, 2017 at 02:59 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -353,7 +353,29 @@ INSERT INTO `gambar` (`ID`, `TagPost`, `Utama`, `caption`) VALUES
 (51, 4, 0, NULL),
 (53, 4, 0, NULL),
 (56, 4, 0, NULL),
-(60, 4, 0, NULL);
+(60, 4, 0, NULL),
+(61, 5, 0, NULL),
+(62, 5, 0, NULL),
+(64, 5, 0, NULL),
+(67, 5, 0, NULL),
+(68, 6, 0, NULL),
+(69, 6, 0, NULL),
+(71, 6, 0, NULL),
+(74, 6, 0, NULL),
+(78, 6, 0, NULL),
+(83, 6, 0, NULL),
+(84, 7, 0, NULL),
+(85, 7, 0, NULL),
+(87, 7, 0, NULL),
+(90, 7, 0, NULL),
+(94, 7, 0, NULL),
+(99, 7, 0, NULL),
+(100, 8, 0, NULL),
+(101, 8, 0, NULL),
+(103, 8, 0, NULL),
+(104, 9, 0, NULL),
+(105, 9, 0, NULL),
+(107, 9, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -478,11 +500,11 @@ INSERT INTO `posting` (`ID`, `Judul`, `Tanggal`, `Isi`, `Author`, `tag0`, `tag1`
 (2, 'Sertifikat Profesional Dosen Departemen Ilmu Komputer', '2017-11-20 04:21:06', '<p>Sampai saat ini telah 6 dosen Departemen Ilmu Komputer telah memiliki Sertifikasi Profesional dari institusi internasional yaitu dari Microsoft dan dari Oracle. Sertifikat dari Microsoft berupa  Microsoft Certified Educator (MCE) untuk 3 orang dosen, Microsoft Technology Associate (MTA) untuk satu orang dosen, dan Microsoft Office Specialist (MOS) untuk satu orang dosen. Sedangkan dari Oracle adalah sertifikat  Database Design and Programming with SQL. Berkaitan dengan Oracle, Departemen Ilmu Komputer juga telah menjadi â€œInstitution Memberâ€ dari Oracle Academy. Sedangkan untuk spersiapan pembentukan asesor profesi informatika, dua dosen telah dilatih dan siap menjadi asesor LSP Informatika yang akan dibangun.  Berikut sertifikat yang telah dimiliki.</p>', 'ADMIN', 2, 10, 16, 17, 0, 0, 0, 0, 0),
 (3, 'Prestasi Mahasiswa TI Unpad di 3rd International Conference on Science in Information Technology (ICSITech) 2017', '2017-11-20 04:26:57', '\r\n<p style="text-align: left">Pada tanggal 25 â€“ 26 Oktober 2017 , 7 orang mahasiswa TI yang tergabung dalam 2 tim berhasil melaksanakan presentasi dua artikel ilmiah di ajang 3rd International Conference on Science in Information Technology (ICSITech 2017) yang dilaksanakan di GH Universal Hotel, Bandung, Jawa Barat.</p>\r\n\r\n<p>Tim pertama terdiri dari <strong>Fajar Satria, Hafiz Aditra, M. Dean Aji Wibowo, dan Hilmi Luthfiansyah</strong> yaitu mahasiswa TI angkatan 2014 yang diwakili presentasinya oleh M. Dean Aji Wibowo. Tim pertama ini mempresentasikan artikel yang berjudul â€œEFL Learning Media for Early Childhood Through Speech Recognition Applicationâ€, sebuah <em>game-based learning</em> untuk pembelajaran bahasa Inggris bagi anak-anak melalui pengenalan suara.</p>\r\n<p>Tim kedua terdiri dari <strong>Gustara Sapto Ajie, M. Azhari Marpaung, dan Agung Kurniawan</strong> yaitu mahasiswa TI angkatan 2014 juga, diwakili presentasinya oleh Gustara Sapto Ajie. Tim kedua mempresentasikan artikel yang berjudul â€œThe Development and Usability Testing of Game-based Learning as A Medium to Introduce Zoology to Young Learnersâ€, sebuah aplikasi <em>game-based learning</em> pengenalan aneka hewan bagi anak-anak melalui teknik hand gesture recognition.</p>\r\n<p><span id="more-3075"></span></p>\r\n<p>Kedua artikel yang dihasilkan merupakan hasil penelitian dari kedua tim selama 1 semester perkuliahan Human Computer Interaction. Selain aplikasi yang dihasilkan, mahasiswa juga harus mampu menuangkan hasil karyanya ke dalam artikel ilmiah. Kegiatan penelitian ini dibimbing oleh 3 dosen pengampu yaitu: Mira Suryani, S.Pd., M.Kom Erick Paulus, S.Si., M.Kom, dan Ino Suryana, Drs., M.Kom.</p>\r\n</p>', 'ADMIN', 5, 8, 10, 12, 0, 0, 0, 0, 0),
 (4, 'Teknik Informatika Unpad di Tech in Asia Jakarta', '2017-11-20 04:28:43', 'Pada tanggal 1-2 November 2017, Prodi Teknik Informatika Unpad yang diwakili oleh Dr. Asep Sholahuddin, M.T dan Aditya Pradana, M.Eng serta 50 mahasiswa dari berbagai angkatan mengikuti acara Tech in Asia yang berlangsung di Jakarta Convention Center.\r\nAcara terdiri dari presentasi dari beberapa sponsor, perwakilan startup serta pameran dari para Bootstrap Alley. Diharapkan dengan mengikuti acara seperti ini akan menumbuhkan kreatifitas dari pada mahasiswa untuk berkreasi dan mengetahui perkembangan teknologi terbaru.', 'ADMIN', 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(5, 'Rakornas APTIKOM dan ICIC 2017', '2017-11-07 04:08:21', '<p>Pada tanggal 1-4 Nov 2017, Dosen Teknik Informatika, Universitas Padjadjaran ikut berpartisipasi aktif pada kegiatan Rapat Koordinasi Nasional (RAKORNAS) Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM) 2017. Kegiatan Rakornas yang bekerjasama dengan Universitas YAPIS Papua ini mengusung tema Peningkatan Kompetensi SDM TIK dan Daya Saing Daerah di Era Global. Pada kesempatan yang sama juga diselenggarakan beberapa kegiatan:</p>\r\n<ol>\r\n<li>Seminar Nasional Aptikom (Semnastikom) Call For Paper dengan tema : Pengembangan SDM TIK Untuk Percepatan Pembangunan Daerah.</li>\r\n<li>The 2nd International Conference on Informatics and Computing (ICIC 2017) dengan tema : Improving Competencies of ICT Human Resources and Regional Competitiveness in Global Era.</li>\r\n<li>Higher Education Sharing of Best Practice</li>\r\n<li>Industrial Sharing of Technology</li>\r\n<li>Higher Education Clinics</li>\r\n<li>Country Side Tour</li>\r\n</ol>\r\n<p>Adapun kegiatan ICIC 2017 ini menyajikan sekitar 97 artikel, diantaranya adalah </p>\r\n<ol>\r\n<li>A Novel Scheme for Handwritten Binarization Method on Sundanese Palm Leaf Document Images oleh Erick Paulus, Mira Suryani, Setiawan Hadi and Intan Nurma Yulita</li>\r\n<li>Quality enhancement of degraded Sundanese lontar images using direct subtraction and retrospective correction methods in several color spaces oleh Setiawan Hadi, Undang Ahmad Darsa, Erick Paulus and Mira Suryani</li>\r\n</ol>', 'ADMIN', 12, 16, 19, 0, 0, 0, 0, 0, 0),
-(6, 'Sertifikat Kompetensi Keahlian Dosen', '2017-11-24 17:00:00', '<p>3 (tiga) dosen Ilmu Komputer telah mengikuti kegiatan Sertifikasi Kompetensi yaitu 2 orang mengikuti Sertifikasi Kompetensi sebagai Programmer dan 1 orang mengikuti Sertifikasi Reviewer Penelitian. Dengan ini meningkatkan dan mengembangkan jumlah dosen Ilkom yang memiliki Sertifikat Kompetensi.</p>\r\n', 'ADMIN', 3, 7, 8, 10, 16, 17, 18, NULL, NULL),
-(7, 'Unpad Experience Day di Huawei', '2017-11-24 17:00:01', '<p>Pada hari Jumat, 24 November 2017, Unpad mengikuti <em>Experience Day</em> di Huawei yang diwakili oleh dosen dari Teknik Informatika, Dr. Asep Sholahuddin, M.T. dan 10 mahasiswa FMIPA yang terdiri dari Prodi Teknik Informatika (4 mahasiswa), Teknik Elektro (3 mahasiswa), dan Fisika (3 mahasiswa).</p>\r\n<p>Tim mengikuti seminar dan diskusi dengan Huawei. Beberapa materinya adalah tentang Advance Mobile Service, sharing pengalaman, serta pemaparan beberapa teknologi yang ada di Huawei.\r\n</p>\r\n', 'ADMIN', 15, 16, 19, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, 'Dosen Ilmu Komputer mendapat Penghargaan dalam Konferensi Internasional', '2017-12-07 17:00:00', '<p>Makalah dosen Departemen Ilmu Komputer FMIPA Universitas Padjadjaran telah berhasil terpilih sebagai makalah terbaik dan memperoleh sertifikat The Best Paper Award dalam International Conference of Computer and Applied Informatics (ICCAI) yang diselenggarakan di Medan pada tanggal 28-30 November 2017 oleh  Fakultas Ilmu Komputer dan Informatika Universitas Sumatera Utara. Makalah ilmiah yang berjudul berjudul "Improved Line Segmentation Framework for Old Sundanese Documents" ini, dipresentasikan dalam kancah ilmiah berstandar internasioanal dan hasilnya dipublikasikan dalam Journal of Physics IOP. </p>\r\n<p>Informasi lain dapat dilihat di. <a href="http://www.unpad.ac.id/2017/12/penelitian-dosen-fmipa-unpad-raih-penghargaan-di-iccai-medan/" target="_blank">situs UNPAD.</a></p>', 'ADMIN', 8, 10, 12, 16, 19, NULL, NULL, NULL, NULL),
-(9, 'Alumni UNPAD Sukses Menjadi Deputi Direktur Perusahaan Multi Finance', '2017-12-14 17:00:00', '<p>William Francis Indra adalah alumni Universitas Padjadjaran lulusan tahun 2003 yang saat ini diberi amanah untuk menjabat Deputi Direktur Perusahaan Mandiri Tunas Finance (MTF), sebuah anak perusahaan Bank Mandiri, yang bergerak di bidang pembiayaan (financing). Di Universitas Padjadjaran, William aktif dalam bidang akademik di program D-3 Teknik Informatika yang dimulainya pada tahun 1999 sebagai asisten laboratorium. Ia kemudian melanjutkan pendidikan sarjananya di Program Ekstensi Jurusan Matematika Bidang minat Ilmu Komputer. Jejak karirnya di Mandiri Tunas Finance diawali pada tahun 2009 sebagai manager di bidang Jaringan Komputer, meningkat menjadi general manager di bidang IT. Selanjutnya ia diangkat menjadi Direktur yang membawahi bidang IT dan bidang lainnya.  Pada kuliah umum yang diadakan di Departemen Ilmu Komputer pada tanggal 7 Desember 2017 dihadapan para dosen dan mahasiswa S-1 Teknik Informatika, William memberikan gambaran tentang kegiatan di perusahaan nasional yang memiliki ratusan cabang di Indonesia dan perputaran uangnya hampir 2 triliun per bulan ini, tidak bisa terlepas dari Teknologi Informasi. Di sisi lain, pemanfaatan Teknologi Informasi di MTF ini tidak stagnan namun terus menerus dikembangkan sehingga membutuhkan tenaga-tenaga muda Informatika, menambah pasukan tenaga yang sekarang ada sehingga mencapai 50 orang. Dia menawarkan berbagai jenis kesempatan mulai dari magang, beasiswa, hingga kesempatan kerja ekslusif yang mudah-mudahan bisa dimanfaatkan oleh para mahasiswa Teknik Informatika dan mahasiswa UNPAD pada umumnya. Sebagai salah seorang alumni UNPAD  yang menduduki jabatan eksekutif dan pengelola di perusahaan yang memiliki visi nasional dan salah satu misinya adalah memakmurkan bangsa Indonesia, dia mengharapkan ikatannya dengan UNPAD dapat terus ditingkatkan meliputi berbagai aspek.</p>', 'ADMIN', 4, 7, 15, 20, 0, 0, 0, 0, 0);
+(5, 'Rakornas APTIKOM dan ICIC 2017', '2017-12-16 06:14:00', '<p>Pada tanggal 1-4 Nov 2017, Dosen Teknik Informatika, Universitas Padjadjaran ikut berpartisipasi aktif pada kegiatan Rapat Koordinasi Nasional (RAKORNAS) Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM) 2017. Kegiatan Rakornas yang bekerjasama dengan Universitas YAPIS Papua ini mengusung tema Peningkatan Kompetensi SDM TIK dan Daya Saing Daerah di Era Global. Pada kesempatan yang sama juga diselenggarakan beberapa kegiatan:</p>\r\n<ol>\r\n<li>Seminar Nasional Aptikom (Semnastikom) Call For Paper dengan tema : Pengembangan SDM TIK Untuk Percepatan Pembangunan Daerah.</li>\r\n<li>The 2nd International Conference on Informatics and Computing (ICIC 2017) dengan tema : Improving Competencies of ICT Human Resources and Regional Competitiveness in Global Era.</li>\r\n<li>Higher Education Sharing of Best Practice</li>\r\n<li>Industrial Sharing of Technology</li>\r\n<li>Higher Education Clinics</li>\r\n<li>Country Side Tour</li>\r\n</ol>\r\n<p>Adapun kegiatan ICIC 2017 ini menyajikan sekitar 97 artikel, diantaranya adalah </p>\r\n<ol>\r\n<li>A Novel Scheme for Handwritten Binarization Method on Sundanese Palm Leaf Document Images oleh Erick Paulus, Mira Suryani, Setiawan Hadi and Intan Nurma Yulita</li>\r\n<li>Quality enhancement of degraded Sundanese lontar images using direct subtraction and retrospective correction methods in several color spaces oleh Setiawan Hadi, Undang Ahmad Darsa, Erick Paulus and Mira Suryani</li>\r\n</ol>', 'NULL', 12, 16, 19, 0, 0, 0, 0, 0, 0),
+(6, 'Sertifikat Kompetensi Keahlian Dosen', '2017-12-16 06:16:08', '<p>3 (tiga) dosen Ilmu Komputer telah mengikuti kegiatan Sertifikasi Kompetensi yaitu 2 orang mengikuti Sertifikasi Kompetensi sebagai Programmer dan 1 orang mengikuti Sertifikasi Reviewer Penelitian. Dengan ini meningkatkan dan mengembangkan jumlah dosen Ilkom yang memiliki Sertifikat Kompetensi.</p>\r\n', 'NULL', 3, 7, 8, 10, 16, 17, 18, 0, 0),
+(7, 'Unpad Experience Day di Huawei', '2017-12-16 06:18:04', '<p>Pada hari Jumat, 24 November 2017, Unpad mengikuti <em>Experience Day</em> di Huawei yang diwakili oleh dosen dari Teknik Informatika, Dr. Asep Sholahuddin, M.T. dan 10 mahasiswa FMIPA yang terdiri dari Prodi Teknik Informatika (4 mahasiswa), Teknik Elektro (3 mahasiswa), dan Fisika (3 mahasiswa).</p>\r\n<p>Tim mengikuti seminar dan diskusi dengan Huawei. Beberapa materinya adalah tentang Advance Mobile Service, sharing pengalaman, serta pemaparan beberapa teknologi yang ada di Huawei.\r\n</p>\r\n', 'NULL', 15, 16, 19, 0, 0, 0, 0, 0, 0),
+(8, 'Dosen Ilmu Komputer mendapat Penghargaan dalam Konferensi Internasional', '2017-12-16 06:20:31', '<p>Makalah dosen Departemen Ilmu Komputer FMIPA Universitas Padjadjaran telah berhasil terpilih sebagai makalah terbaik dan memperoleh sertifikat The Best Paper Award dalam International Conference of Computer and Applied Informatics (ICCAI) yang diselenggarakan di Medan pada tanggal 28-30 November 2017 oleh  Fakultas Ilmu Komputer dan Informatika Universitas Sumatera Utara. Makalah ilmiah yang berjudul berjudul "Improved Line Segmentation Framework for Old Sundanese Documents" ini, dipresentasikan dalam kancah ilmiah berstandar internasioanal dan hasilnya dipublikasikan dalam Journal of Physics IOP. </p>\r\n<p>Informasi lain dapat dilihat di <a href="http://www.unpad.ac.id/2017/12/penelitian-dosen-fmipa-unpad-raih-penghargaan-di-iccai-medan/" target="_blank">situs UNPAD</a>.</p>', 'NULL', 8, 10, 12, 16, 19, 0, 0, 0, 0),
+(9, 'Alumni UNPAD Sukses Menjadi Deputi Direktur Perusahaan Multi Finance', '2017-12-16 06:19:58', '<p>William Francis Indra adalah alumni Universitas Padjadjaran lulusan tahun 2003 yang saat ini diberi amanah untuk menjabat Deputi Direktur Perusahaan Mandiri Tunas Finance (MTF), sebuah anak perusahaan Bank Mandiri, yang bergerak di bidang pembiayaan (financing). Di Universitas Padjadjaran, William aktif dalam bidang akademik di program D-3 Teknik Informatika yang dimulainya pada tahun 1999 sebagai asisten laboratorium. Ia kemudian melanjutkan pendidikan sarjananya di Program Ekstensi Jurusan Matematika Bidang minat Ilmu Komputer. Jejak karirnya di Mandiri Tunas Finance diawali pada tahun 2009 sebagai manager di bidang Jaringan Komputer, meningkat menjadi general manager di bidang IT. Selanjutnya ia diangkat menjadi Direktur yang membawahi bidang IT dan bidang lainnya.  Pada kuliah umum yang diadakan di Departemen Ilmu Komputer pada tanggal 7 Desember 2017 dihadapan para dosen dan mahasiswa S-1 Teknik Informatika, William memberikan gambaran tentang kegiatan di perusahaan nasional yang memiliki ratusan cabang di Indonesia dan perputaran uangnya hampir 2 triliun per bulan ini, tidak bisa terlepas dari Teknologi Informasi. Di sisi lain, pemanfaatan Teknologi Informasi di MTF ini tidak stagnan namun terus menerus dikembangkan sehingga membutuhkan tenaga-tenaga muda Informatika, menambah pasukan tenaga yang sekarang ada sehingga mencapai 50 orang. Dia menawarkan berbagai jenis kesempatan mulai dari magang, beasiswa, hingga kesempatan kerja ekslusif yang mudah-mudahan bisa dimanfaatkan oleh para mahasiswa Teknik Informatika dan mahasiswa UNPAD pada umumnya. Sebagai salah seorang alumni UNPAD  yang menduduki jabatan eksekutif dan pengelola di perusahaan yang memiliki visi nasional dan salah satu misinya adalah memakmurkan bangsa Indonesia, dia mengharapkan ikatannya dengan UNPAD dapat terus ditingkatkan meliputi berbagai aspek.</p>', 'NULL', 4, 7, 15, 20, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -502,15 +524,15 @@ CREATE TABLE `tags` (
 INSERT INTO `tags` (`ID`, `Text`) VALUES
 (1, 'Kecendekiawanan'),
 (2, 'Kerjasama'),
-(3, 'laboratorium'),
-(4, 'lulusan'),
+(3, 'Laboratorium'),
+(4, 'Lulusan'),
 (5, 'Mahasiswa'),
-(6, 'monev-mutu'),
+(6, 'Monev-mutu'),
 (7, 'Pendidikan'),
-(8, 'penelitian'),
+(8, 'Penelitian'),
 (9, 'Pengabdian'),
 (10, 'Prestasi'),
-(11, 'sarpras'),
+(11, 'Sarpras'),
 (12, 'Seminar'),
 (13, 'Standar 1'),
 (14, 'Standar 2'),
@@ -585,17 +607,17 @@ ALTER TABLE `detaildosen`
 -- AUTO_INCREMENT for table `dosen`
 --
 ALTER TABLE `dosen`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 --
 -- AUTO_INCREMENT for table `lulusan`
 --
 ALTER TABLE `lulusan`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 --
 -- AUTO_INCREMENT for table `posting`
 --
