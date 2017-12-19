@@ -16,7 +16,7 @@
 	?>
 	<div class="grid-dosen-container">
         <!-- navigasi kiri -->
-			<?php include 'left_nav.html';?>
+			<?php include 'left_nav.php';?>
         <!-- konten -->
         <div class="grid-dosen-header">
             <h1 class="headline-header" style=" text-align: left">TENAGA <span class="header-revcolor">PENDIDIK</span></h1>

@@ -14,7 +14,7 @@
     <div class="grid-container">
         
         <!-- navigasi kiri -->
-			<?php include 'left_nav.html';?>
+			<?php include 'left_nav.php';?>
 		<!--Recent-->
         <!-- konten -->
 		<div class="grid-headline-header">

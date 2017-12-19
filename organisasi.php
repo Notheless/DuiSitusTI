@@ -13,7 +13,7 @@
     <?php include 'Navbar.html';?>
     <div class="grid-container">
         <!-- navigasi kiri -->
-			<?php include 'left_nav.html';?>
+			<?php include 'left_nav.php';?>
 		<!--Recent-->
         <!-- konten -->
 		

@@ -62,7 +62,7 @@
 		<?php include 'Navbar.html';?>
     <div class="grid-container">
         <!-- navigasi kiri -->
-			<?php include 'left_nav.html';?>
+			<?php include 'left_nav.php';?>
 		<!--Recent-->
         <!-- konten -->
 		
@@ -71,7 +71,7 @@
             <div class="contentstyle" style="margin:40px;text-align:justify">
                 <!-- content start -->
                 <?php ?>
-					<div class="daftar-artikel-header">
+					<div class="daftar-artikel-header" id="artikel-header">
 						<?php 
 						$mid = strrpos(substr($judul, 0, floor(strlen($judul) / 2)), ' ') + 1;
 						
@@ -101,7 +101,10 @@
 					if ($id==0){
 						if ( $_GET['page'] ) { $page_id = $_GET['page']; }
 						else { $page_id = 1; }
-						$sqlx = "SELECT * FROM posting ORDER BY ID DESC LIMIT ".(($page_id - 1) * 10).",10";
+						if (isset($_GET['search'])) {$searchse = $_GET['search']; $sqlx = "SELECT * FROM posting WHERE Judul LIKE '%".$searchse."%' ORDER BY ID DESC LIMIT ".(($page_id - 1) * 10).",10";} 
+						elseif (isset($_GET['tags'])) {$tagse = $_GET['tags']; $sqlx = "SELECT * FROM posting WHERE tag0=".$tagse." OR tag1=".$tagse." OR tag2=".$tagse." OR tag3=".$tagse." OR tag4=".$tagse." OR tag5=".$tagse." OR tag6=".$tagse." OR tag7=".$tagse." OR tag8=".$tagse." ORDER BY ID DESC LIMIT ".(($page_id - 1) * 10).",10";} 
+						else { $sqlx = "SELECT * FROM posting ORDER BY ID DESC LIMIT ".(($page_id - 1) * 10).",10"; }
+						
 						$resultx = $conn->query($sqlx);
 						if (($resultx->num_rows > 0)) 
 						{
@@ -180,23 +183,26 @@
 							</ul>
 							<div class="page-list-row">
 								<?php 
-									$sqlm = "SELECT MAX(ID) FROM posting";
+									if (isset($_GET['search'])) {$searchse = $_GET['search']; $sqlx = "SELECT COUNT(*) FROM posting WHERE Judul LIKE '%".$searchse."%'";} 
+									elseif (isset($_GET['tags'])) {$tagse = $_GET['tags']; $sqlm = "SELECT COUNT(*) FROM posting WHERE tag0=".$_GET['tags']." OR tag1=".$tagse." OR tag2=".$tagse." OR tag3=".$tagse." OR tag4=".$tagse." OR tag5=".$tagse." OR tag6=".$tagse." OR tag7=".$tagse." OR tag8=".$tagse;}
+									else {$sqlm = "SELECT COUNT(*) FROM posting;";}
+									
 									$resultm = $conn->query($sqlm);
-									while($rowm = $resultm->fetch_assoc()) { $max_page = ($rowm['MAX(ID)'] % 10) + 1; }
+									while($rowm = $resultm->fetch_assoc()) { $max_page = $rowm['COUNT(*)'] / 10; }
 								?>
 
 								<?php if ($page_id > 2) { ?> 
-									<a href="?page=<?php echo $page_id - 2; ?>"><div class="page-list-counter"><p><?php echo $page_id - 2; ?><p></div></a> 
+									<a href="?page=<?php echo $page_id - 2; if(isset($_GET['search'])) {echo "&search=".$_GET['search']; } if(isset($_GET['tags'])) {echo "&tags=".$_GET['tags']; } ?>"><div class="page-list-counter"><p><?php echo $page_id - 2; ?><p></div></a> 
 								<?php } 
 								if ($page_id > 1) { ?> 
-									<a href="?page=<?php echo $page_id - 1; ?>"><div class="page-list-counter"><p><?php echo $page_id - 1; ?><p></div></a> 
+									<a href="?page=<?php echo $page_id - 1; if(isset($_GET['search'])) {echo "&search=".$_GET['search']; } if(isset($_GET['tags'])) {echo "&tags=".$_GET['tags']; } ?>"><div class="page-list-counter"><p><?php echo $page_id - 1; ?><p></div></a> 
 								<?php } ?>
 								<a href><div class="page-list-counter" id="active"><p><?php echo $page_id; ?><p></div></a>
 								<?php if ($page_id < $max_page) { ?> 
-									<a href="?page=<?php echo $page_id + 1; ?>"><div class="page-list-counter"><p><?php echo $page_id + 1; ?><p></div></a> 
+									<a href="?page=<?php echo $page_id + 1; if(isset($_GET['search'])) {echo "&search=".$_GET['search']; } if(isset($_GET['tags'])) {echo "&tags=".$_GET['tags']; } ?>"><div class="page-list-counter"><p><?php echo $page_id + 1; ?><p></div></a> 
 								<?php } 
 								if ($page_id + 1 < $max_page) { ?> 
-									<a href="?page=<?php echo $page_id + 2; ?>"><div class="page-list-counter"><p><?php echo $page_id + 2; ?><p></div></a> 
+									<a href="?page=<?php echo $page_id + 2; if(isset($_GET['search'])) {echo "&search=".$_GET['search']; } if(isset($_GET['tags'])) {echo "&tags=".$_GET['tags']; } ?>"><div class="page-list-counter"><p><?php echo $page_id + 2; ?><p></div></a> 
 								<?php } ?>
 							</div>
 							<?php

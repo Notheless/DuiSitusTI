@@ -10,7 +10,7 @@
     <?php include 'Navbar.html';?>
 	<div class="grid-article-container">
         <!-- navigasi kiri -->
-        <?php include 'left_nav.html';?>
+        <?php include 'left_nav.php';?>
 		<?php
             error_reporting(0);
             include 'database.php';

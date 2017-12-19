@@ -267,6 +267,25 @@ a.left-sidebar:hover div {
 .subscribe-submit:active {
     opacity: 0.7;
 }
+div.subscribe-succ {
+    margin: 10px 20px;
+    width: 140px;
+}
+.subscribe-succ p {
+    font-family: 'Futura bk BT';
+    width: 140px;
+    color: black;
+}
+.subscribe-succ .lowbar {
+    display: block;
+    background-color: #e2a200;
+    height: 3px;
+    width: 0;
+    animation: lowbar-anim 5s;
+}
+.subscribe-succ#subscribe-animation {
+    display: none;
+}
 .end-of-left-nav {
     padding: 40px;
 }
@@ -275,4 +294,9 @@ a.left-sidebar:hover div {
     .left-sidebar-container {
         padding-top: 10px;
     }
+}
+@keyframes lowbar-anim {
+    0% {width: 0;}
+    15%, 80% {width: 135px; transform: translateX(0);}
+    95% {width: 0; transform: translateX(135px);}
 }
