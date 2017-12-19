@@ -297,6 +297,6 @@ div.subscribe-succ {
 }
 @keyframes lowbar-anim {
     0% {width: 0;}
-    15%, 80% {width: 135px; transform: translateX(0);}
-    95% {width: 0; transform: translateX(135px);}
+    15%, 80% {width: 107px; transform: translateX(0);}
+    95% {width: 0; transform: translateX(107px);}
 }

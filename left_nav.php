@@ -36,9 +36,9 @@
                         <li class="subscribe-icon"><img class="subscribe-icon" src="img/mail.png" height="40px" width="60px" /></li>
                         <p>Subscribe <span>untuk mengikuti perkembangan terbaru kami!</span></p>
                     </div>
-                    <input class="subscribe-input" type="text" name="email" placeholder="Alamat surel anda" />
+                    <input class="subscribe-input" type="email" name="email" placeholder="Alamat surel anda" />
                     <div class="subscribe-succ" id="subscribe-animation"><p>Subscribe berhasil!</p><div class="lowbar"></div></div>
-                    <button class="subscribe-submit" onclick="showSubscribeAnimation()">SUBSCRIBE</button>
+                    <button class="subscribe-submit" onclick="showSubscribeAnimation()" id="subscribe-button">SUBSCRIBE</button>
                     <!-- <input class="subscribe-submit" type="submit" value="SUBSCRIBE" /> -->
                 </div>
                 <!-- link -->
